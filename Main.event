@@ -1,0 +1,136 @@
+
+#define _MAIN_
+#include "Config.event"
+
+
+
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+#include "Extensions/ProcDefinitions.txt"
+
+
+// Texts
+ORG FreeSpaceText
+#define IN_TEXT_RANGE
+	ALIGN 4
+	#include "Writans/text-repoint/repointedTextTable.event"
+	
+	#ifdef _CHINESE_
+		ALIGN 4
+		#include "CN-Texts/Text.event"
+		
+		ALIGN 4
+		#include "Writans/Text.event"
+	#else
+		ALIGN 4
+		#include "Writans_EN/Text.event"
+	#endif
+	
+ASSERT (FreeSpaceTextEnd - CURRENTOFFSET)	
+#undef IN_TEXT_RANGE
+
+
+
+
+
+
+// Font Glyph
+ORG FreeSpaceFont
+#define IN_FONT_RANGE
+
+
+#include "CN-Fonts/FE8U-CN-Font-Installer.event"
+
+
+ASSERT (FreeSpaceFontEnd - CURRENTOFFSET)
+#undef IN_FONT_RANGE
+
+
+
+
+
+
+
+
+
+
+// Misc
+ORG FreeSpace
+#define IN_MAIN_HACK_RANGE	
+
+	#include "Main_Vars.event"
+	
+	// Wizardry
+	ALIGN 4
+	#include "Wizardry/Wizardry.event"
+	
+	// FE16 Icon
+	ALIGN 4
+	#include "Spritans/FE16Icon/FE16Icon.event"
+	
+
+	
+	#ifndef _USE_VANILLA_CHAPTER_
+	
+	// Portraits
+	ALIGN 4
+	#include "Spritans/Portraits.event"
+	
+	// Chapters
+	{
+		ALIGN 4
+		#include "Chapters/Chapters.event"
+	}
+	#endif // _USE_VANILLA_CHAPTER_
+
+
+	// Debug
+	#ifdef _DEBUG_
+	
+		ALIGN 4
+		#include "Debug_File.event"
+		
+	#endif // _DEBUG_
+	
+ASSERT (FreeSpaceEnd - CURRENTOFFSET)
+#undef IN_MAIN_HACK_RANGE
+
+
+
+
+
+
+
+
+
+
+
+// Tables	
+ORG FreeSpaceTable
+#define IN_TABLE_RANGE
+	
+	ALIGN 4
+	#include "GameData/GameData.event"
+	
+	
+ASSERT (FreeSpaceTableEnd - CURRENTOFFSET)	
+#undef IN_TABLE_RANGE
+
+
+
+
+// If assertion fails, it means we ran out of free space.
+// If that happens, we want to either split out our data between different
+// sections, or start writing after the end of the ROM (offset 0x1000000+)
+
+ORG $EF2F18
+	WORD 0 0
+	
+	ALIGN 16
+	String("cSkillSys-Proj.Lysithea By Mokha, version 2022.05.08")
+	BYTE 0 0 0
+	
+	ALIGN 16
+	WORD 0 0 0 0
+	String("Contact me: MokhaLeee@Git")
+	BYTE 0

@@ -1,0 +1,51 @@
+
+
+##CharmString
+魅力[X]
+
+## MagicString
+魔力[X]
+
+## LuckString
+幸运[X]
+
+## StatString
+状态[X]
+
+## ssWpnEqpName
+装备[X]
+
+## ssWpnEqpDesc
+Equipped Weapon, will use[NL]
+it in next encountered battle.[X]
+
+## ssCharmDesc
+Charm, affects unit's Gambit Mt,[NL]
+Hit, and Avoid. (5 x Charm%).[X]
+
+## ssBrawlDesc
+Brawling mastery level[X]
+
+## ssReasonDesc
+黑魔法等级[X]
+
+## ssFaithDesc
+白魔法等级[X]
+
+## ssAuthorityDesc
+Authority mastery level[X]
+
+## ssRidingDesc
+骑行技能等级[X]
+
+## ssFlyingDesc
+飞行技能等级[X]
+
+## ssHeavyDesc
+重装技能等级[X]
+
+## msgCharmDesc
+Nothing but just for test LOL[X]
+
+## ssClassRDesc
+当前职业熟练度[X]

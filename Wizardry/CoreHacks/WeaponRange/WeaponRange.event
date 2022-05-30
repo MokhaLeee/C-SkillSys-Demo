@@ -1,0 +1,98 @@
+#ifndef MAP_MASTER_MOKHA
+#define MAP_MASTER_MOKHA
+
+
+
+
+// Range Getter Core
+#include "RangeGetter/RangeGetter.lyn.event"
+// #include "ProperRangeGetters_Internal.event"
+#include "HookList.event"
+
+ALIGN 4
+prMinRangeGetter:
+	LynJump(RangeMinGetter)
+prMaxRangeGetter:
+	LynJump(RangeMaxGetter)
+	
+PROTECT $18A1C $18A54 // GetUnitMagBy2Range
+
+
+
+
+// Draw Item Range String
+#include "DrawString/UI_range.lyn.event"
+
+PUSH
+	// W.I.P.
+	// Draw Status Screen Page2
+/* 	ORG $87630	
+		SHORT $2000	// mov r0, #0
+		BL(Goto_GetUnitRangeString) */
+	
+	ORG $16CC0
+	LynJump(_GetItemDisplayRangeString)
+	
+	ORG CURRENTOFFSET
+	Goto_GetUnitRangeString:
+		LynJump(_GetUnitRangeString)
+	
+	PROTECT $16CC0 $16D5A // GetItemDisplayRangeString
+POP
+
+
+
+
+// Fill Map
+#include "FillMapMisc/core.lyn.event"
+PUSH
+	ORG $0170D4 // GetItemReachBits
+	LynJump(ItemRange2Mask)
+	PROTECT $170D4 $171E4 // GetItemReachBits
+POP
+
+#include "FillMapMisc/bmidoten.lyn.event"
+PROTECT $1CB70 $1CC1A // DisplayUnitEffectRange
+PROTECT $1A38C $1A3C2 // GenerateUnitMovementMap
+PROTECT $1ACBC $1B44A // GenerateUnitCompleteAttackRange
+PROTECT $1B460 $1B614 // GenerateUnitStandingReachRange
+PROTECT $1B618 $1B7FE // GenerateUnitCompleteStaffRange
+PROTECT $1B810 $1B950 // GenerateDangerZoneRange
+
+#include "FillMapMisc/bmitem.lyn.event"
+PROTECT $171E8 $1723A // GetUnitWeaponReachBits
+PROTECT $1723C $172F6 // GetUnitItemUseReachBits
+PROTECT $172F8 $1737A // GetUnitStaffReachBits
+
+
+
+
+
+
+// Is Item Covering Range
+#include "ItemCoveringRange/CoverRangeHack.lyn.event"
+
+PUSH
+	ORG $016B8C
+	LynJump(new_IsItemCoveringRange)
+	PROTECT $16B8C $16BBC
+POP
+
+
+
+// Staff Range Fix
+#include "StaffRange/StaffRange.lyn.event"
+PROTECT $25e7c $25EAC // MakeTargetListForAdjacentHeal
+PROTECT $25eb0 $25EFC // MakeTargetListForRangedHeal
+PROTECT $25fe8 $26018 // MakeTargetListForRestore
+PROTECT $2606c $260A0 // MakeTargetListForBarrier
+PROTECT $260d8 $26100 // MakeTargetListForRescueStaff
+PROTECT $261e4 $2620C // MakeTargetListForSilence
+PROTECT $2620c $26230 // MakeTargetListForSleep
+PROTECT $26234 $2625C // MakeTargetListForBerserk
+PROTECT $26294 $262C8 // MakeTargetListForWarp
+PROTECT $262c8 $262F8 // MakeTargetListForUnlock
+PROTECT $26354 $26388 // MakeTargetListForHammerne
+
+
+#endif // MAP_MASTER_MOKHA

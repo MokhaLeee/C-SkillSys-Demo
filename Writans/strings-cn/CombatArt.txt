@@ -1,0 +1,37 @@
+## msg_umCAname
+战技[X]
+
+## msg_mssCAname
+战技[X]
+
+## msg_umCAdesc
+战技: 通过提高武器损耗[NL]
+获得强力一击。无法追击，[NL]
+无效埋伏技能。[X]
+
+## msg_umCAGrayBox
+你无法使用战技！[X]
+
+## msg_umCAselectGrayBox
+你无法于当前状况下[NL]
+使用战技。[X]
+
+## msg_Bksel_NoCAWarning
+无战技[X]
+
+## msg_Bksel_NotUseCA
+不使用战技[X]
+
+## msg_CA_MagAtk
+魔法攻击[X]
+
+## msg_CA_PhyAtk
+物理攻击[X]
+
+
+
+
+
+
+
+

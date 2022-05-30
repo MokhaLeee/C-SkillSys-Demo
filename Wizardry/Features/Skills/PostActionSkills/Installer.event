@@ -1,0 +1,32 @@
+
+ALIGN 4
+#include "Src/Infos.lyn.event"
+#include "Src/Core.lyn.event"
+#include "Src/CantoHackASM.lyn.event"
+
+
+InjectSkillInfo(SKILLID_Canto, SkillInfo_Canto)
+InjectSkillInfo(SKILLID_AlertStance, SkillInfo_AlertStance)
+InjectSkillInfo(SKILLID_AlertStancePlus, SkillInfo_AlertStancePlus)
+
+
+PUSH
+	ORG $01D248
+	jumpToHack(CantoHackASM)
+	PROTECT $01D244 $01D300
+	
+	// Besides, there is another check canto,
+	// inside function HandlePostActionTraps
+POP
+
+ALIGN 4
+// Icon
+SI_Canto:
+	#incbin "Icons/Canto.4bpp"
+
+SI_AlertStance:
+	#incbin "Icons/AlertStance.4bpp"
+
+SI_AlertStancePlus:
+	#incbin "Icons/AlertStancePlus.4bpp"
+

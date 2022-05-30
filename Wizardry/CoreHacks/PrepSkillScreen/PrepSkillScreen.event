@@ -1,0 +1,76 @@
+
+ALIGN 4
+#include "src/PrepSkill-ListMisc.lyn.event"
+#include "src/PrepSkill-OnDraw.lyn.event"
+#include "src/PrepSkill-Obj.lyn.event"
+
+#include "src/PrepSkillScreen.lyn.event"
+#include "src/PrepSkillPickSkills.lyn.event"
+
+
+
+
+// Gfx
+ALIGN 4
+Gfx_PrepSkillScreen:
+	#incbin "data/Gfx_PrepSkillScreen.4bpp.lz"
+
+ALIGN 4
+Pal_PrepSkillScreen:
+	#incbin "data/Gfx_PrepSkillScreen.gbapal"
+
+ALIGN 4
+Gfx_PrepSkillScreen2:
+	#incbin "data/Gfx_PrepSkillScreen2.4bpp.lz"
+
+
+// Same as Pal_PrepSkillScreen
+// So we don't use this
+ALIGN 4
+Pal_PrepSkillScreen2:
+	#incbin "data/Gfx_PrepSkillScreen2.gbapal"
+
+ALIGN 4
+Tsa_PrepSkillScreen:
+	#incbin "data/Tsa_PrepSkillScreen.tsa.lz"
+
+ALIGN 4
+Tsa_PrepSkillScreenSubMenu:
+	#incbin "data/Tsa_PrepSkillScreenSubMenu.tsa.lz"
+
+
+
+// Pick Skill Window
+ALIGN 4
+Gfx_PrepPickSkillScreen:
+	#incbin "data/Gfx_PrepPickSkillScreen.4bpp.lz"
+
+ALIGN 4
+Tsa_PrepSubPickSkillScreen:
+	#incbin "data/Tsa_PrepSubPickSkillScreen.tsa.lz"
+
+ALIGN 4
+Tsa_PrepSubPickCombatArtScreen:
+	#incbin "data/Tsa_PrepSubPickCombatArtScreen.tsa.lz"
+
+
+// Skill state Obj
+ALIGN 4
+Gfx_ObjSkill:
+	#incbin "data/Obj_Skill.4bpp.lz"
+
+ALIGN 4
+Pal_ObjSkill:
+	#incbin "data/Obj_Skill.gbapal"
+
+
+
+// Obj window
+ALIGN 4
+Gfx_ObjWindow:
+	#incbin "data/Obj_Window.4bpp.lz"
+
+ALIGN 4
+Pal_ObjWindow:
+	#incbin "data/Obj_Window.gbapal"
+	

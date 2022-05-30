@@ -1,0 +1,79 @@
+#ifndef COMBAT_ART_DEF
+
+	// Sword: 0x01
+	#define eCA_WrathStrike 0x01
+	#define eCA_Grounder 0x02
+	#define eCA_Soulblade 0x3
+	#define eCA_BaneOfMonsters 0x004
+	#define eCA_Sunder 0x05
+	#define eCA_Hexblade 0x06
+	#define eCA_HazeSlice 0x07
+	#define eCA_FinesseBlade 0x08
+	#define eCA_Windsweep 0x09
+	#define eCA_SwordDance 0x0A
+	#define eCA_Assassinate 0x0B
+	#define eCA_Subdue 0x0C
+	#define eCA_FoudroyantStrike 0x0D
+	#define eCA_SublimeHeaven 0x0E
+	#define eCA_RupturedHeaven 0x0F
+	#define eCA_HeavensFall 0x10
+	
+	
+	
+	
+	
+	
+	// Lance: 0x20
+	#define eCA_TempestLance 0x20		// 旋风枪
+	#define eCA_Knightkneeler 0x21		// 弑骑一击
+	#define eCA_ShatterSlash 0x22		// 破坏强击
+	#define eCA_MonsterPiercer 0x23		// 魔物刺击
+	#define eCA_HitAndRun 0x24			// 一击即离
+	#define eCA_SwiftStrikes 0x25		// 连击
+	#define eCA_FrozenLance 0x26		// 冰枪
+	#define eCA_GlowingEmber 0x27		// 萤火
+	#define eCA_Vengeance 0x28			// 复仇
+	#define eCA_LanceJab 0x29			// 突枪
+	
+	
+	
+	// Axe: 0x40
+	#define eCA_Smash 0x40				// 猛击
+	#define eCA_HelmSplitter 0x41		// 破盔
+	#define eCA_MonsterBreaker 0x42		// 魔物猛击
+	#define eCA_FocusedStrike 0x43		// 明镜止水
+	#define eCA_WildAbandon 0x44		// 无我境界
+	#define eCA_Spike 0x45				// 劈刺
+	#define eCA_DiamondAxe 0x46			// 金刚斧
+	#define eCA_LightningAxe 0x47		// 雷斧
+	#define eCA_ArmoredStrike 0x48		// 铠甲打击
+	#define eCA_WarMasterStrike 0x49		// 战鬼一击
+	#define eCA_FlickeringFlower 0x4A	// 闪花
+	
+	
+	// Bow: 0x60
+	#define eCA_CurvedShot 0x60			// 曲射
+	#define eCA_Deadeye 0x61			// 狙击
+	#define eCA_Encloser 0x62			// 合围之箭
+	#define eCA_HeavyDraw 0x63			// 强弓
+	#define eCA_MonsterBlast 0x64		// 魔物射击
+	#define eCA_SchismShot 0x65			// 魔法射击
+	#define eCA_BreakShot 0x66			// 破坏射击
+	#define eCA_WaningShot 0x67 		// 弱化射击
+	#define eCA_PointBlankVolley 0x67	// 近距离连射
+	#define eCA_WardArrow 0x69			// 封魔之箭
+	#define eCA_HuntersVolley 0x6A		// 猎箭齐发
+	
+	#define eCA_EncloserPlus 0x70		// 重压箭+
+	#define eCA_WaningShotPlus 0x71		// 弱化箭+
+	#define eCA_BreakShotPlus 0x72		// 破甲箭+
+	#define eCA_WardArrowPlus 0x73		// 封魔矢+
+	
+	
+	// Fist: 0x80
+	
+	
+	// Misc: 0xA0
+	
+
+#endif // COMBAT_ART_DEF

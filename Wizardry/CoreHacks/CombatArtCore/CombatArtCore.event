@@ -1,0 +1,18 @@
+#ifndef COMBAT_ART
+#define COMBAT_ART
+
+ALIGN 4
+#include "Core/Core.lyn.event"
+#include "Core/Misc.lyn.event"
+#include "bmmenu/Menu-TargetSelect.lyn.event"
+#include "bmmenu/MenuPanel.lyn.event"
+#include "BkSel/BkselCombatArt.event"
+#include "CombatSelectTarget/uiSelectTargetRework.lyn.event"
+
+
+
+
+// Icon
+InjectIconSheet(ICON_SHEET_COMBAT_ART, GetCombatArtIconGfx)
+
+#endif // COMBAT_ART

@@ -1,0 +1,64 @@
+
+// Pre-Battle Calc
+ALIGN 4
+PreBattleCalcLoopTable:
+	// (struct BattleUnit* actor, struct BattleUnit* target)
+	
+	// Init on first(if it has attr bonus)
+	POIN BC_Init
+	POIN BC_UnitStatus
+	POIN BC_CombatArtBonus
+	POIN BC_WeaponLvSkills
+	POIN BC_WTA_Bonus
+	POIN BC_BlowBonus
+	POIN BC_StanceBonus
+	POIN BC_BattleStatusSkills
+	POIN BC_SetDouleLionFlag
+	
+	// Common calc 
+	POIN BC_Lethality BC_Atk BC_AS BC_DefRes BC_Hit BC_Avo BC_Crit BC_Dodge
+	
+	// Not did: Support / Status bonus / Weapon rank bonus
+	WORD 0
+
+
+
+// Judge Brave
+ALIGN 4
+BattleHitsCountCalcLoop:
+	// int(*)(struct BattleUnit* actor, int cur)
+	POIN HitCountCalc_OrderSkills
+	POIN HitCountCalc_CombatArt
+	POIN HitCountCalc_BraveWeapon
+	WORD 0
+
+
+
+// Battle Triangle
+ALIGN 4
+BattleTriangleBonusCalcLoopTable:
+	// (struct BattleUnit* actor, struct BattleUnit* target)
+	
+	POIN WTA_SwordBreaker WTA_AxeBreaker WTA_LanceBreaker
+	POIN WTA_BowBreaker WTA_TomeBreaker
+	WORD 0
+
+
+// Battle Can-Counter
+ALIGN 4
+BattleCheckNullCounterLoop:
+	// int (BNC)(void)
+	// If target cannot counter, return 1
+	POIN BCanCounter_CheckEgg
+	POIN BCanCounter_WpnAttr
+	POIN BCanCounter_UnitStat
+	
+	// Hook here
+	POIN BCanCounter_CombatArt
+	POIN BCanCounter_CheckSkill
+	
+	
+	// End
+	POIN BCanCounter_CheckRange
+	WORD 0
+	

@@ -1,0 +1,13 @@
+
+#include "CombatArtDef.event"
+#include "Infos/CombatArtInfo.lyn.event"
+#include "Infos/InfoSword.lyn.event"
+#include "Infos/InfoLance.lyn.event"
+#include "Infos/InfoAxe.lyn.event"
+#include "Infos/InfoBow.lyn.event"
+#include "InstallIcons.event"
+
+// see _include/combat-art.h
+#define InjectCombatArtInfo(index, info) "PUSH; ORG CombatArtInfoTable+4*(index); POIN (info); POP"
+
+

@@ -1,0 +1,94 @@
+#ifndef VALUE_GLOBAL
+#define VALUE_GLOBAL
+
+// #define _thumb(p) "PUSH; ORG CURRENTOFFSET+1; p:; POP"
+
+ALIGN 4
+_thumb(ReturnTRUE)
+	SHORT $2001 $4770	// mov r0,#1; 	bx lr;
+	
+_thumb(ReturnFALSE)
+	SHORT $2000 $4770	// mov r0,#0; 	bx lr;
+
+
+// Common Save-su
+ALIGN 4
+gpCommonSpace:
+	WORD 0x2026E30	// 0x40
+
+gpBattleFlagExt:
+	WORD 0x2026E20	// 0x10
+
+// Unit Data Expansion
+ALIGN 4
+gpUnitExpaData:
+	WORD 0x02026E70	// 46(len) * 0x10(size)
+
+
+// Repoint gBattleHitArray
+#define gBattleHitArrayRe 0x2027300	// 0x20 * 4
+
+ALIGN 4
+gBattleHitArrayReAt:
+	WORD gBattleHitArrayRe
+
+
+// On Prep-Screen Skill List
+gpPrepSkillList:
+	WORD 0x2027380		// 0x130
+
+
+
+
+
+// RecoverableRN2
+ALIGN 4
+gpRneState:
+	WORD 0x03003600
+gpRneTmp:
+	WORD 0x03003610
+
+
+
+// SkillSystem
+ALIGN 4
+gpSkillFastList0:
+	WORD 0x03003B60	// Max = 0x20
+
+gpSkillFastList1:
+	WORD 0x03003B80	// End=3003B90
+
+
+// Battle System
+BattleHitExtCur:
+	WORD 0x3003F48 // pointer to &BattleHitExtArray[i]
+
+BattleHitExtArray:
+	WORD 0x3003F4C // size = 0x70; End = 0x3003FBC
+
+
+
+gpRamPromoTmpList:
+	WORD 0x030005B0		// 0x10
+
+
+// if 0, null game-intro-gfx
+GAME_INTRO_GFX_SHOW_At:
+
+	#ifdef _USE_GAME_INTRO_GFX_
+	WORD 1
+	#else
+	WORD 0
+	#endif
+
+// if 1, unit can use weapon even if he has no wExp of its wType
+gCanUnitUseAllTypeWeapon:
+	#ifdef _UNIT_CAN_USE_ALL_WEAPON_
+	BYTE 1
+	#else
+	BYTE 0
+	#endif
+
+
+ALIGN 4	
+#endif // VALUE_GLOBAL

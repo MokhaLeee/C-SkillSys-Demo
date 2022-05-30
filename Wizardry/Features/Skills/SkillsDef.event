@@ -1,0 +1,208 @@
+#ifndef SKILL_ID_DEFINITIONS
+#define SKILL_ID_DEFINITIONS
+
+// Range Skills
+#define SKILLID_RangeBonusBMag1			0x01
+#define SKILLID_RangeBonusBMag2			0x02
+#define SKILLID_RangeBonusBow1			0x03
+#define SKILLID_RangeBonusBow2			0x04
+
+// Defiant Skills
+#define SKILLID_DefiantStr				0x06	
+#define SKILLID_DefiantMag				0x07
+#define SKILLID_DefiantSkl				0x08	
+#define SKILLID_DefiantSpd				0x09
+#define SKILLID_DefiantLck				0x0A
+#define SKILLID_DefiantDef				0x0B
+#define SKILLID_DefiantRes				0x0C
+#define SKILLID_DefiantCrit				0x0D
+#define SKILLID_DefiantAvoid			0x0E
+
+// Misc Skills
+#define SKILLID_LifeAndDeath			0x0F
+
+// Range Skills
+#define SKILLID_RangeBonusBMag1_ext		0x10
+#define SKILLID_RangeBonusBow1_ext		0x11
+
+
+// Battle Status(0x10)
+// Blow Skills
+#define SKILLID_BlowDarting 			0x12	// Darting Blow: 	AS +6
+#define SKILLID_BlowDeath 				0x13	// Death Blow: 		Str +6
+#define SKILLID_BlowArmored 			0x14	// Armored Blow: 	Def +6
+#define SKILLID_BlowFiendish 			0x15	// Fiendish Blow: 	Mag+6
+#define SKILLID_BlowWarding 			0x16	// Warding Blow: 	Res +6
+#define SKILLID_BlowDuelist 			0x17	// Duelist's Blow: 	Avo +20
+#define SKILLID_BlowUncanny 			0x18	// Uncanny Blow: 	Hit +30
+
+
+
+
+// Battle Misc(0x20)
+#define SKILLID_Vantage 				0x20	// 待伏
+#define SKILLID_VantageBat 				0x21
+#define SKILLID_Desperation 			0x22	// 猛攻
+#define SKILLID_DesperationBat		 	0x23	
+#define SKILLID_QuickRiposte 			0x24	// 回击
+
+#define SKILLID_Lethality				0x25	// 瞬杀
+#define SKILLID_Crit					0x26	// 必杀+
+#define SKILLID_WatchfulEye				0x27	// 命中+
+
+#define SKILLID_CritSword				0x28
+#define SKILLID_CritAxe					0x29
+#define SKILLID_CritLance				0x2A
+#define SKILLID_CritBow					0x2B
+#define SKILLID_CritBMag				0x2C
+#define SKILLID_CritWMag				0x2D
+
+#define SKILLID_Avoid					0x2E
+#define SKILLID_AvoidSword				0x2F
+
+
+// Battle Tri-Angle
+#define SKILLID_SwordBreaker			0x30
+#define SKILLID_AxeBreaker				0x31
+#define SKILLID_LanceBreaker			0x32
+#define SKILLID_BowBreaker				0x33
+#define SKILLID_TomeBreaker				0x34
+#define SKILLID_FistBreaker				0x35
+
+// Battle Status: Faire
+#define SKILLID_FaireSword				0x36
+#define SKILLID_FaireLance				0x37
+#define SKILLID_FaireAxe				0x38
+#define SKILLID_FaireBow				0x39
+#define SKILLID_FaireBMag				0x3A
+
+// Battle Can Counter
+#define SKILLID_CloseCounter			0x3B
+#define SKILLID_CounterAttack			0x3C
+
+// Misc
+#define SKILLID_WaryFighter				0x3D
+
+// Battle Order
+#define SKILLID_DoubleLion				0x3F
+
+// Post-Action Skills
+#define SKILLID_Canto					0x50
+#define SKILLID_AlertStance				0x51
+#define SKILLID_AlertStancePlus			0x52
+
+
+// Rally Skills
+#define SKILLID_RallyStr				0x60
+#define SKILLID_RallyMag				0x61
+#define SKILLID_RallySkl				0x62
+#define SKILLID_RallySpd				0x63
+#define SKILLID_RallyLck				0x64
+#define SKILLID_RallyDef				0x65
+#define SKILLID_RallyRes				0x66
+#define SKILLID_RallyMov				0x67
+#define SKILLID_RallySpectrum			0x68
+
+
+// Menu Skills
+#define SKILLID_Dance					0x69
+#define SKILLID_LockTouch				0x6A
+#define SKILLID_Summon					0x6B
+#define SKILLID_Supply					0x6C
+#define SKILLID_Steal					0x6D
+
+
+//Pre-Phase skills
+#define SKILLID_Renewal					0x70
+#define SKILLID_ArmorMarch 0x71				// 重装行军
+
+
+
+
+// Stance Skills
+#define SKILLID_StanceBracing			0x72
+#define SKILLID_StanceDarting			0x73
+#define SKILLID_StanceFierce			0x74
+#define SKILLID_StanceKestrel			0x75
+#define SKILLID_StanceMirror			0x76
+#define SKILLID_StanceReady				0x77
+#define SKILLID_StanceSteady			0x78
+#define SKILLID_StanceSturdy			0x79
+#define SKILLID_StanceSwift				0x7A
+#define SKILLID_StanceWarding			0x7B
+
+
+// Move Skills
+#define SKILLID_Pass					0x7C
+#define SKILLID_RuinedBladePlus 0x7D		// 破败之刃+
+
+// Battle Status
+#define SKILLID_RuinedBlade 0x80			// 破败之刃
+#define SKILLID_InfinityEdge 0x81			// 无尽之刃
+#define SKILLID_HeavyBlade 0x82				// 刚剑
+#define SKILLID_HeavyBladePlus 0x83			// 刚剑+
+#define SKILLID_FlashingBlade 0x84			// 柔剑
+#define SKILLID_FlashingBladePlus 0x85		// 柔剑+
+#define SKILLID_LunaAttack 0x86				// 月光
+#define SKILLID_SorceryBlade 0x87			// 魔道之刃
+
+
+// Unit status
+#define SKILLID_Fury 0x88					// 狮子奋迅
+#define SKILLID_FuryPlus 0x89				// 狮子奋迅+
+#define SKILLID_FortressDef 0x8A			// 防守壁垒
+#define SKILLID_FortressRes 0x8B			// 魔防壁垒
+
+// Exp Skills
+#define SKILLID_Discipline 0x8C				// 天才
+#define SKILLID_RoyalLineage 0x8D			// 血统
+
+
+// Weapon Lv Skills
+#define SKILLID_SwordLv1 0x90
+#define SKILLID_SwordLv2 0x91
+#define SKILLID_SwordLv3 0x92
+#define SKILLID_SwordLv4 0x93
+#define SKILLID_SwordLv5 0x94
+	
+#define SKILLID_LanceLv1 0x95
+#define SKILLID_LanceLv2 0x96
+#define SKILLID_LanceLv3 0x97
+#define SKILLID_LanceLv4 0x98
+#define SKILLID_LanceLv5 0x99
+	
+#define SKILLID_AxeLv1 0x9A
+#define SKILLID_AxeLv2 0x9B
+#define SKILLID_AxeLv3 0x9C
+#define SKILLID_AxeLv4 0x9D
+#define SKILLID_AxeLv5 0x9E
+	
+#define SKILLID_BowLv1 0x9F
+#define SKILLID_BowLv2 0xA0
+#define SKILLID_BowLv3 0xA1
+#define SKILLID_BowLv4 0xA2
+#define SKILLID_BowLv5 0xA3
+	
+#define SKILLID_BMagLv1 0xA4
+#define SKILLID_BMagLv2 0xA5
+#define SKILLID_BMagLv3 0xA6
+#define SKILLID_BMagLv4 0xA7
+#define SKILLID_BMagLv5 0xA8
+	
+#define SKILLID_WMagLv1 0xA9
+#define SKILLID_WMagLv2 0xAA
+#define SKILLID_WMagLv3 0xAB
+#define SKILLID_WMagLv4 0xAC
+#define SKILLID_WMagLv5 0xAD
+
+
+#define SKILLID_StrBonus 0xAE
+#define SKILLID_MagBonus 0xAF
+#define SKILLID_SklBonus 0xB0
+#define SKILLID_SpdBonus 0xB1
+#define SKILLID_LukBonus 0xB2
+#define SKILLID_DefBonus 0xB3
+#define SKILLID_ResBonus 0xB4
+#define SKILLID_MovBonus 0xB5
+
+#endif // SKILL_ID_DEFINITIONS

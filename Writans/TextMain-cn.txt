@@ -1,0 +1,57 @@
+
+
+
+
+#0xD4C msgCharmName
+魅力[X]
+
+#include strings-cn/StatusScreen.txt
+#include strings-cn/Menu.txt
+#include strings-cn/Skills_Blow.txt
+#include strings-cn/Skills_Stance.txt
+#include strings-cn/Skills_BattleOrder.txt
+#include strings-cn/Skills_BattleTriangle.txt
+#include strings-cn/Skills_BattleStatus.txt
+#include strings-cn/Skills_BattleCanCounter.txt
+#include strings-cn/Skills_PostAction.txt
+#include strings-cn/Skills_PrePhase.txt
+#include strings-cn/Skills_Rally.txt
+#include strings-cn/Skills_Menu.txt
+#include strings-cn/Skills_Range.txt
+#include strings-cn/Skills_Defiant.txt
+#include strings-cn/Skills_UnitStatus.txt
+#include strings-cn/Skills_Exp.txt
+#include strings-cn/Skills_WeaponLv.txt
+#include strings-cn/Skills_Misc.txt
+
+#include strings-cn/PrepScreen.txt
+#include strings-cn/CombatArt.txt
+#include strings-cn/CombatArt_Sword.txt
+#include strings-cn/CombatArt_Lance.txt
+#include strings-cn/CombatArt_Axe.txt
+#include strings-cn/CombatArt_Bow.txt
+#include strings-cn/UnitStatus.txt
+
+## msg_Silencer
+瞬杀[X]
+
+## msg_SilencerDesc
+瞬杀概率:[NL]
+有几率直接杀死对方[X]
+
+## msg_ItemEffectApplied
+道具效果生效 ![X]
+
+## msg_ItemUnitStatusUp
+角色能力提升[X]
+
+## msgItemName_MagBooster
+魔力药水[X]
+## msgItemDesc_MagBooster
+使用后角色魔力值+2[X]
+## msgItemUseDesc_MagBooster
+提升魔力[X]
+
+## msg_end
+0[X]
+

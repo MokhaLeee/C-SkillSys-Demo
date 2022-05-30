@@ -1,0 +1,93 @@
+#ifndef C_SKILLSYS_ANIME_CORE
+#define C_SKILLSYS_ANIME_CORE
+
+
+
+// Judge for whether call for Ekr anime or map anime
+
+#include "JudgeMapOrEkr/JudgeMapOrEkr.lyn.event"
+
+PUSH
+	ORG $55BC4
+	jumpToHack(JudgeCallEkrOrMapAnim)
+	PROTECT $055BC4 $055BD4
+POP
+
+
+
+
+// ====================================================
+//                       Skill Anim
+// ====================================================
+
+#include "SkillAnimActivition/SkillAnimOn.lyn.event"
+#include "SkillAnimActivition/SkillAnimOnASM.lyn.event"
+
+ALIGN 4
+SkillAnimationTable:
+	FILL 0x100 * 4
+
+CombatArtAnimationTable:
+	FILL 0x100 * 4
+
+#define DefaultOffseniveSkillActivationAnim 0x806E311
+
+#define InjectSkillAnimation(SkillID,function) " PUSH; ORG (SkillAnimationTable + (4*SkillID)); POIN function|1; POP"
+#define InjectCombatArtAnimation(index, function) " PUSH; ORG (CombatArtAnimationTable + (4*index)); POIN function|1; POP"
+
+InjectSkillAnimation(0, DefaultOffseniveSkillActivationAnim)
+// InjectCombatArtAnimation(0, DefaultOffseniveSkillActivationAnim)
+
+PUSH
+	ORG $59048
+	jumpToHack(SkillActivationAnims)
+	
+	// Make defensive skill use opponent's x-location.
+	// Replace proc loop with proc call (can yield).
+	// This means we no longer have to break proc loop,
+	// allowing us to replace the call to breakProcLoop
+	// with a call to getTargetAIS.
+	// Originally the proc loop would immediately break.
+	// It seems whoever designed battle animation stuff
+	// didn't know about proc call.
+	ORG $5D9408
+		BYTE 0x16
+	ORG $6E614
+		WORD 0xF7EB6DE0 0x2302FE4D 0x48055E1A
+		WORD 0x21802301 0xF0040049 0x2000F9BD
+		WORD 0xBC02BC10 0x00004708
+
+POP
+
+#include "SkillAnimActivition/SkillBox-SkillSystemFE8/SkillProcDisplay.lyn.event"
+
+ALIGN 4
+SPD_ProcDisplayTiles:
+	#incbin "SkillAnimActivition/data/ProcDisplayTiles.4bpp.lz"
+
+
+// ====================================================
+//                 New Ekr Anim Proc
+// ====================================================
+
+#include "NewEkrSkillProc/NewEkrSkillProc.lyn.event"
+#include "NewEkrSkillProc/EkrSkill_BgHack.lyn.event"
+
+PUSH
+	ORG $5D9320
+	_6C_JUMP(gProcCmd_NewEkrSkill)
+	
+	// Make here to load from another position
+	// So that we can get enough space for "jumpToHack"
+	// ldr: 01001 + (3 bits)Rd + (8 bits) offset/4, note that current pc = real adr + 2
+	ORG $6E492
+	SHORT $4C87		// 0x4C + (0x6E6B0 - 0x6E492 - 2)/4
+	
+	ORG $6E4B6
+	SHORT 0
+	jumpToHack(EkrSkill_BgConfigHackASM)
+	
+POP
+
+
+#endif // C_SKILLSYS_ANIME_CORE

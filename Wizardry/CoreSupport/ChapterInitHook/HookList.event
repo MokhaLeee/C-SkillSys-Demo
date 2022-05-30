@@ -1,0 +1,8 @@
+
+ALIGN 4
+ChapterInitFuncList:
+	POIN InitRNE
+	POIN ResetCommonSpace
+	POIN ResetSkillFastList
+	// POIN ResetUnitsMagic
+	WORD $0

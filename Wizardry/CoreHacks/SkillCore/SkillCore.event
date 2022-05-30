@@ -1,0 +1,58 @@
+#ifndef  SKILL_CORE
+#define SKILL_CORE
+
+#ifndef BWL_SUPPORT
+	ERROR Skill core need Null-Bwl and Bwl-Support installed !
+#endif // BWL_SUPPORT
+
+
+#include "Core/Tester.lyn.event"
+
+
+ALIGN 4
+#include "Core/Misc.lyn.event"
+
+ALIGN 4
+#include "Core/SkillFastList.lyn.event"
+
+// Common WIP Icon
+ALIGN 4
+SkillIcon_WIP:
+	#incbin "Data/SkillIcon_WIP.4bpp"
+
+
+
+
+
+
+// ====================================================
+//                      Skill Tester
+// ====================================================
+ALIGN 4
+SkillTester:
+	POIN JudgeSkillFast
+
+
+
+
+// ====================================================
+//                   Skill Icon Display
+// ====================================================
+#ifndef HAX_ICONDISPLAY
+	ERROR Need core-support of Patch: IconDisplay from StanHash/SkillsLite!
+#endif // HAX_ICONDISPLAY
+
+InjectIconSheet(ICON_SHEET_SKILLS, GetSkillIconGfx)
+
+
+
+
+
+
+
+
+
+
+
+
+#endif // SKILL_CORE

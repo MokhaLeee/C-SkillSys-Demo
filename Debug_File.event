@@ -1,0 +1,67 @@
+#ifdef _DEBUG_
+
+ALIGN 4
+_thumb(_debug_)
+	jumpToHack(ReturnTRUE)
+
+
+
+
+	
+
+// For Debug
+PUSH
+	
+	// ORG	$2C5AC
+	// BYTE $64 $20	// Exp=100
+	
+	// Eirika level 10
+	ORG $8B3C2B
+	BYTE $50		
+	
+	// Eirika Class = Mage
+	ORG $8B3C29
+	BYTE Mage_F		
+	
+	// Eirika items
+	ORG $8B3C35		
+	BYTE Fire GuidingRing 0xBC
+	
+	// Eirika Speed
+	ORG $803D73
+	BYTE 20
+	
+	ORG $8B3C51
+	BYTE Mage		// O'Neill class
+	BYTE 0
+	BYTE $A5		// O'Neill auto level, and level=20
+	
+	ORG $8B3C65		// Prologue solder
+	BYTE Mage
+	BYTE 0
+	BYTE $A5
+	
+	ORG $80A309
+	// BYTE $35		// Weapon range of Fire
+	
+	ORG $80A2F8
+	BYTE $23		// Fire attack twice
+	
+	ORG $8AEBB4
+	BYTE $F1		// Eirika support with Seth
+	ORG $8AEBE4
+	BYTE $F1		// Seth support with Eirika
+	
+	// call prep-screen in prologue
+	ORG $9EECB4
+	// PREP
+	
+	// Make Fire be a mag-booster
+	ORG $8AEEF1
+	// BYTE 2
+	
+	
+POP
+
+
+#endif // _DEBUG_

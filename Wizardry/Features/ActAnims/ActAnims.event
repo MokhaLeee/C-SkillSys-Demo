@@ -1,0 +1,64 @@
+
+#ifndef _thumb
+	#define _thumb(func) "PUSH; ORG CURRENTOFFSET+1; func:; POP"
+#endif // _thumb
+
+
+
+
+
+ALIGN 4
+_thumb(CommonSkill)
+{
+  #include "CommonSkill/CommonSkillAnim.event"
+}
+
+ALIGN 4
+_thumb(SureShotAnim)
+{
+  #include "SureShot/SureShotAnim.event"
+}
+
+
+ALIGN 4
+_thumb(MokhaAnim)
+{
+  #include "Mokha/MokhaAnim.event"
+}
+
+
+ALIGN 4
+_thumb(ClassChangAnim)
+{
+  #include "ClassChang/ClassChangAnim.event"
+}
+
+ALIGN 4
+_thumb(Aether)
+{
+  #include "Aether/Skill.event"
+}
+
+ALIGN 4
+_thumb(DragonFang)
+{
+  #include "DragonFang/Skill.event"
+}
+
+// Skills
+InjectSkillAnimation(0, DefaultOffseniveSkillActivationAnim)
+
+// Combat Arts
+InjectCombatArtAnimation(0, ClassChangAnim)
+
+
+
+/*
+Some ideas on skill-activation animation:
+1. put the skill-activation window in OAM，and load them as objects, so that we can draw windows through tsa freely control the position of the window (instead of replacing the picture frame by frame as it currently does)
+
+Rework on tools of SkillAnimCreator: 
+1. Compress the skill-animes' gfx amd tsa to save rom space
+2. Make the same set of animations share a palette, rather than load for each gfx, so that we can save the rom space also eay to modify the anime's palette. 
+3. rewrite the skillTemplate rountine in C.
+

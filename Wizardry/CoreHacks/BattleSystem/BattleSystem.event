@@ -1,0 +1,153 @@
+#ifndef BATTLE_SYSTEM_REWORK
+#define BATTLE_SYSTEM_REWORK
+
+
+
+ALIGN 4
+#include HookList.event
+
+
+
+// ====================================================
+//             Battle Hit Array Expansion
+// ====================================================
+
+ALIGN 4
+#include "Expansion/Expansion.lyn.event"
+// #include "HitArrayExpansion/RepontArray.event"		// At the end of Wizardry
+PROTECT $2AE90 $2AED0		// ClearBattleHits
+PROTECT $2B83C $2B92C		// BattleGenerateHit
+
+
+
+// ====================================================
+//                    Battle Order
+// ====================================================
+
+// check battle order
+// check skill: vantage & despration & QuickRiposte
+
+#include "BattleOrder/BattleOrder.lyn.event"
+#include "BattleOrder/User-HitCounterCalc.lyn.event"
+PROTECT $2AED0 $2AF7C		// BattleUnwind
+PROTECT $2AF90 $2B018		// BattleCheckDoubling
+PROTECT $2B018 $2B080		// BattleGenerateRoundHits
+PROTECT $2B080 $2B094		// GetBattleUnitHitCount
+
+
+
+// ====================================================
+//                  Pre-Battle Calc
+// ====================================================
+
+#include "BattleCalc/PreBattleCalc.lyn.event"
+PROTECT $2A95C $2A9A8		// ComputeBattleUnitStats
+PROTECT $2AABC $2AB74		// ComputeBattleUnitAttack
+PROTECT $2AB74 $2ABAC		// ComputeBattleUnitSpeed
+PROTECT $2AA44 $2AAA4		// ComputeBattleUnitDefense
+PROTECT $2ABAC $2ABE4		// ComputeBattleUnitHitRate
+PROTECT $2ABE4 $2AC18		// ComputeBattleUnitAvoidRate
+PROTECT $2AC18 $2AC54		// ComputeBattleUnitCritRate
+PROTECT $2AC54 $2AC60		// ComputeBattleUnitDodgeRate
+
+#include "BattleCalc/BattleCalcReal.lyn.event"
+PROTECT $2ACF8 $2AD54		// ComputeBattleUnitSilencerRate
+PROTECT $2ADCC $2AE90		// ComputeBattleUnitSpecialWeaponStats
+
+#include "BattleCalc/BattleHit.lyn.event"
+PROTECT $2B3EC $2B578		// BattleGenerateHitAttributes
+PROTECT $2B600 $2B83C		// BattleGenerateHitEffects
+
+// ====================================================
+//                  Bksel Rework
+// ====================================================
+#include "BattleForcast/BKSEL.lyn.event"
+PROTECT $3666C $366A0		// AddWeaponStatsAfterRound
+PROTECT $366A0 $36818		// BKSEL_SetupHitAndSuchStats
+
+ALIGN 4
+Gfx_BkSel:
+	#incbin "BattleForcast/Gfx_BkSel.4bpp"
+
+Pal_BkSel:
+	#incbin "BattleForcast/Gfx_BkSel.gbapal"
+
+PUSH
+	// Make sure BkSel always deiplay x2 or x4 obj
+	ORG $36F94
+	SHORT $2002	// MOV R0, #2
+	SHORT 0 0 0
+	ORG $36FB6
+	SHORT $2004	// MOV R0, #4
+	SHORT 0 0 0
+	
+	// Repoint Palette
+	ORG $36E14
+	POIN Pal_BkSel
+POP
+
+// ====================================================
+//                  Battle Triangle
+// ====================================================
+
+/*
+ * Idea:
+ * Null Vanilla WTA bonus, but put them inside pre-battle calc
+ * beacuse vanilla WTA bonus can only get hit & dmg bonus.
+ *
+ */
+
+#include "WeaponTriangle/WTA_Bonus.lyn.event"
+PROTECT $2C7C0 $2C844		// BattleApplyWeaponTriangleEffect
+
+
+
+// ====================================================
+//            Battle Check Can Counter
+// ====================================================
+
+/*
+ * Idea:
+ * Firstly null the check can-counter calc in function: SetBattleUnitWeapon
+ * This has been set inside "WeaponEquip.c"
+ * Then we shall rework on function: BattleInitTargetCanCounter
+ *
+ */
+
+#include "CheckCanCounter/CheckCanCounter.lyn.event"
+PROTECT $2C844 $2C8C4		// BattleInitTargetCanCounter
+
+
+
+
+
+
+
+// ====================================================
+//               Battle Check Effective
+// ====================================================
+#include "BattleEffective/BattleEffective.lyn.event"
+PROTECT $16BEC $16C88		// IsItemEffectiveAgainst
+PROTECT $16C88 $16CC0		// IsUnitEffectiveAgainst
+
+
+// ====================================================
+//                  Battle Accuracy
+// ====================================================
+#include "BattleAccuracy/StaffAccuracy.lyn.event"
+PROTECT $2CCDC $2CD64		// GetOffensiveStaffAccuracy
+
+
+
+// ====================================================
+//                  Battle Exp
+// ====================================================
+#include "BattleExp/UnitExp.lyn.event"
+
+PROTECT $2B92C $2B9A0		// BattleApplyExpGains
+PROTECT $2c368 $2C398		// GetUnitRoundExp
+PROTECT $2c534 $2C5B8		// GetBattleUnitExpGain
+
+
+
+#endif // BATTLE_SYSTEM_REWORK

@@ -1,0 +1,43 @@
+
+#ifndef SKILL_CORE
+	ERROR Need Skill-Core installed!
+#endif // SKILL_CORE
+
+
+
+// Skill Defs
+#include SkillsDef.event
+
+// Skill-Info-Table
+ALIGN 4
+SkillInfoTable:
+	FILL 0x100 * 4
+
+	
+
+
+#define InjectSkillInfo(aSkillId, aSkillInfo) "PUSH; ORG SkillInfoTable+4*(aSkillId); POIN (aSkillInfo); POP"
+
+
+
+
+
+// ==============================================
+//             Skill Infos Installer
+// ==============================================
+
+#include "BlowSkills/Installer.event"
+#include "StanceSkills/Installer.event"
+#include "BattleOrder/Installer.event"
+#include "BattleStatus/Installer.event"
+#include "BattleTriangle/Installer.event"
+#include "BattleCanCounter/Installer.event"
+#include "PostActionSkills/Installer.event"
+#include "PrePhaseSkills/Installer.event"
+#include "RallySkills/Installer.event"
+#include "MoveSkills/Installer.event"
+#include "MenuSkills/Installer.event"
+#include "RangeSkills/Installer.event"
+#include "StatusGetterSkills/Installer.event"
+#include "ExpSkills/Installer.event"
+#include "WeaponLvSkills/WeaponLvSkills.event"

@@ -1,0 +1,71 @@
+## msg_SN_RallyStr
+Rally Str[X]
+
+## msg_SD_RallyStr
+Rally Str:[X]
+
+
+## msg_SN_RallyMag
+Rally Mag:[X]
+
+## msg_SD_RallyMag
+Rally Mag:[NL]
+[X]
+
+
+## msg_SN_RallySkl
+Rally Skl[X]
+
+## msg_SD_RallySkl
+Rally Skl:[NL]
++4[X]
+
+
+## msg_SN_RallySpd
+Rally Spd[X]
+
+## msg_SD_RallySpd
+Rally Spd:[NL]
++4[X]
+
+
+## msg_SN_RallyLck
+Rally Luk[X]
+
+## msg_SD_RallyLck
+Rally Luk:[NL]
++4[X]
+
+
+## msg_SN_RallyDef
+Rally Def[X]
+
+## msg_SD_RallyDef
+Rally Def:[NL]
++4[X]
+
+
+## msg_SN_RallyRes
+Rally Res[X]
+
+## msg_SD_RallyRes
+Rally Res:[NL]
++4[X]
+
+
+## msg_SN_RallyMov
+Rally Mov[X]
+
+## msg_SD_RallyMov
+Rally Mov:[NL]
++1[X]
+
+
+## msg_SN_RallySpectrum
+Rally+[X]
+
+## msg_SD_RallySpectrum
+Rally+:[NL]
++2[X]
+
+

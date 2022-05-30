@@ -1,0 +1,33 @@
+
+// ====================================================
+//                        Core
+// ====================================================
+
+
+
+// ====================================================
+//                 Weapon Equipment
+// ====================================================
+#include "WeaponEquip/WeaponEquip.lyn.event"
+PROTECT $2A730 $2A918		// SetBattleUnitWeapon
+
+
+
+// ====================================================
+//                  Battle Exp
+// ====================================================
+#include "WeaponExp/Core.lyn.event"
+#include "WeaponExp/WeaponExp.lyn.event"
+#include "WeaponExp/HookFuncs.lyn.event"
+PROTECT $2c0b4 $2C1B0		// GetBattleUnitUpdatedWeaponExp
+PROTECT $2c1b0 $2C1EC		// HasBattleUnitGainedWeaponLevel
+
+
+#include "JudgeCanUseWeapon/JudgeCanUseWeapon.lyn.event"
+
+// ====================================================
+//                    Class Rank
+// ====================================================
+
+#include "ClassRank/Core.lyn.event"
+#include "ClassRank/Misc.lyn.event"
