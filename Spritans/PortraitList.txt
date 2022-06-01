@@ -1,6 +1,17 @@
 
 #                         Index MouthX MouthY EyesX EyesY IndexDefinition
-"Portraits/Lysithea.png"  0x02  2      6      2     4     MUG_LYSITHEA
-"Portraits/Eru.png"       0x0F  3      5      3     3     MUG_ERU
-"Portraits/Dimitri.png"   0x04  2      6      3     4     MUG_DIMITRI
-"Portraits/Flayn.png"     0x10  4      5      4     3     MUG_FLAYN
+"Portraits/Lysithea.png"  0x01  2      6      2     4     Mug_Lysi
+"Portraits/Dimitri.png"   0x02  2      6      3     4     Mug_Dimi
+"Portraits/Eru.png"       0x03  3      5      3     3     Mug_Eru
+"Portraits/Flayn.png"     0x04  4      5      4     3     Mug_Flyan
+
+"Portraits/Bernadetta.png" 0x05 3      6      3     4     Mug_Ber
+"Portraits/Hapi.png"      0x06  2      6      2     3     Mug_Hapi
+"Portraits/Leonie.png"    0x07  3      5      3     3     Mug_Leonie
+"Portraits/Linhardt.png"  0x08  3      5      3     3     Mug_Linhardt
+"Portraits/Mercedes.png"  0x09  4      5      4     3     Mug_Mercedes
+"Portraits/Shamir.png"    0x0A  4      5      4     3     Mug_Shamir
+"Portraits/Sylvain.png"   0x0B  3      5      3     3     Mug_Sylvain
+"Portraits/Yuri.png"      0x0C  3      5      3     3     Mug_Yuri
+"Portraits/Marianne.png"  0x0D  4      6      4     4     Mug_Marianne
+

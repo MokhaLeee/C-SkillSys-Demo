@@ -4,7 +4,8 @@
 typedef struct Unit Unit;
 
 
-extern void DrawStatScreenBar(u16 BarId, u8 x, u8 y, s8 ValueBase, s8 ValueReal, s8 MaxValue); // 0x80870BC
+// extern void DrawStatScreenBar(u16 BarId, u8 x, u8 y, s8 ValueBase, s8 ValueReal, s8 MaxValue); // 0x80870BC
+
 extern void DrawUiSmallNumber(u16* a, int b, int c);
 extern u16 gBmFrameTmap0[0x280];
 
@@ -203,61 +204,99 @@ static void DrawPage1_Texts(){
 
 static void DrawPage1_NumBar(Unit* unit){
 	
-	DrawStatScreenBar(0,5,1,	// Pow
+	inline int GetMax(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15){
+		
+		int max;
+		
+		max = a0 < a1 ? a1 : a0;
+		max = max < a2 ? a2 : max;
+		max = max < a3 ? a3 : max;
+		max = max < a4 ? a4 : max;
+		max = max < a5 ? a5 : max;
+		max = max < a6 ? a6 : max;
+		max = max < a7 ? a7 : max;
+		max = max < a8 ? a8 : max;
+		max = max < a9 ? a9 : max;
+		max = max < a10 ? a10 : max;
+		max = max < a11 ? a11 : max;
+		max = max < a12 ? a12 : max;
+		max = max < a13 ? a13 : max;
+		max = max < a14 ? a14 : max;
+		max = max < a15 ? a15 : max;
+		
+		return max;
+	}
+	
+	int max = GetMax(
+		PowGetter(unit),
+		MagGetter(unit),
+		SklGetter(unit),
+		SpdGetter(unit),
+		DefGetter(unit),
+		ResGetter(unit),
+		LckGetter(unit),
+		MovGetter(unit),
+		ConGetter(unit),
+		unit->pow,
+		*GetMagAt(unit),
+		unit->skl,
+		unit->spd,
+		unit->def,
+		unit->res,
+		unit->lck
+	);
+	
+	NewDrawStatScreenBar(0,5,1,	// Pow
 		unit->pow,
 		PowGetter(unit),
-		unit->pClassData->maxPow );
+		max );
 	
-	DrawStatScreenBar(1,5,3,	// Mag
+	NewDrawStatScreenBar(1,5,3,	// Mag
 		*GetMagAt(unit),
 		MagGetter(unit),
-		GetClassMagCap(unit->pClassData->number) );
+		max );
 	
 	// displaying skl stat value
-    DrawStatScreenBar(2, 5, 5,
+    NewDrawStatScreenBar(2, 5, 5,
         gStatScreen.unit->state & US_RESCUING
             ? gStatScreen.unit->skl/2
             : gStatScreen.unit->skl,
         SklGetter(gStatScreen.unit),
-		gStatScreen.unit->state & US_RESCUING
-			? UNIT_SKL_MAX(gStatScreen.unit)/2
-			: UNIT_SKL_MAX(gStatScreen.unit));
+		max);
 
     // displaying spd stat value
-	DrawStatScreenBar(3, 5, 7,
+	NewDrawStatScreenBar(3, 5, 7,
 		gStatScreen.unit->state & US_RESCUING
 			? gStatScreen.unit->spd/2
 			:gStatScreen.unit->spd,
 		SpdGetter(gStatScreen.unit),
-		gStatScreen.unit->state & US_RESCUING
-			? UNIT_SPD_MAX(gStatScreen.unit)/2
-			: UNIT_SPD_MAX(gStatScreen.unit));
+		max);
 	
 	
-	DrawStatScreenBar(4,5,9,	// Def
+	NewDrawStatScreenBar(4,5,9,	// Def
 		unit->def,
 		DefGetter(unit),
-		unit->pClassData->maxDef );
+		max );
 	
-	DrawStatScreenBar(5,5,11,	// Res
+	NewDrawStatScreenBar(5,5,11,	// Res
 		unit->res,
 		ResGetter(unit),
-		unit->pClassData->maxRes );
+		max );
 	
-	DrawStatScreenBar(6,13,1,	// Lck
+	NewDrawStatScreenBar(6,13,1,	// Lck
 		unit->lck,
 		LckGetter(unit),
-		30 );
+		max );
 	
-	DrawStatScreenBar(7,13,3,	// Mov
+	NewDrawStatScreenBar(7,13,3,	// Mov
 		unit->pClassData->baseMov,
 		MovGetter(unit),
-		0xF );
+		max );
 	
-	DrawStatScreenBar(9,13,5,	// Con
+	NewDrawStatScreenBar(9,13,5,	// Con
 		unit->pClassData->baseCon + unit->pCharacterData->baseCon,
 		ConGetter(unit),
-		unit->pClassData->maxCon );
+		max );
 	
 	// displaying unit aid
 	DrawDecNumber(gBmFrameTmap0 + TILEMAP_INDEX(13, 7), TEXT_COLOR_BLUE,

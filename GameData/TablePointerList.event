@@ -2,10 +2,10 @@ ALIGN 4
 
 // Str Mag
 pUnitMagicTable:
-	POIN UnitMagicTable
+	WORD 0 // POIN UnitMagicTable
 	
 pClassMagicTable:
-	POIN ClassMagicTable
+	WORD 0 // POIN ClassMagicTable
 	
 
 

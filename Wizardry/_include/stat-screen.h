@@ -24,3 +24,6 @@ void ResetTextPalInfo();
 void NewDrawTextInline(struct TextHandle* text, u16* dest, int colorId, int x, int tileWidth, const char* string);
 
 int GetNewTextColorByGrowth(int growth);
+
+
+void NewDrawStatScreenBar(int num, int x, int y, int base, int total, int max);

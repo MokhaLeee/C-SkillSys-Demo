@@ -1,0 +1,25 @@
+#ifndef EVENT_MACROS
+#define EVENT_MACROS
+
+
+// Macros
+#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
+#define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
+#define Every3Turns(CondID1,CondID2,CondID3,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
+#define FadeOutMusic "MUSCMID 0x7FFF"
+#define GiveItem(Item,Character) "SMOV 0x3 Item ; GIVEITEMTO Character"
+#define GiveGold(money) "SVAL 0x3 money; GIVEITEMTOMAIN 0"
+#define GuardAI GuardTileAI
+#define EndA2 ENDA
+#define EndUnit UNIT
+#define EndConvo "CALL $9EE2C4"
+#define ClearAllUnits "CLEA 0x0; CLEE 0x0; CLEN 0x0"
+#define ScrollBoxText(textID) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textID; TEXTEND; REMA"
+#define MakeSuspendSave "ASMC 0xB5D5D"
+
+#define BloodyStream 0x57
+#define Intro(textID) "MUSC BloodyStream; ShowCG(0x35); _0x1A22; TEXTSHOW textID; TEXTEND; ClearBackground; MUSC Silent"
+
+
+
+#endif // EVENT_MACROS

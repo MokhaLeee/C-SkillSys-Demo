@@ -1,0 +1,12 @@
+
+PUSH
+	ORG $803D64
+	#include "src/Character01.lyn.event"
+	#include "src/Character02.lyn.event"
+	#include "src/Character03.lyn.event"
+	#include "src/Character04.lyn.event"
+	#include "src/Character05.lyn.event"
+	#include "src/Character06.lyn.event"
+	#include "src/Character07.lyn.event"
+	#include "src/Character08.lyn.event"
+POP

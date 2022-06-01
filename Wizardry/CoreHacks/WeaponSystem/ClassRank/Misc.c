@@ -3,7 +3,7 @@
 // For Unit WType Growth
 u8 GetClassRankExpGain(u8 class_id){
 	
-	u8 rank_exp = GetClassRomDataExpa(class_id)->RankExp;
+	u8 rank_exp = GetClassRomDataExpa(class_id)->wexpBonus[ITYPE_CLASS];
 	
 	if( rank_exp > 0 )
 		return rank_exp;

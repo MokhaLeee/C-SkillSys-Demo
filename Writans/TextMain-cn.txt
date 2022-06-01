@@ -52,6 +52,9 @@
 ## msgItemUseDesc_MagBooster
 提升魔力[X]
 
+
+#include "ChapterText-cn/Prologue.txt"
+
 ## msg_end
 0[X]
 

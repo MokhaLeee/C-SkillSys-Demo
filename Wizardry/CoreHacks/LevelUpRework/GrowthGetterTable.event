@@ -1,26 +1,35 @@
 // Growth Getter
 ALIGN 4
+// int (*)(struct Unit* unit);
 HpGrowthMods:
+	POIN GrowthGetterHp_UnitExpa
 	WORD 0
 
 PowGrowthMods:
+	POIN GrowthGetterPow_UnitExpa
 	WORD 0
 
 MagGrowthMods:
+	POIN GrowthGetterMag_UnitExpa
 	WORD 0
 
 SklGrowthMods:
+	POIN GrowthGetterSkl_UnitExpa
 	WORD 0
 
 SpdGrowthMods:
+	POIN GrowthGetterSpd_UnitExpa
 	WORD 0
 
 LckGrowthMods:
+	POIN GrowthGetterLck_UnitExpa
 	WORD 0
 
 DefGrowthMods:
+	POIN GrowthGetterDef_UnitExpa
 	WORD 0
 
 ResGrowthMods:
+	POIN GrowthGetterRes_UnitExpa
 	WORD 0
 	

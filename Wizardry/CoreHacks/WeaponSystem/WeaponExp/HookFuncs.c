@@ -112,15 +112,14 @@ void MLU_PromoGain_WExp(struct Unit* unit, u8 promClassId){
 	
 	#define SET_WXEP(wtype){							\
 		wexp = GetWExp(unit, wtype)						\
-			+ GetClassBaseWExp(promClassId, wtype)		\
-			- GetClassBaseWExp(baseClassId, wtype);		\
+			+ GetClassBaseWExp(promClassId, wtype);		\
 		wexp = wexp > 0 ? wexp : 0;						\
 		wexp = wexp > WPN_EXP_S ? WPN_EXP_S : wexp;		\
 		SetWExp(unit, wtype, wexp);						\
 	}
 	
 	int wexp;
-	int baseClassId = unit->pClassData->number;
+	// int baseClassId = unit->pClassData->number;
 	const struct ClassData* promotedClass = GetClassData(promClassId);
 
 	// Remove base class' base wexp from unit wexp

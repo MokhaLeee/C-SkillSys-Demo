@@ -76,3 +76,76 @@ int GetNewTextColorByGrowth(int growth){
 	return 9 - growth + 5;
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// New Draw Bar
+void NewDrawStatScreenBar(int num, int x, int y, int base, int total, int max){
+	
+	max = _lib_div(max - 1, 10) * 10 + 10;
+	
+	if( max < 20 )
+		max = 20;
+	
+	DrawDecNumber(gBmFrameTmap0 + TILEMAP_INDEX(x, y),
+		(base == max) ? TEXT_COLOR_GREEN : TEXT_COLOR_BLUE, base);
+	
+	
+	
+	switch( _lib_div(max, 10) ){
+		
+		case 6:
+			base = (base * 3) / 6;
+			total = (total * 3) / 6;
+			max = 30;
+			break;
+		
+		case 5:
+			base = (base * 3) / 5;
+			total = (total * 3) / 5;
+			max = 30;
+			break;
+		
+		case 4:
+			base = (base * 3) / 4;
+			total = (total * 3) / 4;
+			max = 30;
+			break;
+		
+		case 3:
+		case 2:
+		case 1:
+		case 0:
+			break;
+			
+		default:
+			max = 30;
+			base = base >= max ? 30 : base * 30 / max;
+			total = total >= max ? 30 : total * 30 / max;
+			break;
+	}
+	
+	// DrawStatWithBar(BarId, x, y, base, total, max);
+	int diff = total - base;
+
+	sub_8004BF0(diff, gBmFrameTmap0 + TILEMAP_INDEX(x + 1, y));
+
+
+	sub_8086B2C(
+		0x401 + num*6, 6,
+		gBmFrameTmap1 + TILEMAP_INDEX(x - 2, y + 1),
+		TILEREF(0, STATSCREEN_BGPAL_6), 
+		max * 41 / 30, 
+		base * 41 / 30, 
+		diff * 41 / 30
+		);
+}

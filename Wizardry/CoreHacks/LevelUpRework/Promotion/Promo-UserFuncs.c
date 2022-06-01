@@ -66,9 +66,12 @@ void MLU_PromoGain_Vanilla(struct Unit* unit, u8 classId) {
 	if (baseClassId == CLASS_PUPIL && promClassId == CLASS_SHAMAN)
 		unit->ranks[ITYPE_ANIMA] = 0; 
 */
-
-	unit->level = 1;
-	unit->exp   = 0;
+	
+	
+	
+	// null the level reset!
+	// unit->level = 1;
+	// unit->exp   = 0;
 
 	unit->curHP += promotedClass->promotionHp;
 

@@ -19,24 +19,20 @@
 #include "Indices.event"
 
 // Item Data Fix
-ALIGN 4
 #include "ItemData/ItemDataFix.event"
 
-// Str-Mag split
-ALIGN 4
-#include "StrMag/MagCharEditor.event"
+// Class Data
+#include "ClassData/ClassData.event"
 
-ALIGN 4
-#include "StrMag/MagClassEditor.event"
+// Character Data
+#include "CharacterData/CharacterData.event"
 
 // Skill system
-ALIGN 4
 #include "Skills/SkillsBasicData.lyn.event"
 #include "Skills/SkillsLevelBasedList_Chartacter.lyn.event"
 #include "Skills/SkillsLevelBasedList_Class.lyn.event"
 
 // Combat art
-ALIGN 4
 #include "CombatArts/CombatArtsLevelBasedList_Chartacter.lyn.event"
 #include "CombatArts/CombatArtsLevelBasedList_Class.lyn.event"
 

@@ -11,7 +11,7 @@ main_event="$BASE_DIR/Main.event"
 
 # ROMs
 source_rom="$BASE_DIR/FE8U.gba"
-target_rom="$BASE_DIR/FE-cSkillSys.gba"
+target_rom="$BASE_DIR/Demo.gba"
 
 
 # Tools
@@ -19,7 +19,7 @@ EA="$EA_DIR/ColorzCore.exe"
 
 
 
-if [[ $1 == all ]]; then
+if [[ $1 != quick ]]; then
 	
 	make clean
 	make writans
@@ -28,7 +28,7 @@ if [[ $1 == all ]]; then
 fi
 
 
-if [[ $1 != all ]]; then
+if [[ $1 == quick ]]; then
 	# Preparing ROM
 	cd "$BASE_DIR"
 	echo "===== Copy ROM ====="

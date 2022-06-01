@@ -1,0 +1,8 @@
+
+#define _T0_RecruitM_Sword 0xCA
+#define _T0_RecruitM_Lance 0xCB
+#define _T0_RecruitM_Bow 0xCC
+#define _T0_RecruitF_Magic 0xCD
+#define _T0_RecruitM_Staff 0xCE
+
+

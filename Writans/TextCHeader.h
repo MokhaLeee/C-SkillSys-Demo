@@ -376,5 +376,10 @@ enum{
 	ENUM_msgItemName_MagBooster = 0xEBE,
 	ENUM_msgItemDesc_MagBooster = 0xEBF,
 	ENUM_msgItemUseDesc_MagBooster = 0xEC0,
-	ENUM_msg_end = 0xEC1,
+	ENUM_Prologue_Opening = 0xEC1,
+	ENUM_Prologue_Village = 0xEC2,
+	ENUM_Prologue_Ending = 0xEC3,
+	ENUM_Prologue_Objective = 0xEC4,
+	ENUM_Prologue_Goal = 0xEC5,
+	ENUM_msg_end = 0xEC6,
 };

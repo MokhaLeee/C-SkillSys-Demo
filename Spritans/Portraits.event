@@ -15,7 +15,7 @@ _MugFramesGfx:
 #incbin "Portraits/Lysithea_frames.dmp"
 
 PUSH
-ORG PortraitTable+(0x1C*0x02)
+ORG PortraitTable+(0x1C*0x01)
 POIN _MugGfx
 POIN _MugMiniGfx
 POIN _MugPal
@@ -26,34 +26,7 @@ WORD 1
 POP
 }
 
-#define MUG_LYSITHEA 0x02
-
-{
-_MugGfx:
-#incbin "Portraits/Eru_mug.dmp"
-
-_MugPal:
-#incbin "Portraits/Eru_palette.dmp"
-
-_MugMiniGfx:
-#incbin "Portraits/Eru_minimug.dmp"
-
-_MugFramesGfx:
-#incbin "Portraits/Eru_frames.dmp"
-
-PUSH
-ORG PortraitTable+(0x1C*0x0F)
-POIN _MugGfx
-POIN _MugMiniGfx
-POIN _MugPal
-POIN _MugFramesGfx
-WORD 0
-BYTE 3 5 3 3
-WORD 1
-POP
-}
-
-#define MUG_ERU 0x0F
+#define Mug_Lysi 0x01
 
 {
 _MugGfx:
@@ -69,7 +42,7 @@ _MugFramesGfx:
 #incbin "Portraits/Dimitri_frames.dmp"
 
 PUSH
-ORG PortraitTable+(0x1C*0x04)
+ORG PortraitTable+(0x1C*0x02)
 POIN _MugGfx
 POIN _MugMiniGfx
 POIN _MugPal
@@ -80,7 +53,34 @@ WORD 1
 POP
 }
 
-#define MUG_DIMITRI 0x04
+#define Mug_Dimi 0x02
+
+{
+_MugGfx:
+#incbin "Portraits/Eru_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Eru_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Eru_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Eru_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x03)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 3 5 3 3
+WORD 1
+POP
+}
+
+#define Mug_Eru 0x03
 
 {
 _MugGfx:
@@ -96,7 +96,7 @@ _MugFramesGfx:
 #incbin "Portraits/Flayn_frames.dmp"
 
 PUSH
-ORG PortraitTable+(0x1C*0x10)
+ORG PortraitTable+(0x1C*0x04)
 POIN _MugGfx
 POIN _MugMiniGfx
 POIN _MugPal
@@ -107,5 +107,248 @@ WORD 1
 POP
 }
 
-#define MUG_FLAYN 0x10
+#define Mug_Flyan 0x04
+
+{
+_MugGfx:
+#incbin "Portraits/Bernadetta_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Bernadetta_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Bernadetta_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Bernadetta_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x05)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 3 6 3 4
+WORD 1
+POP
+}
+
+#define Mug_Ber 0x05
+
+{
+_MugGfx:
+#incbin "Portraits/Hapi_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Hapi_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Hapi_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Hapi_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x06)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 2 6 2 3
+WORD 1
+POP
+}
+
+#define Mug_Hapi 0x06
+
+{
+_MugGfx:
+#incbin "Portraits/Leonie_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Leonie_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Leonie_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Leonie_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x07)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 3 5 3 3
+WORD 1
+POP
+}
+
+#define Mug_Leonie 0x07
+
+{
+_MugGfx:
+#incbin "Portraits/Linhardt_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Linhardt_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Linhardt_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Linhardt_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x08)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 3 5 3 3
+WORD 1
+POP
+}
+
+#define Mug_Linhardt 0x08
+
+{
+_MugGfx:
+#incbin "Portraits/Mercedes_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Mercedes_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Mercedes_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Mercedes_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x09)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 4 5 4 3
+WORD 1
+POP
+}
+
+#define Mug_Mercedes 0x09
+
+{
+_MugGfx:
+#incbin "Portraits/Shamir_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Shamir_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Shamir_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Shamir_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x0A)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 4 5 4 3
+WORD 1
+POP
+}
+
+#define Mug_Shamir 0x0A
+
+{
+_MugGfx:
+#incbin "Portraits/Sylvain_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Sylvain_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Sylvain_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Sylvain_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x0B)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 3 5 3 3
+WORD 1
+POP
+}
+
+#define Mug_Sylvain 0x0B
+
+{
+_MugGfx:
+#incbin "Portraits/Yuri_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Yuri_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Yuri_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Yuri_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x0C)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 3 5 3 3
+WORD 1
+POP
+}
+
+#define Mug_Yuri 0x0C
+
+{
+_MugGfx:
+#incbin "Portraits/Marianne_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Marianne_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Marianne_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Marianne_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x0D)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 4 6 4 4
+WORD 1
+POP
+}
+
+#define Mug_Marianne 0x0D
 

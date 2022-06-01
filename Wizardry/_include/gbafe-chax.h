@@ -40,5 +40,7 @@
 #include "../Features/CombatArts/CombatArtDef.h"
 #include "../Features/UnitStatusInfos/UnitStatusDef.h"
 
+
+#include "../../Definitions/cUnits.h"
 #include "../../Writans/TextCHeader.h"
 

@@ -1,42 +1,63 @@
 #ifndef CHAPTERS
 #define CHAPTERS
 
-// Putting each chapter in their own symbol scope
-// That way, label names can be reused between chapters
-// (Which would be useful if I had more than one at a time)
+
+#include "Definitions.event"
 
 
-{
-#include MokhaTest/MokhaTest.event
-#include MokhaTest/SF-Round-35.event
-}
+// ========================================
+//                  Maps
+// ========================================
 
+ALIGN 4
+#include "Maps/FixedValni/FixedValni.event"
 
-{
-// #include "PeerBlitz/PeerBlitzCh9.event"
-// #include "PeerBlitz/PeerBlitzCh9Map.event"
-}
+ALIGN 4
+#include "Maps/CaveTileset/CaveTilesetInstaller.event"
 
-{
-// #include "FE6Ch1/FE6Chapter1.event"
-// #include "FE6Ch1/FE6Chapter1Map.event"
-}
+ALIGN 4
+#include "Maps/FE6SnowTileset/FE6SnowInstaller.event"
 
 {
-// #include "CCBlitz/CCBlitzChapter27.event"
-// #include "CCBlitz/CCBlitzChapter27Map.event"
-}
-
-{
-// #include "CommBlitz/CommBlitzCh10.event"
-// #include "CommBlitz/CommBlitzCh10Map.event"
-}
-
-{
-// #include "Demo/Demo.event"
+	ALIGN 4
+	#include "Maps/Prologue.event"
 }
 
 
 
+
+// ========================================
+//                  Events
+// ========================================
+
+ALIGN 4
+#include "Events/REDAs.event"
+
+ALIGN 4
+#include "Events/PrepShop.event"
+
+{
+	ALIGN 4
+	#include "Events/Prologue.event"
+}
+
+
+
+
+// ========================================
+//                WM Events
+// ========================================
+
+// #define WorldMapIntroPointerTable(id,offset) "PUSH; ORG 0x8B3ad8+(4*id); POIN offset; POP"
+
+{
+	#define PrologueWMEventsID 0x1
+	ALIGN 4
+	#include "WM_Events/WM_Prologue.event"
+}
+{
+	ALIGN 4
+	#include "WM_Events/WM2_Prologue.event"
+}
 
 #endif // CHAPTERS

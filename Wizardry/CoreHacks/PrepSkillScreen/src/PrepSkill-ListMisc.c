@@ -28,211 +28,18 @@ static void MakeTotalListSkill(struct Unit* unit, struct PrepSkillsList* list){
 		&ClassSkillRomList[num_clas];
 
 	
-	/* // Tmp
-	const u8 skills_tmp[0x100] = {
-		
-		// Simple Bonus
-		SID_StrBonus, // 0xAE,
-		SID_MagBonus, // 0xAF,
-		SID_SklBonus, // 0xB0,
-		SID_SpdBonus, // 0xB1,
-		SID_LukBonus, // 0xB2,
-		SID_DefBonus, // 0xB3,
-		SID_ResBonus, // 0xB4,
-		SID_MovBonus, // 0xB5,
-		
-		// Weapon Lv Skills
-		SID_SwordLv1,
-		SID_SwordLv2 ,
-		SID_SwordLv3 ,
-		SID_SwordLv4 ,
-		SID_SwordLv5, //94,
-		
-		SID_LanceLv1, //95,
-		SID_LanceLv2, //96,
-		SID_LanceLv3, //97,
-		SID_LanceLv4, //98,
-		SID_LanceLv5, //99,
-		
-		SID_AxeLv1, //9A,
-		SID_AxeLv2, //9B,
-		SID_AxeLv3, //9C,
-		SID_AxeLv4, //9D,
-		SID_AxeLv5, //9E,
-		
-		SID_BowLv1, //9F,
-		SID_BowLv2, //A0,
-		SID_BowLv3, //A1,
-		SID_BowLv4, //A2,
-		SID_BowLv5, //A3,
-		
-		SID_BMagLv1, //A4,
-		SID_BMagLv2, //A5,
-		SID_BMagLv3, //A6,
-		SID_BMagLv4, //A7,
-		SID_BMagLv5, //A8,
-		
-		SID_WMagLv1, //A9,
-		SID_WMagLv2, //AA,
-		SID_WMagLv3, //AB,
-		SID_WMagLv4, //AC,
-		SID_WMagLv5, //AD,
-		
-		SID_RangeBonusBMag1 ,
-		SID_RangeBonusBMag2 ,
-		SID_RangeBonusBow1 ,
-		SID_RangeBonusBow2 ,
-		SID_DefiantStr ,
-		SID_DefiantMag ,
-		SID_DefiantSkl ,
-		SID_DefiantSpd ,
-		SID_DefiantLck ,
-		SID_DefiantDef ,
-		SID_DefiantRes ,
-		SID_DefiantCrit ,
-		SID_DefiantAvoid ,
-		
-		// Misc Skills
-		SID_LifeAndDeath ,
-		
-		// Range Skills
-		SID_RangeBonusBMag1_ext ,
-		SID_RangeBonusBow1_ext ,
-		
-		// Blow Skills
-		SID_BlowDarting ,
-		SID_BlowDeath ,
-		SID_BlowArmored ,
-		SID_BlowFiendish ,
-		SID_BlowWarding ,
-		SID_BlowDuelist ,
-		SID_BlowUncanny,
-		
-		
-		SID_Vantage ,
-		SID_VantageBat ,
-		SID_Desperation ,
-		SID_DesperationBat,
-		SID_QuickRiposte ,
-		
-		SID_Lethality ,
-		SID_Crit ,
-		SID_WatchfulEye ,
-		
-		SID_CritSword ,
-		SID_CritAxe ,
-		SID_CritLance ,
-		SID_CritBow ,
-		SID_CritBMag ,
-		SID_CritWMag ,
-		
-		SID_Avoid ,			// 回避
-		SID_AvoidSword ,		// 剑回避
-		
-		
-		SID_SwordBreaker ,
-		SID_AxeBreaker ,
-		SID_LanceBreaker ,
-		SID_BowBreaker ,
-		SID_TomeBreaker ,
-		SID_FistBreaker ,
-		
-		// Battle Status: Faire
-		SID_FaireSword ,
-		SID_FaireLance ,
-		SID_FaireAxe ,
-		SID_FaireBow ,
-		SID_FaireBMag ,
-		
-		SID_CloseCounter ,	// 近反
-		SID_CounterAttack ,	// 远反
-		
-		// Misc
-		SID_WaryFighter ,		// 防阵
-		
-		// Battle Order
-		SID_DoubleLion ,		// 狮子连斩
-		
-		SID_Canto ,			// 再动
-		SID_AlertStance ,		// 警戒
-		SID_AlertStancePlus ,	// 警戒+
-		
-		// Rally Skills
-		SID_RallyStr ,
-		SID_RallyMag ,
-		SID_RallySkl ,
-		SID_RallySpd ,
-		SID_RallyLck ,
-		SID_RallyDef ,
-		SID_RallyRes ,
-		SID_RallyMov ,
-		SID_RallySpectrum ,
-		
-		// Menu Skills
-		SID_Dance ,			// 舞蹈
-		SID_LockTouch ,		// 开锁
-		SID_Summon ,			// 召唤
-		SID_Supply ,			// 运输队
-		SID_Steal ,			// 偷盗
-		
-		// Pre-Phase
-		SID_Renewal ,			// 回复
-		SID_ArmorMarch ,		// 重装行军
-		
-		
-		// Stance Skills
-		SID_StanceBracing ,	// 金刚明镜架势
-		SID_StanceDarting ,	// 飞燕架势
-		SID_StanceFierce ,	// 鬼神架势
-		SID_StanceKestrel ,	// 鬼神飞燕架势
-		SID_StanceMirror ,	// 鬼神明镜架势
-		SID_StanceReady ,		// 飞燕金刚架势
-		SID_StanceSteady ,	// 金刚架势
-		SID_StanceSturdy ,	// 鬼神金刚架势
-		SID_StanceSwift ,		// 飞燕明镜架势
-		SID_StanceWarding ,	// 明镜架势
-		
-		// Move Skills
-		SID_Pass ,				// 穿越
-		SID_RuinedBladePlus ,		// 破败之刃+
-		
-		// Battle Status
-		SID_RuinedBlade ,			// 破败之刃
-		SID_InfinityEdge ,		// 无尽之刃
-		SID_HeavyBlade ,			// 刚剑
-		SID_HeavyBladePlus ,		// 刚剑+
-		SID_FlashingBlade ,		// 柔剑
-		SID_FlashingBladePlus ,	// 柔剑+
-		SID_LunaAttack ,			// 月光
-		SID_SorceryBlade ,		// 魔道之刃
-		
-		// Unit Status
-		SID_Fury ,				// 狮子奋迅
-		SID_FuryPlus ,			// 狮子奋迅+
-		SID_FortressDef ,			// 防守壁垒
-		SID_FortressRes ,			// 魔防壁垒
-		
-		// Exp Skills
-		SID_Discipline ,			// 天才
-		SID_RoyalLineage ,			// 血统
-	};
-	
-	for( int i = 0; i < 0x100; i++ )
-		ADD_SKILL(skills_tmp[i]); */
-	
-	
-	
-	
-	
 	
 	// Class Normal List
-	for( int i = 0; i < 2; i++ )		
+	for( int i = 0; i < 2; i++ ){	
 		ADD_SKILL(ListClass->default_ram_skill[i]);
-
+		
+		// Add rom skills pls
+		ADD_SKILL(ListClass->default_rom_skill[i]);
+	}
 	
 	
 	// Unit mastered classes
-	for( int i = 1; i <= 0x50; i++)
+	for( int i = 1; i <= 0x50; i++){
 		if( IsClassMastered(unit, i) ){
 			
 			ADD_SKILL( ClassSkillRomList[i].default_ram_skill[0] );
@@ -241,7 +48,13 @@ static void MakeTotalListSkill(struct Unit* unit, struct PrepSkillsList* list){
 			ADD_SKILL( ClassSkillRomList[i].master_ram_skill[1] );
 			ADD_SKILL( ClassSkillRomList[i].master_ram_skill[2] );
 			ADD_SKILL( ClassSkillRomList[i].master_ram_skill[3] );
+			
+			// Add rom skills pls
+			ADD_SKILL(ListClass->master_rom_skill[0]);
+			ADD_SKILL(ListClass->master_rom_skill[1]);
 		}
+	}
+	
 	
 	int WeaponRanks[0x12];
 	
@@ -768,70 +581,6 @@ static void MakeTotalListCombatArt(struct Unit* unit, struct PrepSkillsList* lis
 	
 	list->total[PREP_SKLSUB_RIGHT] = 0;
 	
-	/* const u8 skills_tmp[0x100] = {
-		CA_WrathStrike,
-		CA_Grounder ,
-		CA_Soulblade,
-		CA_BaneOfMonsters,
-		CA_Sunder ,
-		
-		CA_Hexblade ,
-		CA_HazeSlice  ,
-		CA_FinesseBlade,
-		CA_Windsweep ,
-		CA_SwordDance ,
-		
-		CA_Assassinate ,
-		CA_Subdue,
-		CA_FoudroyantStrike,
-		CA_SublimeHeaven ,
-		CA_RupturedHeaven ,
-		
-		CA_HeavensFall,
-		CA_TempestLance ,
-		CA_Knightkneeler ,
-		CA_ShatterSlash,
-		CA_MonsterPiercer ,
-		
-		CA_HitAndRun,
-		CA_SwiftStrikes ,
-		CA_FrozenLance ,
-		CA_GlowingEmber ,
-		CA_Vengeance,
-		
-		CA_LanceJab,
-		CA_Smash,
-		CA_HelmSplitter ,
-		CA_MonsterBreaker,
-		CA_FocusedStrike,
-		
-		CA_WildAbandon,
-		CA_Spike ,
-		CA_DiamondAxe ,
-		CA_LightningAxe,
-		CA_ArmoredStrike ,
-		
-		CA_WarMasterStrike ,
-		CA_FlickeringFlower,
-		CA_CurvedShot,
-		CA_Deadeye ,
-		CA_Encloser,
-		
-		CA_HeavyDraw,
-		CA_MonsterBlast,
-		
-		CA_PointBlankVolley ,
-		CA_WardArrow ,
-		CA_HuntersVolley ,
-		CA_EncloserPlus,
-		
-		CA_WaningShotPlus,
-		CA_BreakShotPlus,
-		CA_WardArrowPlus,
-	};
-	
-	for( int i = 0; i < 0x100; i++ )
-		ADD_SKILL(skills_tmp[i]); */
 	
 	u8 WeaponRanks[0x12];
 	

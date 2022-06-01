@@ -11,20 +11,14 @@ void CheckBattleUnitLevelUp(struct BattleUnit* bu) {
 
 	bu->unit.exp -= 100;
 	bu->unit.level++;
+	
 
-	if (UNIT_CATTRIBUTES(&bu->unit) & CA_MAXLEVEL10) 
-	{
-		if (bu->unit.level == 10) 
-		{
-			bu->expGain -= bu->unit.exp;
-			bu->unit.exp = UNIT_EXP_DISABLED;
-		}
-	} 
-	else if (bu->unit.level == 20) 
-	{
+	if (bu->unit.level >= 60) {
+		
 		bu->expGain -= bu->unit.exp;
 		bu->unit.exp = UNIT_EXP_DISABLED;
 	}
+
 
 	HookFunc_t *it = &OnLevelUpFuncList[0];
 	

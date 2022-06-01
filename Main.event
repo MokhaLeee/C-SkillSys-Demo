@@ -1,12 +1,14 @@
 
 #define _MAIN_
-#include "Config.event"
-
-
 
 #include "EAstdlib.event"
 #include "Extensions/Hack Installation.txt"
 #include "Extensions/ProcDefinitions.txt"
+
+
+// Definitions & macros & headers
+#include "Config.event"
+#include "Definitions/_MasterDefinitionInstaller.event"
 
 
 // Texts
@@ -25,7 +27,7 @@ ORG FreeSpaceText
 		ALIGN 4
 		#include "Writans_EN/Text.event"
 	#endif
-	
+
 ASSERT (FreeSpaceTextEnd - CURRENTOFFSET)	
 #undef IN_TEXT_RANGE
 
@@ -37,19 +39,25 @@ ASSERT (FreeSpaceTextEnd - CURRENTOFFSET)
 // Font Glyph
 ORG FreeSpaceFont
 #define IN_FONT_RANGE
-
-
 #include "CN-Fonts/FE8U-CN-Font-Installer.event"
-
-
 ASSERT (FreeSpaceFontEnd - CURRENTOFFSET)
 #undef IN_FONT_RANGE
 
 
+// Graphics & etc
+ORG FreeSpaceAssets
+#include "Spritans/GraphicsInstaller.event"
+// No Assert
 
 
 
-
+// Tables	
+ORG FreeSpaceTable
+#define IN_TABLE_RANGE
+ALIGN 4
+#include "GameData/GameData.event"	
+ASSERT (FreeSpaceTableEnd - CURRENTOFFSET)	
+#undef IN_TABLE_RANGE
 
 
 
@@ -63,18 +71,9 @@ ORG FreeSpace
 	// Wizardry
 	ALIGN 4
 	#include "Wizardry/Wizardry.event"
-	
-	// FE16 Icon
-	ALIGN 4
-	#include "Spritans/FE16Icon/FE16Icon.event"
-	
 
-	
+
 	#ifndef _USE_VANILLA_CHAPTER_
-	
-	// Portraits
-	ALIGN 4
-	#include "Spritans/Portraits.event"
 	
 	// Chapters
 	{
@@ -91,7 +90,7 @@ ORG FreeSpace
 		#include "Debug_File.event"
 		
 	#endif // _DEBUG_
-	
+
 ASSERT (FreeSpaceEnd - CURRENTOFFSET)
 #undef IN_MAIN_HACK_RANGE
 
@@ -101,20 +100,6 @@ ASSERT (FreeSpaceEnd - CURRENTOFFSET)
 
 
 
-
-
-
-
-// Tables	
-ORG FreeSpaceTable
-#define IN_TABLE_RANGE
-	
-	ALIGN 4
-	#include "GameData/GameData.event"
-	
-	
-ASSERT (FreeSpaceTableEnd - CURRENTOFFSET)	
-#undef IN_TABLE_RANGE
 
 
 

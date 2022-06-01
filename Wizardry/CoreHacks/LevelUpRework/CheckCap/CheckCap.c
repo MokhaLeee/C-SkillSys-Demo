@@ -2,7 +2,7 @@
 #include "str-mag.h"
 
 void CheckBattleUnitStatCaps(struct Unit* unit, struct BattleUnit* bu) {
-	if ((unit->maxHP + bu->changeHP) > UNIT_MHP_MAX(unit))
+/* 	if ((unit->maxHP + bu->changeHP) > UNIT_MHP_MAX(unit))
 		bu->changeHP = UNIT_MHP_MAX(unit) - unit->maxHP;
 
 	if ((unit->pow + bu->changePow) > UNIT_POW_MAX(unit))
@@ -27,14 +27,17 @@ void CheckBattleUnitStatCaps(struct Unit* unit, struct BattleUnit* bu) {
 	int magCap = GetClassMagCap(unit->pClassData->number);
 	
 	if( (magCur + *GetBu_ChangeMagAt(bu)) > magCap)
-		*GetBu_ChangeMagAt(bu) = magCap - magCur;			
-		
+		*GetBu_ChangeMagAt(bu) = magCap - magCur;	 */	
+
+	
+	
+	// null the cap!	
 }
 
 
 
 void UnitCheckStatCaps(struct Unit* unit) {
-	if (unit->maxHP > UNIT_MHP_MAX(unit))
+/* 	if (unit->maxHP > UNIT_MHP_MAX(unit))
 		unit->maxHP = UNIT_MHP_MAX(unit);
 
 	if (unit->pow > UNIT_POW_MAX(unit))
@@ -65,5 +68,8 @@ void UnitCheckStatCaps(struct Unit* unit) {
 	int magCap = GetClassMagCap(unit->pClassData->number);
 	
 	if( magCur > magCap )
-		*GetMagAt(unit) = magCap;
+		*GetMagAt(unit) = magCap; */
+	
+	
+	// null the cap!
 }

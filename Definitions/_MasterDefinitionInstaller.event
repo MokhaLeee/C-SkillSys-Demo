@@ -1,0 +1,8 @@
+#include "CostumDefinitions.event"
+
+#include "ChapterDefs.event"
+#include "CharacterDefs.event"
+#include "ClassDefs.event"
+#include "EventPointerTableDefs.event"
+#include "GraphicsDefs.event"
+#include "ItemDefs.event"	

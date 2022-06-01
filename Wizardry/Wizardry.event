@@ -128,7 +128,8 @@ ALIGN 4
 // You can use them for Post-Action Hook, etc.
 #include "Features/MapAnims/MapAnimsInstaller.event"
 
-
+// FE16 Icon
+#include "Features/FE16Icon/FE16Icon.event"
 
 
 

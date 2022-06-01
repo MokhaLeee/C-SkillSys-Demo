@@ -15,21 +15,21 @@ gpPortraitHeightList:
 ALIGN 4
 PortraitHeightList:
 
+#ifdef _USE_VANILLA_CHAPTER_
 	// Vanilla
 //	BYTE $10	// Lute	
 	BYTE $19	// Amelia
 	BYTE $21	// Ewan
 	BYTE $23	// Dozla
 	BYTE $26	// Myrrh
+#endif // 	_USE_VANILLA_CHAPTER_	
 	
-	
-#ifndef _USE_VANILLA_CHAPTER_
+
 	
 	// Extern
-	BYTE $2		// Eirika
-	BYTE $4		// Seth
+	BYTE Mug_Lysi
+	BYTE Mug_Dimi
 
-#endif // 	_USE_VANILLA_CHAPTER_
 
 
 

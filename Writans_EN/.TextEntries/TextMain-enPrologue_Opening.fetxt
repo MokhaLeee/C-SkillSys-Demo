@@ -1,0 +1,22 @@
+[OpenMidRight]
+[LoadFace][0x06][0x01]
+
+[OpenMidLeft][LoadFace][0x07][0x01]
+
+[OpenMidRight]
+We have arrived...[A]
+
+[OpenMidLeft]
+Yes milord, the rebels have already[NL]
+formed up ranks.[A][NL]
+We best move forward.[A]
+
+[OpenMidRight]
+Give the order to move.[A][NL]
+This Donateenary trash will not[NL]
+be allowed to continue to exist.[A][NL]
+We must seize the town they are[NL]
+holding up in.[A]
+
+[OpenMidLeft]
+Yes milord![A][X]

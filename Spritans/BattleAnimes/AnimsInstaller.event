@@ -1,0 +1,7 @@
+
+//for AA anim installers
+#include "T0_RecruitM/Sword/_T0_RecruitM_SwordInstaller.event"
+#include "T0_RecruitM/Lance/_T0_RecruitM_LanceInstaller.event"
+#include "T0_RecruitM/Bow/_T0_RecruitM_BowInstaller.event"
+#include "T0_RecruitF/Magic/_T0_RecruitF_MagicInstaller.event"
+#include "T0_RecruitM/Staff/_T0_RecruitM_StaffInstaller.event"

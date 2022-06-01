@@ -92,6 +92,8 @@ int GetBattleUnitUpdatedWeaponExp(struct BattleUnit* bu) {
 int NewGetBattleUnitUpdatedWeaponExp(struct BattleUnit* bu, u8 WType){
 	
 	int exp = 0;
+	u8 classId = bu->unit.pClassData->number;
+	u8 charId = bu->unit.pCharacterData->number;
 	
 	if (UNIT_FACTION(&bu->unit) != FACTION_BLUE)
 		return -1;
@@ -130,7 +132,6 @@ int NewGetBattleUnitUpdatedWeaponExp(struct BattleUnit* bu, u8 WType){
 	if( ITYPE_HEAVY == WType ){
 		
 		const u8* effList = GetItemEffectiveness(ITEM_SWORD_ARMORSLAYER);
-		u8 classId = bu->unit.pClassData->number;
 		
 		while(1){
 			 if (*effList == classId)
@@ -148,12 +149,22 @@ int NewGetBattleUnitUpdatedWeaponExp(struct BattleUnit* bu, u8 WType){
 	// this is for class
 	if( ITYPE_CLASS == WType )
 		exp = GetClassRankExpGain(bu->unit.pClassData->number);
-	else
-		exp = GetItemAwardedExp(bu->weapon) * bu->wexpMultiplier;
 	
+	else // if( GetItemAwardedExp(bu->weapon) * bu->wexpMultiplier > 0 )
+		exp = 
+			1 + 
+			GetUnitRomDataExpa(charId)->wexpBonus[WType] + 
+			GetClassRomDataExpa(classId)->wexpBonus[WType];
+			
+			
+
 	// Todo: make a calc loop
 	if( (*SkillTester)(&bu->unit, SID_Discipline) )
 		exp = exp * 2;
+	
+	// minus zero
+	if( exp < 0 )
+		exp = 0;
 	
 	return (GetWExp(&bu->unit, WType) + exp) >= WPN_EXP_S
 		? WPN_EXP_S

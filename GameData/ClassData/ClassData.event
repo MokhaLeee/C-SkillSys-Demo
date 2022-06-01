@@ -1,0 +1,8 @@
+PUSH
+	ORG $808514
+	#include "src/Class3D.lyn.event"
+
+	ORG $80885C
+	#include "src/Class47.lyn.event"
+
+POP

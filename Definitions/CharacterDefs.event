@@ -1,0 +1,20 @@
+
+// char IDs
+
+#define Unit_Lysi 0x01
+#define Unit_Dimi 0x02
+#define Unit_Eru 0x03
+#define Unit_Flyan 0x04
+#define Unit_Ber 0x05
+#define Unit_Hapi 0x06
+#define Unit_Leonie 0x07
+#define Unit_Linhardt 0x08
+#define Unit_Mercedes 0x09
+#define Unit_Shamir 0x0A
+#define Unit_Sylvain 0x0B
+#define Unit_Yuri 0x0C
+#define Unit_Marianne 0x0D
+
+#define MountainBandit 0x80
+
+

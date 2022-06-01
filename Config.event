@@ -1,12 +1,12 @@
-#ifndef CUSTOM_DEF
-#define CUSTOM_DEF
+#ifndef __CONFIG__
+#define __CONFIG__
 
 	// =====================================================
 	// -------------------  For Config ---------------------
 	// =====================================================
 	
 	// If uncommented, will load "Debug_File.event"
-	#define _DEBUG_
+	// #define _DEBUG_
 	
 	// If uncommented, will use chinese texts
 	#define _CHINESE_
@@ -21,44 +21,7 @@
 	// If uncommented, unit will use all types of weapon event wExp = 0
 	// #define _UNIT_CAN_USE_ALL_WEAPON_
 	
-	// For Icon Display
-	#define ICON_SHEET_SKILLS 0x1
-	#define ICON_SHEET_MASTERY 0x2
-	#define ICON_SHEET_COMBAT_ART 0x3
-	
-	
-	// For Unit Action
-	#define UNIT_ACTION_RALLY 0x23
-	#define UNIT_ACTION_HEROMOV 0x24
 	
 	
 	
-	
-	
-	// =====================================================
-	// --------------------  Internal ----------------------
-	// =====================================================
-	
-	#define FreeSpaceBLRange 0x1C1EC0
-	#define FreeSpace $B2A610
-	#define FreeSpaceEnd 0xC00000	
-	
-	#define FreeSpaceFont  $EFB2E0	// End: $FE0000; size E4D20
-	#define FreeSpaceFontEnd 0xFE0000
-	
-	#define FreeSpaceText  $FE4000	// End: $FFF000; size 1B000
-	#define FreeSpaceTextEnd 0xFFF000
-	
-	#define FreeSpaceTable $E47180	// End: $EE0000; size 98E80
-	#define FreeSpaceTableEnd 0xEE0000
-	
-	#define _thumb(func) "PUSH; ORG CURRENTOFFSET+1; func:; POP"
-	#define RETURN_TRUE  "SHORT $2001 $4770"	// mov r0,#1; 	bx lr;
-	#define RETURN_FALSE "SHORT $2000 $4770"	// mov r0,#0; 	bx lr;
-	
-	// Lyn Jump
-	#define LynJumpDefined
-	#define LynJump(aTarget) "WORD $46C04778 $E59FC000 $E12FFF1C; POIN aTarget; "
-	
-	
-#endif
+#endif // __CONFIG__

@@ -15,6 +15,19 @@
 - `Mikey Seregon`: Skill Activition Anime: Aether
 - `GratedShtick`: Skill Activition Anime: Dragon Fang
 
+### Animes
+- `Waleed`: Recruit(M), Journeyman-Reskin(M)
+- `RenOokami`: Archer-Custom
+- `Pikmin`: Pupil-Reskin(F)
+- `Eldritch`: Priest-Reskin(M)
+
+### Portraits
+- `Wasdye`: Shamir
+- `Blade`: Mercedes
+- `ZeMedic`: Sylvain
+- `HyperGammaSpace`: Yuri, Linhardt
+- `Tobiki`: Leonie, Marianne
+- `JeyTheCount`: Hapi
 ## Special Thanks
 
 - all of [FEU](https://feuniverse.us/): Cool guys.

@@ -1502,8 +1502,28 @@ __TEXTPROCESSEC0:
 setText($EC0, __TEXTPROCESSEC0)
 
 __TEXTPROCESSEC1:
-#incbin ".TextEntries\TextMain-enmsg_end.fetxt.dmp"
+#incbin ".TextEntries\TextMain-enPrologue_Opening.fetxt.dmp"
 setText($EC1, __TEXTPROCESSEC1)
+
+__TEXTPROCESSEC2:
+#incbin ".TextEntries\TextMain-enPrologue_Village.fetxt.dmp"
+setText($EC2, __TEXTPROCESSEC2)
+
+__TEXTPROCESSEC3:
+#incbin ".TextEntries\TextMain-enPrologue_Ending.fetxt.dmp"
+setText($EC3, __TEXTPROCESSEC3)
+
+__TEXTPROCESSEC4:
+#incbin ".TextEntries\TextMain-enPrologue_Objective.fetxt.dmp"
+setText($EC4, __TEXTPROCESSEC4)
+
+__TEXTPROCESSEC5:
+#incbin ".TextEntries\TextMain-enPrologue_Goal.fetxt.dmp"
+setText($EC5, __TEXTPROCESSEC5)
+
+__TEXTPROCESSEC6:
+#incbin ".TextEntries\TextMain-enmsg_end.fetxt.dmp"
+setText($EC6, __TEXTPROCESSEC6)
 
 }
 
