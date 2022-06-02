@@ -69,9 +69,11 @@ const struct ClassRomDataExpa ClassRomDataExpaTable[0x100] = {
 		.maxMag = 30,
 	},
 	[CLASS_MYRMIDON]            = {
+		.tier = 1,
 		.maxMag = 30,
 	},
 	[CLASS_MYRMIDON_F]          = {
+		.tier = 1,
 		.maxMag = 30,
 	},
 	[CLASS_SWORDMASTER]         = {

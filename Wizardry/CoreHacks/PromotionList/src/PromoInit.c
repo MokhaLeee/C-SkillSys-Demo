@@ -1,5 +1,5 @@
 #include "gbafe-chax.h"
-#include "Promotion.h"
+
 
 // Promo Init core
 int sub_80CC6D4(struct Proc_PromoInit* proc){
@@ -37,7 +37,7 @@ int sub_80CC6D4(struct Proc_PromoInit* proc){
 
 
 	extern void MakePromotionScreen(struct Proc_PromoInit*, u8 charId, u8 mode);
-	
+	*gpFlagFailedPromote = 0;
 	MakePromotionScreen(proc, proc->charId, 1);
 	return 1;
 

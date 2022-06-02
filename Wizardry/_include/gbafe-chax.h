@@ -12,6 +12,7 @@
 
 
 #include "vanilla-remix/prep-screen.h"
+#include "vanilla-remix/promotion.h"
 
 #include "skill-system.h"
 #include "mokha-lib.h"

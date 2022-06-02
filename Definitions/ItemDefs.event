@@ -1,0 +1,6 @@
+#define Item_PromoT1 0x64
+#define Item_PromoT2_1 0x65
+#define Item_PromoT2_2 0x66
+#define Item_PromoT3_1 0x67
+#define Item_PromoT3_2 0x68
+#define Item_PromoT4 0x97

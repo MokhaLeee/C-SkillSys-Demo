@@ -53,7 +53,8 @@
 提升魔力[X]
 
 
-#include "ChapterText-cn/Prologue.txt"
+#include MiscString/Misc.txt
+#include ChapterText-cn/Prologue.txt
 
 ## msg_end
 0[X]

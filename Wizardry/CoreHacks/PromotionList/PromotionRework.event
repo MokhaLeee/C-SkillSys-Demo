@@ -19,7 +19,6 @@
 
 
 
-
 // ==================================================
 //               Don't Edit Below
 // ==================================================
@@ -31,6 +30,8 @@
 #include "src/PromoMenu.lyn.event"
 #include "src/PromoHackASM.lyn.event"
 
+
+
 // Hack
 PUSH
 	// Make promo anim always shows the item anime
@@ -41,6 +42,10 @@ PUSH
 	// New Menu-Promotion items
 	ORG $B129EC
 	POIN MenuItems_NewPromotion
+	ORG $B129FC
+	POIN NewPromoMenu_OnBPress
+	ORG $0CD252
+	SHORT 0
 	
 	// Geometry
 	ORG $B12A60
@@ -66,6 +71,8 @@ PUSH
 	SHORT 0xE 0 0 0
 	SHORT 0xE 0 0 0
 	SHORT 0xE 0 0 0
+	
+
 POP
 
 PROTECT $291A8 $29408	// CanUnitUsePromotionItem

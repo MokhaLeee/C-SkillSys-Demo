@@ -1,5 +1,5 @@
 #include "gbafe-chax.h"
-#include "Promotion.h"
+
 
 s8 CanUnitUsePromotionItem(struct Unit* unit, int item){
 	
@@ -14,7 +14,7 @@ s8 CanUnitUsePromotionItem(struct Unit* unit, int item){
 		if( class_list[i] != 0 )
 			count++;
 	
-	if( (unit->level >= 10) && (count > 0) )
+	if( (count > 0) )
 		return 1;
 	
 	return 0;

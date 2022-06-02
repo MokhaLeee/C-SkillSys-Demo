@@ -22,6 +22,20 @@ enum UnitsDef{
 
 
 
+enum ClassDef{
+	// Units
+	Class_Thief_F = 0x0E,
+	Class_Soldier_F = CLASS_RECRUIT_T1,		// 0x30
+	Class_Fighter_F = CLASS_RECRUIT_T2,		// 0x3A
+	Class_Pirate_F = CLASS_BRIGAND,			// 0x41(山贼换成贼)
+	Class_Warrior_F = CLASS_JOURNEYMAN_T2,	// 0x38
+
+	
+	
+};
+
+
+
 enum UnitMugsDef{
 	// Units
 	UnitMug_Lysi = 0x01,
@@ -38,4 +52,20 @@ enum UnitMugsDef{
 	UnitMug_Yuri = 0x0C,
 	UnitMug_Marianne = 0x0D,
 	
+};
+
+
+
+
+
+
+
+
+enum ItemDef{
+	Item_PromoT1 = 0x64,
+	Item_PromoT2_1 = 0x65,
+	Item_PromoT2_2 = 0x66,
+	Item_PromoT3_1 = 0x67,
+	Item_PromoT3_2 = 0x68,
+	Item_PromoT4 = 0x97,
 };

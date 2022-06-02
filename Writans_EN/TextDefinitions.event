@@ -377,11 +377,12 @@
 #define msgItemName_MagBooster $EBE
 #define msgItemDesc_MagBooster $EBF
 #define msgItemUseDesc_MagBooster $EC0
-#define Prologue_Opening $EC1
-#define Prologue_Village $EC2
-#define Prologue_Ending $EC3
-#define Prologue_Objective $EC4
-#define Prologue_Goal $EC5
-#define msg_end $EC6
+#define msg_FailToPromote $EC1
+#define Prologue_Opening $EC2
+#define Prologue_Village $EC3
+#define Prologue_Ending $EC4
+#define Prologue_Objective $EC5
+#define Prologue_Goal $EC6
+#define msg_end $EC7
 
 #endif // TEXT_DEFINITIONS_WRITANS_EN_TEXTMAIN_EN_TXT

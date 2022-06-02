@@ -40,7 +40,7 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Eirika 0x47 0x00 Level(1, Ally, 1) [17, 11] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary, SlimSword] NoAI
+UNIT Eirika 0x47 0x00 Level(1, Ally, 1) [17, 11] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary, SlimSword, GuidingRing] NoAI
 UNIT Seth 0x3D Eirika Level(1, Ally, 1) [17, 10] 0 0 0 0 [IronSword, SteelLance] NoAI
 UNIT Gilliam 0x3D Eirika Level(1, Ally, 1) [16, 12] 0 0 0 0 [SteelSword, IronLance] NoAI
 UNIT Franz 0x3D Eirika Level(2, Ally, 1) [16, 11] 0 0 0 0 [IronBow, SteelBow, SilverBow, IronBow] NoAI
@@ -82,6 +82,7 @@ LOAD1 0x1 EnemyUnits
 CAM1 Eirika
 ENUN
 Text(Prologue_Opening)
+PREP
 ENDA
 
 EndingScene:

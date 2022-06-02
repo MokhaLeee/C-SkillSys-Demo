@@ -16,10 +16,18 @@
 - `GratedShtick`: Skill Activition Anime: Dragon Fang
 
 ### Animes
-- `Waleed`: Recruit(M), Journeyman-Reskin(M)
-- `RenOokami`: Archer-Custom
-- `Pikmin`: Pupil-Reskin(F)
-- `Eldritch`: Priest-Reskin(M)
+- Journeyman: Waleed
+- Recruit: Waleed, Memae, Skitty, BwdYeti, MeatOfJustice
+- Pupil: Pikmin
+- Archer: RenOokami, Leo_link, Spud, MeatOfJustice
+- Priest: Eldritch
+- Berserker: eCut, Skitty, Natsumi, AKA Serif, ZoramineFae, Maiser6, TBA, The_Big_Dededester, Orihara_Saki
+- Pirate: Waleed, Pimpstick
+- Fighter: Leo_Link, knabepicer, Pushwall, MK404, Pikmin1211, Maiser6
+- Warrior: Orihara_Saki, Temp, Pushwall
+- Soldier: Alusq, Knabepicer, Russell Clark, Maiser6, Dark, Orihara_Saki, Markex133, Dr0zz
+- Hero: Pushwall, Pikmin1211, Pushwall, St jack
+- Myrmidon: N426
 
 ### Portraits
 - `Wasdye`: Shamir
@@ -28,6 +36,7 @@
 - `HyperGammaSpace`: Yuri, Linhardt
 - `Tobiki`: Leonie, Marianne
 - `JeyTheCount`: Hapi
+
 ## Special Thanks
 
 - all of [FEU](https://feuniverse.us/): Cool guys.

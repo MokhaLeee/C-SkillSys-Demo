@@ -52,7 +52,8 @@ Vanishes after use.[X]
 ## msgItemUseDesc_MagBooster
 Raise Mag[X]
 
-#include "ChapterText-en/Prologue.txt"
+#include MiscString/Misc.txt
+#include ChapterText-en/Prologue.txt
 
 ## msg_end
 0[X]

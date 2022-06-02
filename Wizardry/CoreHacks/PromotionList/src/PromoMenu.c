@@ -1,9 +1,22 @@
 #include "gbafe-chax.h"
-#include "Promotion.h"
+
+static int (*PromoMenu_OnBPress)(struct MenuProc*, struct MenuItemProc*) = (const void*)0x80CDC15;
 
 // =========================================================
 //                             Menu
 // =========================================================
+
+
+// define a new B press
+// before, we null the set action data routine
+// so here we need to add it
+int NewPromoMenu_OnBPress(struct MenuProc* menu, struct MenuItemProc* item){
+	gActionData.unitActionType = 0;
+	return PromoMenu_OnBPress(menu, item);
+}
+
+
+
 
 static u8 NewPromoCmd_Usability(const struct MenuItemDef*, int number);
 static int NewPromoCmd_DrawText(struct MenuProc*, struct MenuItemProc*);
@@ -81,6 +94,7 @@ int NewPromoCmd_DrawText(struct MenuProc* menu, struct MenuItemProc* menu_item){
 
 u8 NewPromoCmd_Effect(struct MenuProc* menu, struct MenuItemProc* menu_item){
 	
+	
 	struct Proc_PromoMenuSelect* parent = menu->proc_parent;
 	struct Proc_PromoDisp* procDisp = parent->proc_parent;
 	struct Proc_PromoMain* procMain = procDisp->proc_parent;
@@ -92,6 +106,15 @@ u8 NewPromoCmd_Effect(struct MenuProc* menu, struct MenuItemProc* menu_item){
 	
 	struct Unit* unit = GetUnitFromCharId(procDisp->charId);
 	procMain->promoClass = class_list[menu_item->itemNumber];
+	
+	
+	// For Three Houses Style failed
+	if( !IsUnitSucessfullyPromote(unit, procMain->promoClass) ){
+		gActionData.unitActionType = 0x1E; // force wait, vanilla is in fog
+		*gpFlagFailedPromote = 1;
+		UnitUpdateUsedItem(unit, proc_init->promotionItemSlot);
+		return PromoMenu_OnBPress(menu, menu_item);
+	}
 	
 	switch(procMain->promoClass){
 		case CLASS_RANGER:

@@ -71,6 +71,8 @@ BattleHitExtArray:
 gpRamPromoTmpList:
 	WORD 0x030005B0		// 0x10
 
+gpFlagFailedPromote:
+	WORD 0x030005C0		// 0x01
 
 // if 0, null game-intro-gfx
 GAME_INTRO_GFX_SHOW_At:
