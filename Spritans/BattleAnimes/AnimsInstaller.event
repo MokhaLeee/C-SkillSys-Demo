@@ -3,5 +3,58 @@
 #include "T0_RecruitM/Sword/_T0_RecruitM_SwordInstaller.event"
 #include "T0_RecruitM/Lance/_T0_RecruitM_LanceInstaller.event"
 #include "T0_RecruitM/Bow/_T0_RecruitM_BowInstaller.event"
-#include "T0_RecruitF/Magic/_T0_RecruitF_MagicInstaller.event"
 #include "T0_RecruitM/Staff/_T0_RecruitM_StaffInstaller.event"
+
+#include "T0_RecruitF/Sword/_T0_RecruitF_SwordInstaller.event"
+#include "T0_RecruitF/Lance/_T0_RecruitF_LanceInstaller.event"
+#include "T0_RecruitF/Magic/_T0_RecruitF_MagicInstaller.event"
+#include "T0_RecruitF/Staff/_T0_RecruitF_StaffInstaller.event"
+
+#include "T1_FighterM/Bow/_T1_FighterM_BowInstaller.event"
+#include "T1_FighterM/Unarmed/_T1_FighterM_UnarmedInstaller.event"
+
+#include "T1_MyrmidonF/Bow/_T1_MyrmidonF_BowInstaller.event"
+#include "T1_MyrmidonM/Bow/_T1_MyrmidonM_BowInstaller.event"
+
+#include "T1_SoldierF/Lance/_T1_SoldierF_LanceInstaller.event"
+#include "T1_SoldierF/Unarmed/_T1_SoldierF_UnarmedInstaller.event"
+
+#include "T1_SoldierM/Sword/_T1_SoldierM_SwordInstaller.event"
+#include "T1_SoldierM/Bow/_T1_SoldierM_BowInstaller.event"
+#include "T1_SoldierM/Staff/_T1_SoldierM_StaffInstaller.event"
+#include "T1_SoldierM/Unarmed/_T1_SoldierM_UnarmedInstaller.event"
+
+#include "T2_KnightM/Sword/_T2_KnightM_SwordInstaller.event"
+#include "T2_KnightM/Axe/_T2_KnightM_AxeInstaller.event"
+#include "T2_KnightM/HandAxe/_T2_KnightM_HandAxeInstaller.event"
+#include "T2_KnightM/Bow/_T2_KnightM_BowInstaller.event"
+#include "T2_KnightM/Magic/_T2_KnightM_MagicInstaller.event"
+#include "T2_KnightM/Staff/_T2_KnightM_StaffInstaller.event"
+
+#include "T2_MercenaryF/Axe/_T2_MercenaryF_AxeInstaller.event"
+#include "T2_MercenaryF/HandAxe/_T2_MercenaryF_HandAxeInstaller.event"
+#include "T2_MercenaryF/Bow/_T2_MercenaryF_BowInstaller.event"
+#include "T2_MercenaryF/Unarmed/_T2_MercenaryF_UnarmedInstaller.event"
+
+#include "T2_MercenaryM/Lance/_T2_MercenaryM_LanceInstaller.event"
+#include "T2_MercenaryM/Axe/_T2_MercenaryM_AxeInstaller.event"
+#include "T2_MercenaryM/HandAxe/_T2_MercenaryM_HandAxeInstaller.event"
+#include "T2_MercenaryM/Bow/_T2_MercenaryM_BowInstaller.event"
+#include "T2_MercenaryM/Unarmed/_T2_MercenaryM_UnarmedInstaller.event"
+
+#include "T2_PirateF/Axe/_T2_PirateF_AxeInstaller.event"
+#include "T2_PirateF/HandAxe/_T2_PirateF_HandAxeInstaller.event"
+#include "T2_PirateF/Unarmed/_T2_PirateF_UnarmedInstaller.event"
+
+#include "T2_PirateM/Sword/_T2_PirateM_SwordInstaller.event"
+#include "T2_PirateM/Lance/_T2_PirateM_LanceInstaller.event"
+
+#include "T2_ShamanF/Staff/_T2_ShamanF_StaffInstaller.event"
+#include "T2_ShamanM/Staff/_T2_ShamanM_StaffInstaller.event"
+
+#include "T2_ThiefF/Sword/_T2_ThiefF_KnifeInstaller.event"
+#include "T2_ThiefF/Bow/_T2_ThiefF_BowInstaller.event"
+#include "T2_ThiefF/Unarmed/_T2_ThiefF_UnarmedInstaller.event"
+#include "T2_ThiefM/Bow/_T2_ThiefM_BowInstaller.event"
+
+

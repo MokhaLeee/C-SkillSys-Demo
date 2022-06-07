@@ -12,7 +12,7 @@ OnLevelUpFuncList:
 ALIGN 4
 OnPromoteFuncList:
 	POIN MLU_PromoGain_Vanilla
-	POIN MLU_PromoGain_Mag
+	// POIN MLU_PromoGain_Mag
 	POIN MLU_PromoGain_WExp
 	WORD 0
 
@@ -21,7 +21,7 @@ OnPromoteFuncList:
 ALIGN 4
 MakePromoteGainsFuncList:
 	POIN MLU_PromoDiff_Vanilla
-	POIN MLU_PromoDiff_Mag
+	// POIN MLU_PromoDiff_Mag
 	WORD 0
 
 

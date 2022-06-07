@@ -13,14 +13,14 @@ const struct CharacterData Char07 = {
 	/* 0A */ ._u0A = 10,
 
 	/* 0B */ .baseLevel = 1,
-	/* 0C */ .baseHP = 3,
-	/* 0D */ .basePow = 3,
-	/* 0E */ .baseSkl = 2,
-	/* 0F */ .baseSpd = 3,
-	/* 10 */ .baseDef = 2,
+	/* 0C */ .baseHP = 18,
+	/* 0D */ .basePow = 5,
+	/* 0E */ .baseSkl = 5,
+	/* 0F */ .baseSpd = 5,
+	/* 10 */ .baseDef = 5,
 	/* 11 */ .baseRes = 0,
 	/* 12 */ .baseLck = 2,
-	/* 13 */ .baseCon = 0,
+	/* 13 */ .baseCon = 1,
 
 	.baseRanks[ITYPE_SWORD] = WPN_EXP_D,
 	.baseRanks[ITYPE_LANCE] = WPN_EXP_D,
@@ -32,12 +32,12 @@ const struct CharacterData Char07 = {
 	.baseRanks[ITYPE_DARK] = 0,		// in c-Skillsys is ITYPE_FLY
 
 	/* 1C */ .growthHP = 50,
-	/* 1D */ .growthPow = 35,
+	/* 1D */ .growthPow = 40,
 	/* 1E */ .growthSkl = 40,
 	/* 1F */ .growthSpd = 45,
 	/* 20 */ .growthDef = 35,
-	/* 21 */ .growthRes = 20,
-	/* 22 */ .growthLck = 40,
+	/* 21 */ .growthRes = 10,
+	/* 22 */ .growthLck = 30,
 
 	/* 23 */ ._u23 = 0,
 	/* 24 */ ._u24 = 0,

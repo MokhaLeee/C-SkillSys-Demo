@@ -92,6 +92,7 @@ const u8 *GetUnitPromoList(u8 charId, u8 classId, u8 itemId){
 	
 	extern u8* gpRamPromoTmpList;
 	
+	struct Unit* unit = GetUnitFromCharId(charId);
 	const struct CharacterData* character = GetCharacterData(charId);
 	const int isMale = 0 == (character->attributes & CA_FEMALE);
 	
@@ -101,19 +102,34 @@ const u8 *GetUnitPromoList(u8 charId, u8 classId, u8 itemId){
 	switch( itemId ){
 		
 		case Item_PromoT1:
-			return isMale ? PromoList_T1_M : PromoList_T1_F;
+			if( unit->level < 5 )
+				return gpRamPromoTmpList;
+			else
+				return isMale ? PromoList_T1_M : PromoList_T1_F;
 		
 		case Item_PromoT2_1:
-			return isMale ? PromoList_T2_M1 : PromoList_T2_F1;
+			if( unit->level < 15 )
+				return gpRamPromoTmpList;
+			else
+				return isMale ? PromoList_T2_M1 : PromoList_T2_F1;
 		
 		case Item_PromoT2_2:
-			return isMale ? PromoList_T2_M2 : PromoList_T2_F2;
+			if( unit->level < 15 )
+				return gpRamPromoTmpList;
+			else
+				return isMale ? PromoList_T2_M2 : PromoList_T2_F2;
 		
 		case Item_PromoT3_1:
-			return isMale ? PromoList_T3_M1 : PromoList_T3_F1;
+			if( unit->level < 25 )
+				return gpRamPromoTmpList;
+			else
+				return isMale ? PromoList_T3_M1 : PromoList_T3_F1;
 		
 		case Item_PromoT3_2:
-			return isMale ? PromoList_T3_M2 : PromoList_T3_F2;
+			if( unit->level < 25 )
+				return gpRamPromoTmpList;
+			else
+				return isMale ? PromoList_T3_M2 : PromoList_T3_F2;
 		
 		default:
 			return gpRamPromoTmpList;
@@ -125,13 +141,55 @@ const u8 *GetUnitPromoList(u8 charId, u8 classId, u8 itemId){
 
 
 // For Three Houses style failed
-int GetPromoteRate(struct Unit*, u8 classId){
-	return 100;
+int GetPromoteRate(struct Unit* unit, u8 classId){
+	
+	// Some Exception
+	if( CLASS_CLERIC == classId || CLASS_MONK == classId ){
+		if( GetWExp(unit, ITYPE_BMAG) >= WPN_EXP_D || GetWExp(unit, ITYPE_WMAG) >= WPN_EXP_D )
+			return 100;
+		
+		else
+			return 0;
+	}
+	
+	#define AddWCount(wType) \
+		if( GetClassBaseWLevel(classId, wType) > WPN_LEVEL_E ){ \
+			int cWLv = GetWeaponLevelFromExp( GetClassBaseWExp(classId, wType) ) - WPN_LEVEL_E; \
+			int uWLv = GetWeaponLevelFromExp( GetWExp(unit, wType) ) - WPN_LEVEL_E; \
+			promoWRcount += cWLv; \
+			unitWRcount += uWLv >= cWLv ? cWLv : uWLv; \
+		}
+	
+	int promoWRcount = 0;
+	int unitWRcount = 0;
+	
+	AddWCount(ITYPE_SWORD);
+	AddWCount(ITYPE_LANCE);
+	AddWCount(ITYPE_AXE);
+	AddWCount(ITYPE_BOW);
+	
+	AddWCount(ITYPE_BMAG);
+	AddWCount(ITYPE_WMAG);
+	
+	AddWCount(ITYPE_RIDE);
+	AddWCount(ITYPE_FLY);
+	AddWCount(ITYPE_HEAVY);
+
+	
+	return unitWRcount >= promoWRcount
+		? 100
+		: unitWRcount * 100 / promoWRcount;
+	
+	#undef AddWCount
 }
-int IsUnitSucessfullyPromote(struct Unit*, u8 classId){
-	// W.I.P.
-	// this will be judged inside menu effect
-	return 1;
+
+
+int IsUnitSucessfullyPromote(struct Unit* unit, u8 classId){
+	
+	int count = 5 * (unit->pCharacterData->number + classId);
+	
+	return NextRNEs_100(count) < GetPromoteRate(unit, classId);
+	
 }
 
 

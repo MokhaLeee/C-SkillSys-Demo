@@ -185,13 +185,13 @@ void LoadUnit_LoadSkill(struct Unit* unit){
 			ADD_SKILL(LevelSkillSword_CharList[0].D[0]);
 			ADD_SKILL(LevelSkillSword_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelSkillSword_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelSkillSword_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelSkillSword_CharList[num_char].E[0]);
 			ADD_SKILL(LevelSkillSword_CharList[num_char].E[1]);
 			ADD_SKILL(LevelSkillSword_CharList[0].E[0]);
-			ADD_SKILL(LevelSkillSword_CharList[0].E[1]);
+			ADD_SKILL(LevelSkillSword_CharList[0].E[1]); */
 		
 		default:
 			break;
@@ -240,19 +240,19 @@ void LoadUnit_LoadSkill(struct Unit* unit){
 			ADD_SKILL(LevelSkillLance_CharList[0].D[0]);
 			ADD_SKILL(LevelSkillLance_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelSkillLance_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelSkillLance_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelSkillLance_CharList[num_char].E[0]);
 			ADD_SKILL(LevelSkillLance_CharList[num_char].E[1]);
 			ADD_SKILL(LevelSkillLance_CharList[0].D[0]);
-			ADD_SKILL(LevelSkillLance_CharList[0].D[1]);
+			ADD_SKILL(LevelSkillLance_CharList[0].D[1]); */
 		
 		default:
 			break;
 	}
-	
-	
+
+
 	switch( WeaponRanks[ITYPE_AXE] ){
 		case WPN_LEVEL_S:
 			ADD_SKILL(LevelSkillAxe_ClassList[num_clas].S[0]);
@@ -294,13 +294,13 @@ void LoadUnit_LoadSkill(struct Unit* unit){
 			ADD_SKILL(LevelSkillAxe_CharList[0].D[0]);
 			ADD_SKILL(LevelSkillAxe_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelSkillAxe_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelSkillAxe_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelSkillAxe_CharList[num_char].E[0]);
 			ADD_SKILL(LevelSkillAxe_CharList[num_char].E[1]);
 			ADD_SKILL(LevelSkillAxe_CharList[0].D[0]);
-			ADD_SKILL(LevelSkillAxe_CharList[0].D[1]);
+			ADD_SKILL(LevelSkillAxe_CharList[0].D[1]); */
 		
 		default:
 			break;
@@ -350,13 +350,13 @@ void LoadUnit_LoadSkill(struct Unit* unit){
 			ADD_SKILL(LevelSkillBow_CharList[0].D[0]);
 			ADD_SKILL(LevelSkillBow_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelSkillBow_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelSkillBow_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelSkillBow_CharList[num_char].E[0]);
 			ADD_SKILL(LevelSkillBow_CharList[num_char].E[1]);
 			ADD_SKILL(LevelSkillBow_CharList[0].E[0]);
-			ADD_SKILL(LevelSkillBow_CharList[0].E[1]);
+			ADD_SKILL(LevelSkillBow_CharList[0].E[1]); */
 		
 		default:
 			break;
@@ -404,13 +404,13 @@ void LoadUnit_LoadSkill(struct Unit* unit){
 			ADD_SKILL(LevelSkillBMag_CharList[0].D[0]);
 			ADD_SKILL(LevelSkillBMag_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelSkillBMag_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelSkillBMag_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelSkillBMag_CharList[num_char].E[0]);
 			ADD_SKILL(LevelSkillBMag_CharList[num_char].E[1]);
 			ADD_SKILL(LevelSkillBMag_CharList[0].E[0]);
-			ADD_SKILL(LevelSkillBMag_CharList[0].E[1]);
+			ADD_SKILL(LevelSkillBMag_CharList[0].E[1]); */
 		
 		default:
 			break;
@@ -459,13 +459,13 @@ void LoadUnit_LoadSkill(struct Unit* unit){
 			ADD_SKILL(LevelSkillWMag_CharList[0].D[0]);
 			ADD_SKILL(LevelSkillWMag_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelSkillWMag_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelSkillWMag_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelSkillWMag_CharList[num_char].E[0]);
 			ADD_SKILL(LevelSkillWMag_CharList[num_char].E[1]);
 			ADD_SKILL(LevelSkillWMag_CharList[0].E[0]);
-			ADD_SKILL(LevelSkillWMag_CharList[0].E[1]);
+			ADD_SKILL(LevelSkillWMag_CharList[0].E[1]); */
 		
 		default:
 			break;

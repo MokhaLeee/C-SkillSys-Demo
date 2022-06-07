@@ -127,15 +127,31 @@ const struct ClassRomDataExpa ClassRomDataExpaTable[0x100] = {
 	,
 	[CLASS_MAGE]                = {
 		.maxMag = 30,
+		.baseMag = 14,
+		.maxMag = 30,
+		.magPromoBonus = 14,
+		.tier = 2,
 	},
 	[CLASS_MAGE_F]              = {
 		.maxMag = 30,
+		.baseMag = 14,
+		.maxMag = 30,
+		.magPromoBonus = 14,
+		.tier = 2,
 	},
 	[CLASS_SAGE]                = {
+		.baseMag = 26,
 		.maxMag = 30,
+		.magPromoBonus = 26,
+		.maxMag = 30,
+		.tier = 3,
 	},
 	[CLASS_SAGE_F]              = {
 		.maxMag = 30,
+		.baseMag = 26,
+		.maxMag = 30,
+		.magPromoBonus = 26,
+		.tier = 3,
 	},
 	[CLASS_MAGE_KNIGHT]         = {
 		.maxMag = 30,
@@ -144,16 +160,28 @@ const struct ClassRomDataExpa ClassRomDataExpaTable[0x100] = {
 		.maxMag = 30,
 	},
 	[CLASS_BISHOP]              = {
+		.baseMag = 24,
 		.maxMag = 30,
+		.magPromoBonus = 24,
+		.tier = 3,
 	},
 	[CLASS_BISHOP_F]            = {
+		.baseMag = 24,
 		.maxMag = 30,
+		.magPromoBonus = 24,
+		.tier = 3,
 	},
 	[CLASS_SHAMAN]              = {
+		.baseMag = 16,
 		.maxMag = 30,
+		.magPromoBonus = 16,
+		.tier = 2,
 	},
 	[CLASS_SHAMAN_F]            = {
+		.baseMag = 16,
 		.maxMag = 30,
+		.magPromoBonus = 16,
+		.tier = 2,
 	},
 	[CLASS_DRUID]               = {
 		.maxMag = 30,
@@ -216,21 +244,29 @@ const struct ClassRomDataExpa ClassRomDataExpaTable[0x100] = {
 	},
  	[CLASS_FIGHTER]             = {
 		.maxMag = 30,
+		.tier = 1,
 	},
  	[CLASS_WARRIOR]             = {
 		.maxMag = 30,
+		.tier = 3,
 	},
  	[CLASS_BRIGAND]             = {
 		.maxMag = 30,
 	},
  	[CLASS_PIRATE]              = {
 		.maxMag = 30,
+		.tier = 2,
 	},
  	[CLASS_BERSERKER]           = {
 		.maxMag = 30,
+		.tier = 3,
 	},
  	[CLASS_MONK]                = {
+		.baseMag = 9,
 		.maxMag = 30,
+		.magPromoBonus = 9,
+		.magic_tier = 1,
+		.tier = 1,
 	},
  	[CLASS_PRIEST]              = {
 		.maxMag = 30,
@@ -245,18 +281,31 @@ const struct ClassRomDataExpa ClassRomDataExpaTable[0x100] = {
 	},
  	[CLASS_PEGASUS_KNIGHT]      = {
 		.rank_fly = WPN_EXP_E,
+		.baseMag = 10,
 		.maxMag = 30,
+		.magPromoBonus = 10,
+		.tier = 2,
 	},
  	[CLASS_FALCON_KNIGHT]       = {
-		.rank_fly = WPN_EXP_E,
+		.rank_fly = WPN_EXP_C,
+		.baseMag = 15,
 		.maxMag = 30,
+		.magPromoBonus = 15,
+		.tier = 3,
 	},
  	[CLASS_CLERIC]              = {
+		.baseMag = 9,
 		.maxMag = 30,
+		.magPromoBonus = 9,
+		.magic_tier = 1,
+		.tier = 1,
 	},
  	[CLASS_TROUBADOUR]          = {
 		.rank_ride = WPN_EXP_E,
+		.baseMag = 24,
 		.maxMag = 30,
+		.magPromoBonus = 24,
+		.tier = 3,
 	},
  	[CLASS_VALKYRIE]            = {
 		.maxMag = 30,

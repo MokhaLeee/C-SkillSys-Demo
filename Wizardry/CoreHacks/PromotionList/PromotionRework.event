@@ -44,6 +44,8 @@ PUSH
 	POIN MenuItems_NewPromotion
 	ORG $B129FC
 	POIN NewPromoMenu_OnBPress
+	ORG $B12A04
+	POIN NewPromoMenu_HelpBox
 	ORG $0CD252
 	SHORT 0
 	

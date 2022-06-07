@@ -56,7 +56,7 @@ struct ClassRomDataExpa{
 	s16 growthMag;
 	s16 baseMag;
 	s16 maxMag;
-	s16 magPromoBonus;	// unused
+	s16 magPromoBonus;
 	s8 magic_tier;	// 0, 1, 2, 3 = cannot, can a little, can, master
 	
 	s8 tier;		// 0, 1, 2, 3, -1

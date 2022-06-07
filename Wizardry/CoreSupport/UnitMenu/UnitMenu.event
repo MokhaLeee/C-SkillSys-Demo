@@ -105,7 +105,7 @@ UnitMenuTable:
 	UM_Summon_DK
 	UM_Pick
 	UM_Talk
-	UM_Support
+	// UM_Support
 	UM_Visit
 	UM_Chest
 	UM_Door

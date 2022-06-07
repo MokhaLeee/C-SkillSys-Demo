@@ -1,8 +1,0 @@
-#define NumberOfAnims 0x100
-
-#include "AnimDefinitions-Vanilla.event"
-#include "AnimDefinitions-Demo.event"
-#include "RepointedAnimTable.event"
-
-#include "AnimsInstaller.event"
-#include "AnimMappings.event"

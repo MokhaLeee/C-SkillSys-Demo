@@ -17,7 +17,7 @@
 
 ### Animes
 - Journeyman: Waleed
-- Recruit: Waleed, Memae, Skitty, BwdYeti, MeatOfJustice
+- Recruit: Waleed, Memae, Skitty, BwdYeti, MeatOfJustice, GabrielKnight, Seal, Sacred War
 - Pupil: Pikmin
 - Archer: RenOokami, Leo_link, Spud, MeatOfJustice
 - Priest: Eldritch
@@ -28,6 +28,12 @@
 - Soldier: Alusq, Knabepicer, Russell Clark, Maiser6, Dark, Orihara_Saki, Markex133, Dr0zz
 - Hero: Pushwall, Pikmin1211, Pushwall, St jack
 - Myrmidon: N426
+- Assassin: Pushwall, Jj09, FPZero, Moocavo, Riku, Keks_Krebs, Beccarte, SD9K, Andy
+- Trickster: Leo_Link
+- Thief: Pikmin1211, Maiser6, Skitty, GabrielKnight, ZoramineFae
+- Knight: TheBlindArcher, Vilkalizer, TheBlindArcher, knabepicer
+- General: GabrielKnight, DerTheVaporeon
+- Shaman: Jeorge_Reds, Temp
 
 ### Portraits
 - `Wasdye`: Shamir

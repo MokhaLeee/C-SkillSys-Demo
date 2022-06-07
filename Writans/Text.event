@@ -1529,6 +1529,234 @@ __TEXTPROCESSEC7:
 #incbin ".TextEntries\TextMain-cnmsg_end.fetxt.dmp"
 setText($EC7, __TEXTPROCESSEC7)
 
+__TEXTPROCESS2D8:
+#incbin ".TextEntries\TextMain-cn2D8.fetxt.dmp"
+setText($2D8, __TEXTPROCESS2D8)
+
+__TEXTPROCESS324:
+#incbin ".TextEntries\TextMain-cn324.fetxt.dmp"
+setText($324, __TEXTPROCESS324)
+
+__TEXTPROCESS2DA:
+#incbin ".TextEntries\TextMain-cn2DA.fetxt.dmp"
+setText($2DA, __TEXTPROCESS2DA)
+
+__TEXTPROCESS332:
+#incbin ".TextEntries\TextMain-cn332.fetxt.dmp"
+setText($332, __TEXTPROCESS332)
+
+__TEXTPROCESS2C8:
+#incbin ".TextEntries\TextMain-cn2C8.fetxt.dmp"
+setText($2C8, __TEXTPROCESS2C8)
+
+__TEXTPROCESS314:
+#incbin ".TextEntries\TextMain-cn314.fetxt.dmp"
+setText($314, __TEXTPROCESS314)
+
+__TEXTPROCESS2DC:
+#incbin ".TextEntries\TextMain-cn2DC.fetxt.dmp"
+setText($2DC, __TEXTPROCESS2DC)
+
+__TEXTPROCESS327:
+#incbin ".TextEntries\TextMain-cn327.fetxt.dmp"
+setText($327, __TEXTPROCESS327)
+
+__TEXTPROCESS2ED:
+#incbin ".TextEntries\TextMain-cn2ED.fetxt.dmp"
+setText($2ED, __TEXTPROCESS2ED)
+
+__TEXTPROCESS339:
+#incbin ".TextEntries\TextMain-cn339.fetxt.dmp"
+setText($339, __TEXTPROCESS339)
+
+__TEXTPROCESS2E4:
+#incbin ".TextEntries\TextMain-cn2E4.fetxt.dmp"
+setText($2E4, __TEXTPROCESS2E4)
+
+__TEXTPROCESS32F:
+#incbin ".TextEntries\TextMain-cn32F.fetxt.dmp"
+setText($32F, __TEXTPROCESS32F)
+
+__TEXTPROCESS2E9:
+#incbin ".TextEntries\TextMain-cn2E9.fetxt.dmp"
+setText($2E9, __TEXTPROCESS2E9)
+
+__TEXTPROCESS335:
+#incbin ".TextEntries\TextMain-cn335.fetxt.dmp"
+setText($335, __TEXTPROCESS335)
+
+__TEXTPROCESS2E1:
+#incbin ".TextEntries\TextMain-cn2E1.fetxt.dmp"
+setText($2E1, __TEXTPROCESS2E1)
+
+__TEXTPROCESS32C:
+#incbin ".TextEntries\TextMain-cn32C.fetxt.dmp"
+setText($32C, __TEXTPROCESS32C)
+
+__TEXTPROCESS2C1:
+#incbin ".TextEntries\TextMain-cn2C1.fetxt.dmp"
+setText($2C1, __TEXTPROCESS2C1)
+
+__TEXTPROCESS30D:
+#incbin ".TextEntries\TextMain-cn30D.fetxt.dmp"
+setText($30D, __TEXTPROCESS30D)
+
+__TEXTPROCESS2C3:
+#incbin ".TextEntries\TextMain-cn2C3.fetxt.dmp"
+setText($2C3, __TEXTPROCESS2C3)
+
+__TEXTPROCESS30F:
+#incbin ".TextEntries\TextMain-cn30F.fetxt.dmp"
+setText($30F, __TEXTPROCESS30F)
+
+__TEXTPROCESS3DD:
+#incbin ".TextEntries\TextMain-cn3DD.fetxt.dmp"
+setText($3DD, __TEXTPROCESS3DD)
+
+__TEXTPROCESS48C:
+#incbin ".TextEntries\TextMain-cn48C.fetxt.dmp"
+setText($48C, __TEXTPROCESS48C)
+
+__TEXTPROCESS4CA:
+#incbin ".TextEntries\TextMain-cn4CA.fetxt.dmp"
+setText($4CA, __TEXTPROCESS4CA)
+
+__TEXTPROCESS3DE:
+#incbin ".TextEntries\TextMain-cn3DE.fetxt.dmp"
+setText($3DE, __TEXTPROCESS3DE)
+
+__TEXTPROCESS48D:
+#incbin ".TextEntries\TextMain-cn48D.fetxt.dmp"
+setText($48D, __TEXTPROCESS48D)
+
+__TEXTPROCESS4CB:
+#incbin ".TextEntries\TextMain-cn4CB.fetxt.dmp"
+setText($4CB, __TEXTPROCESS4CB)
+
+__TEXTPROCESS3DF:
+#incbin ".TextEntries\TextMain-cn3DF.fetxt.dmp"
+setText($3DF, __TEXTPROCESS3DF)
+
+__TEXTPROCESS48E:
+#incbin ".TextEntries\TextMain-cn48E.fetxt.dmp"
+setText($48E, __TEXTPROCESS48E)
+
+__TEXTPROCESS4CC:
+#incbin ".TextEntries\TextMain-cn4CC.fetxt.dmp"
+setText($4CC, __TEXTPROCESS4CC)
+
+__TEXTPROCESS542:
+#incbin ".TextEntries\TextMain-cn542.fetxt.dmp"
+setText($542, __TEXTPROCESS542)
+
+__TEXTPROCESS212:
+#incbin ".TextEntries\TextMain-cn212.fetxt.dmp"
+setText($212, __TEXTPROCESS212)
+
+__TEXTPROCESS26E:
+#incbin ".TextEntries\TextMain-cn26E.fetxt.dmp"
+setText($26E, __TEXTPROCESS26E)
+
+__TEXTPROCESS213:
+#incbin ".TextEntries\TextMain-cn213.fetxt.dmp"
+setText($213, __TEXTPROCESS213)
+
+__TEXTPROCESS26F:
+#incbin ".TextEntries\TextMain-cn26F.fetxt.dmp"
+setText($26F, __TEXTPROCESS26F)
+
+__TEXTPROCESS214:
+#incbin ".TextEntries\TextMain-cn214.fetxt.dmp"
+setText($214, __TEXTPROCESS214)
+
+__TEXTPROCESS270:
+#incbin ".TextEntries\TextMain-cn270.fetxt.dmp"
+setText($270, __TEXTPROCESS270)
+
+__TEXTPROCESS215:
+#incbin ".TextEntries\TextMain-cn215.fetxt.dmp"
+setText($215, __TEXTPROCESS215)
+
+__TEXTPROCESS271:
+#incbin ".TextEntries\TextMain-cn271.fetxt.dmp"
+setText($271, __TEXTPROCESS271)
+
+__TEXTPROCESS216:
+#incbin ".TextEntries\TextMain-cn216.fetxt.dmp"
+setText($216, __TEXTPROCESS216)
+
+__TEXTPROCESS272:
+#incbin ".TextEntries\TextMain-cn272.fetxt.dmp"
+setText($272, __TEXTPROCESS272)
+
+__TEXTPROCESS217:
+#incbin ".TextEntries\TextMain-cn217.fetxt.dmp"
+setText($217, __TEXTPROCESS217)
+
+__TEXTPROCESS273:
+#incbin ".TextEntries\TextMain-cn273.fetxt.dmp"
+setText($273, __TEXTPROCESS273)
+
+__TEXTPROCESS218:
+#incbin ".TextEntries\TextMain-cn218.fetxt.dmp"
+setText($218, __TEXTPROCESS218)
+
+__TEXTPROCESS274:
+#incbin ".TextEntries\TextMain-cn274.fetxt.dmp"
+setText($274, __TEXTPROCESS274)
+
+__TEXTPROCESS219:
+#incbin ".TextEntries\TextMain-cn219.fetxt.dmp"
+setText($219, __TEXTPROCESS219)
+
+__TEXTPROCESS275:
+#incbin ".TextEntries\TextMain-cn275.fetxt.dmp"
+setText($275, __TEXTPROCESS275)
+
+__TEXTPROCESS21A:
+#incbin ".TextEntries\TextMain-cn21A.fetxt.dmp"
+setText($21A, __TEXTPROCESS21A)
+
+__TEXTPROCESS276:
+#incbin ".TextEntries\TextMain-cn276.fetxt.dmp"
+setText($276, __TEXTPROCESS276)
+
+__TEXTPROCESS21B:
+#incbin ".TextEntries\TextMain-cn21B.fetxt.dmp"
+setText($21B, __TEXTPROCESS21B)
+
+__TEXTPROCESS277:
+#incbin ".TextEntries\TextMain-cn277.fetxt.dmp"
+setText($277, __TEXTPROCESS277)
+
+__TEXTPROCESS21C:
+#incbin ".TextEntries\TextMain-cn21C.fetxt.dmp"
+setText($21C, __TEXTPROCESS21C)
+
+__TEXTPROCESS278:
+#incbin ".TextEntries\TextMain-cn278.fetxt.dmp"
+setText($278, __TEXTPROCESS278)
+
+__TEXTPROCESS21D:
+#incbin ".TextEntries\TextMain-cn21D.fetxt.dmp"
+setText($21D, __TEXTPROCESS21D)
+
+__TEXTPROCESS279:
+#incbin ".TextEntries\TextMain-cn279.fetxt.dmp"
+setText($279, __TEXTPROCESS279)
+
+__TEXTPROCESS294:
+#incbin ".TextEntries\TextMain-cn294.fetxt.dmp"
+setText($294, __TEXTPROCESS294)
+
+__TEXTPROCESS24D:
+#incbin ".TextEntries\TextMain-cn24D.fetxt.dmp"
+setText($24D, __TEXTPROCESS24D)
+
+__TEXTPROCESS249:
+#incbin ".TextEntries\TextMain-cn249.fetxt.dmp"
+setText($249, __TEXTPROCESS249)
+
 }
 
 #endif // TEXT_INSTALLER_WRITANS_TEXTMAIN_CN_TXT

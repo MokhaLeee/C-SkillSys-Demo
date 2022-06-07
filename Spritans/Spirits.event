@@ -1,0 +1,5 @@
+
+#include "Spirits/MapSpriteDefs.event"
+#include "Spirits/RepointSpiritsTable.event"
+#include "Spirits/Installer.event"
+

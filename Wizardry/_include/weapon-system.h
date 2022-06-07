@@ -13,6 +13,7 @@ extern const u8 gCanUnitUseAllTypeWeapon;
 
 u8 GetWExp(struct Unit* unit, const u8 wType);
 int GetClassBaseWExp(u8 class_id, const u8 wType);
+int GetClassBaseWLevel(u8 class_id, const u8 wType);
 void SetWExp(struct Unit* unit, const u8 wType, u8 exp);
 void AddWExp(struct Unit* unit, const u8 wType, u8 exp);
 u16 GetWTypeMokhaIconIndex(u8 wType);

@@ -6,7 +6,7 @@
 # Variable listing all text files in the writans directory
 # The text installer depends on them (in case there was any change)
 # (Too lazy to code a dependency thingy for that too)
-export WRITANS_ALL_TEXT    := $(wildcard Writans/strings-cn/*.txt) $(wildcard Writans_EN/strings-en/*.txt) $(wildcard Writans/ChapterText-cn/*.txt) $(wildcard Writans_EN/ChapterText-en/*.txt)
+export WRITANS_ALL_TEXT    := $(wildcard Writans/strings-cn/*.txt) $(wildcard Writans_EN/strings-en/*.txt) $(wildcard Writans/ChapterText-cn/*.txt) $(wildcard Writans_EN/ChapterText-en/*.txt) $(wildcard Writans/MiscString/*.txt) $(wildcard Writans_EN/MiscString/*.txt) $(wildcard Writans/VanillaStrings/*.txt) $(wildcard Writans_EN/VanillaStrings/*.txt)
 
 # CN Texts
 WRITANS_TEXT_MAIN	:= Writans/TextMain-cn.txt

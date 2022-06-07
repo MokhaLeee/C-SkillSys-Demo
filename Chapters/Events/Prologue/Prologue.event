@@ -1,0 +1,134 @@
+EventPointerTable(0x7, PointerList)
+
+#include "src/Ch0.lyn.event"
+
+ALIGN 4
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN AllyUnits1 EnemyUnits1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, EventLoadAlly, 5)
+TurnEventPlayer(0, EventLoadEnemies, 7)
+TurnEventEnemy(0, CheckSoldierAttack, 1, 6)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(1,2)
+Village(0x7,VillageEvent,11,2)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+AllyUnits1:
+UNIT Unit_Lysi Recruit1 0x00 Level(1, Ally, 0) [17, 11] 0x00 0x00 0x0 0x00 [IronSword, Fire, Vulnerary] NoAI
+UNIT Unit_Dimi Journeyman1 Unit_Lysi Level(1, Ally, 0) [16, 12] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Unit_Eru Recruit1 Unit_Lysi Level(1, Ally, 0) [17, 10] 0 0 0 0 [SteelAxe, IronAxe, Hammer, Vulnerary] NoAI
+UNIT Unit_Shamir Recruit1 Unit_Lysi Level(1, Ally, 0) [16, 11] 0 0 0 0 [IronSword, SteelSword, IronBow,Vulnerary] NoAI
+UNIT Unit_Ber Recruit1 Unit_Lysi Level(1, Ally, 0) [14, 11] 0 0 0 0 [IronBow, SteelBow, Vulnerary] NoAI
+UNIT Unit_Flyan Recruit1 Unit_Lysi Level(1, Ally, 0) [14, 10] 0 0 0 0 [Heal, Vulnerary] NoAI
+UNIT
+
+AllyUnits2:
+UNIT Unit_Yuri Recruit1 0x00 Level(1, Ally, 0) [2, 11] 0x00 0x00 0x0 0x00 [IronSword, SteelSword, Vulnerary, Item_PromoT1] NoAI
+UNIT
+
+EnemyUnits1:
+UNIT 0x80 Fighter Breguet Level(1, Enemy, 1) [15, 8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT 0x81 Shaman Breguet Level(1, Enemy, 1) [15, 4] 2 0 0 0 [Fire, Item_PromoT1] AttackInRangeAI
+
+UNIT 0x81 Soldier Breguet Level(1, Enemy, 1) [8, 11] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT 0x81 Soldier Breguet Level(1, Enemy, 1) [3, 8] 0 0 0 0 [IronLance, Javelin] AttackInRangeAI
+UNIT 0x81 Soldier Breguet Level(1, Enemy, 1) [1, 9] 0 0 0 0 [IronLance, Javelin] AttackInRangeAI
+UNIT 0x81 Fighter Breguet Level(2, Enemy, 1) [2, 9] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT 0x81 Fighter Breguet Level(2, Enemy, 1) [1, 8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT 0x81 Monk Breguet Level(1, Enemy, 1) [7, 12] 2 0 0 0 [Flux] AttackInRangeAI
+UNIT 0x80 Fighter Breguet Level(1, Enemy, 1) [2, 6] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Breguet Knight 0x0 Level(5, Enemy, 1) [1, 2] 0 0 0 0 [IronAxe, HandAxe] NeverMoveAI
+UNIT
+
+EnemyUnits2:
+UNIT 0x80 Cavalier Breguet Level(1, Enemy, 1) [18, 8] 0 0 0 0 [IronLance] PursueWithoutHeedAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+CHECK_TUTORIAL
+BEQ 0x0 0xC 0x0
+ENUT 0xb0 //turn on casual mode if easy
+LABEL 0x0
+LOAD1 0x1 AllyUnits1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+ASMC EventCh0_SetAlly1Skills
+
+ENUN
+
+LOAD1 0x1 EnemyUnits1
+ASMC EventCh0_SetEnemy1Skills
+CAMERA Unit_Lysi
+ENUN
+Text(Prologue_Opening)
+ENDA
+
+EndingScene:
+Text(Prologue_Ending)
+// MNC2 0x1 //go to ch1
+MNTS 0
+NoFade
+ENDA
+
+VillageEvent:
+VillageEventItem(Prologue_Village, HouseBG, Item_PromoT1)
+
+EventLoadEnemies:
+NoFade
+CAMERA [18, 8]
+ENUN
+LOAD1 0x1 EnemyUnits2
+ENUN
+ENDA
+
+EventLoadAlly:
+NoFade
+CAMERA [2, 11]
+ENUN
+LOAD1 0x1 AllyUnits2
+ASMC EventCh0_SetAlly2Skills
+ENUN
+ENDA
+
+CheckSoldierAttack:
+NoFade
+ASMC EventCh0_CheckSoldierAI
+ENDA

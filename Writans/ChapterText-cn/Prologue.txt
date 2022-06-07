@@ -2,70 +2,37 @@
 [OpenMidRight]
 [LoadFace][0x02][NL]
 
-[OpenMidLeft][LoadFace][0x05][NL]
+[OpenMidLeft][LoadFace][0x01][NL]
 
 [OpenMidRight]
 终于赶到了...[A]
 
 [OpenMidLeft]
-是的，但叛军占领了城镇[A][NL]
+牛头人占领了纯爱群[A][NL]
 我们最好继续进攻[A]
 
 [OpenMidRight]
-全军进攻！[A][NL]
-这些叛军必须被消灭，[NL]
-我们需要夺回他们占领的城镇！[A]
+退！[A][NL]
+鸽子必须被消灭，[NL]
+我们需要夺回纯爱战士的荣耀！[A]
 
 [OpenMidLeft]
-好的主公！[A][X]
+好的！[A][X]
 
 ## Prologue_Village
 [OpenMidRight][LoadFace][0xFF][0xFF]
 [OpenMidLeft][LoadFace][0x58][NL]
-Oh, it's the Nameless Order[NL]
-of Knights! We used to support[A][NL]
-the Donateenary cause and[NL]
-their God Hex, so we did, but[A][NL]
-then the great God Builda appeared,[NL]
-and made our lives much easier.[A][NL]
-The Donateenary remnants didn't take[NL]
-our side switcharooing very well,[A][NL]
-and took over our humble village.[NL]
-We're so glad you've come![A][NL]
-Here, take this as a token of our[NL]
-appreciation.[A][X]
+送你个大宝贝！[A][X]
 
 ## Prologue_Ending
-[OpenMidRight][LoadFace][0x2][0x1]
-[OpenMidLeft][LoadFace][0x07][NL]
+[OpenMidRight][LoadFace][0x1][0x1]
+[OpenMidLeft][LoadFace][0x02][NL]
 
 [OpenMidRight]
-How pathetic.[A][NL]
-How did such a pathetic people ever[NL]
-revive the Demon King 20 years ago?[A]
-
-[OpenMidLeft]
-I assure you milord,[NL]
-they were much more powerful then.[A]
-
-[OpenMidRight]
-How would you know?[NL]
-You didn't fight in the war.[A][NL]
-You ran, coward![NL]
-You let my grandparents die![A]
-
-[OpenMidLeft]
-And I have spent the last 20 years[NL]
-trying to atone for my cowardice,[A][NL]
-and in my efforts to atone I-[A]
-
-[OpenMidRight]
-Shut up, there's another rebel base[NL]
-ahead we need to take.[A][X]
+剩下的工作正在进行中[A][X]
 
 ## Prologue_Objective
-Seize the village held[NL]
-by the Donateenaries.[X]
+占领城门.[X]
 
 ## Prologue_Goal
-Seize gate[X]
+占领城门[X]

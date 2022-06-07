@@ -15,6 +15,7 @@ enum UnitsDef{
 	Unit_Sylvain = 0x0B,
 	Unit_Yuri = 0x0C,
 	Unit_Marianne = 0x0D,
+	Unit_Felix = 0x0E,
 
 	MountainBandit = 0x80,
 	
@@ -25,7 +26,7 @@ enum UnitsDef{
 enum ClassDef{
 	// Units
 	Class_Thief_F = 0x0E,
-	Class_Soldier_F = CLASS_RECRUIT_T1,		// 0x30
+	Class_Soldier_F = CLASS_RECRUIT_T1,		// 0x37
 	Class_Fighter_F = CLASS_RECRUIT_T2,		// 0x3A
 	Class_Pirate_F = CLASS_BRIGAND,			// 0x41(山贼换成贼)
 	Class_Warrior_F = CLASS_JOURNEYMAN_T2,	// 0x38
@@ -51,6 +52,7 @@ enum UnitMugsDef{
 	UnitMug_Sylvain = 0x0B,
 	UnitMug_Yuri = 0x0C,
 	UnitMug_Marianne = 0x0D,
+	UnitMug_Felix = 0x0E,
 	
 };
 

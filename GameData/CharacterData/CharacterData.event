@@ -9,4 +9,10 @@ PUSH
 	#include "src/Character06.lyn.event"
 	#include "src/Character07.lyn.event"
 	#include "src/Character08.lyn.event"
+	#include "src/Character09.lyn.event"
+	#include "src/Character0A.lyn.event"
+	#include "src/Character0B.lyn.event"
+	#include "src/Character0C.lyn.event"
+	#include "src/Character0D.lyn.event"
+	#include "src/Character0E.lyn.event"
 POP

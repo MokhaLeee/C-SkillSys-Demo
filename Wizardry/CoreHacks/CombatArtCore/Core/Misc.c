@@ -158,13 +158,13 @@ void LoadUnit_CombatArt(struct Unit* unit){
 			ADD_SKILL(LevelCASword_CharList[0].D[0]);
 			ADD_SKILL(LevelCASword_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelCASword_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelCASword_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelCASword_CharList[num_char].E[0]);
 			ADD_SKILL(LevelCASword_CharList[num_char].E[1]);
 			ADD_SKILL(LevelCASword_CharList[0].E[0]);
-			ADD_SKILL(LevelCASword_CharList[0].E[1]);
+			ADD_SKILL(LevelCASword_CharList[0].E[1]); */
 		
 		default:
 			break;
@@ -213,13 +213,13 @@ void LoadUnit_CombatArt(struct Unit* unit){
 			ADD_SKILL(LevelCALance_CharList[0].D[0]);
 			ADD_SKILL(LevelCALance_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelCALance_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelCALance_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelCALance_CharList[num_char].E[0]);
 			ADD_SKILL(LevelCALance_CharList[num_char].E[1]);
 			ADD_SKILL(LevelCALance_CharList[0].D[0]);
-			ADD_SKILL(LevelCALance_CharList[0].D[1]);
+			ADD_SKILL(LevelCALance_CharList[0].D[1]); */
 		
 		default:
 			break;
@@ -267,13 +267,13 @@ void LoadUnit_CombatArt(struct Unit* unit){
 			ADD_SKILL(LevelCAAxe_CharList[0].D[0]);
 			ADD_SKILL(LevelCAAxe_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelCAAxe_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelCAAxe_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelCAAxe_CharList[num_char].E[0]);
 			ADD_SKILL(LevelCAAxe_CharList[num_char].E[1]);
 			ADD_SKILL(LevelCAAxe_CharList[0].D[0]);
-			ADD_SKILL(LevelCAAxe_CharList[0].D[1]);
+			ADD_SKILL(LevelCAAxe_CharList[0].D[1]); */
 		
 		default:
 			break;
@@ -323,13 +323,13 @@ void LoadUnit_CombatArt(struct Unit* unit){
 			ADD_SKILL(LevelCABow_CharList[0].D[0]);
 			ADD_SKILL(LevelCABow_CharList[0].D[1]);
 		
-		case WPN_LEVEL_E:
+	/* 	case WPN_LEVEL_E:
 			ADD_SKILL(LevelCABow_ClassList[num_clas].E[0]);
 			ADD_SKILL(LevelCABow_ClassList[num_clas].E[1]);
 			ADD_SKILL(LevelCABow_CharList[num_char].E[0]);
 			ADD_SKILL(LevelCABow_CharList[num_char].E[1]);
 			ADD_SKILL(LevelCABow_CharList[0].E[0]);
-			ADD_SKILL(LevelCABow_CharList[0].E[1]);
+			ADD_SKILL(LevelCABow_CharList[0].E[1]); */
 		
 		default:
 			break;
@@ -591,6 +591,7 @@ void PostAction_CombatArtDebuff(ProcPtr proc){
 		return;
 	}
 
+	gpBattleFlagExt->combatArt_hitted = 0;
 }
 
 

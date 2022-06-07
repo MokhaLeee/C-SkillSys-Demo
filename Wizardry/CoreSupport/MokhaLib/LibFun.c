@@ -64,3 +64,22 @@ void NewDrawAbsDecNumber(u16 *dest, int color, int number){
 	else
 		DrawUiNumber(dest, color, number);
 }
+
+
+// ====================================================
+//                     Map Misc
+// ====================================================
+
+int IsPositionVaild(s8 x, s8 y){
+	return( (x >= 0) && (x <= gBmMapSize.x) && (y >= 0) && (y <=  gBmMapSize.y) );
+}
+
+
+struct Unit* GetUnitByLoc(s8 x, s8 y){
+	
+	if( !IsPositionVaild(x, y) )
+		return NULL;
+	
+	return GetUnit(gBmMapUnit[y][x]);
+	
+}

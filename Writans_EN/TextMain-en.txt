@@ -55,6 +55,11 @@ Raise Mag[X]
 #include MiscString/Misc.txt
 #include ChapterText-en/Prologue.txt
 
+
 ## msg_end
 0[X]
+
+
+
+#include VanillaStrings/Class.txt
 

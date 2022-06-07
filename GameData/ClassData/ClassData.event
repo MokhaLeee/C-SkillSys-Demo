@@ -1,8 +1,65 @@
 PUSH
-	ORG $808514
-	#include "src/Class3D.lyn.event"
 
+	ORG $8072B4
+	#include "Tier2/Class05_Cavalier.lyn.event"
+	#include "Tier2/Class06_CavalierF.lyn.event"
+	
+	ORG $807404
+	#include "Tier2/Class09_Knight.lyn.event"
+	#include "Tier2/Class0A_KnightF.lyn.event"
+	
+	ORG $807554
+	#include "Tier2/Class0D_ThiefM.lyn.event"
+	#include "Tier2/Class0E_ThiefF.lyn.event"
+	
+	ORG $8075FC
+	#include "Tier2/Class0F_Mercenary.lyn.event"
+	#include "Tier2/Class10_MercenaryF.lyn.event"
+	
+	ORG $80774C
+	#include "Tier1/Class13_MyrmidonM.lyn.event"
+	#include "Tier1/Class14_MyrmidonF.lyn.event"
+	
+	ORG $807944
+	#include "Tier2/Class19_Archer.lyn.event"
+	#include "Tier2/Class1A_ArcherF.lyn.event"
+	
+	ORG $807B3C
+	#include "Tier2/Class1F_WRider.lyn.event"
+	
+	ORG $807D34
+	#include "Tier2/Class25_Mage.lyn.event"
+	#include "Tier2/Class26_MageF.lyn.event"
+	
+	ORG $807FD4
+	#include "Tier2/Class2D_Shaman.lyn.event"
+	#include "Tier2/Class2E_ShamanF.lyn.event"
+	
+	ORG $80831C
+	#include "Tier1/Class37_SoldierF.lyn.event"
+	
+	ORG $808418
+	#include "Tier1/Class3A_FighterF.lyn.event"
+	
+	ORG $808514
+	#include "Tier0/Class3D_Journeyman.lyn.event"
+	
+	ORG $808664
+	#include "Tier2/Class41_PirateF.lyn.event"
+	#include "Tier2/Class42_PirateM.lyn.event"
+	
+	ORG $808760
+	#include "Tier1/Class44_Monk.lyn.event"
+	
 	ORG $80885C
-	#include "src/Class47.lyn.event"
+	#include "Tier0/Class47_Recruit.lyn.event"
+	#include "Tier2/Class48_PKnight.lyn.event"
+	
+	ORG $808958
+	#include "Tier1/Class4A_Cleric.lyn.event"
+	#include "Tier2/Class4B_Troubadour.lyn.event"
+	
+	ORG $808AA8
+	#include "Tier1/Class4E_SoldierM.lyn.event"
 
 POP

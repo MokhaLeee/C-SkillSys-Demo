@@ -1,0 +1,40 @@
+# 0x2D8
+Noble[X]
+# 0x324
+Tier 0[X]
+
+# 0x2DA
+Noble[X]
+# 0x332
+Tier 0[X]
+
+# 0x2C8
+Myrmidon[X]
+# 0x314
+Tier 1, need Sword level > D[X]
+
+# 0x2DC
+Fighter[X]
+# 0x327
+Tier 1, need Axe level > D[X]
+
+# 0x2ED
+Soldier[X]
+# 0x339
+Tier 1, need Lance level > D[X]
+
+
+# 0x2E4
+Monk[X]
+# 0x32F
+Tier 1, need B.Mag or [NL]
+W.Mag level > D[X]
+
+
+# 0x2E9
+Monk[X]
+# 0x335
+Tier 1, need B.Mag or [NL]
+W.Mag level > D[X]
+
+

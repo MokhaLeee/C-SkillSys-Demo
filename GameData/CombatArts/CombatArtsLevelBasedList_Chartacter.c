@@ -15,6 +15,7 @@ const struct LevelBasedSkillList_t LevelCASword_CharList[0x100] = {
 		.S[0] = CA_HeavensFall,
 		.S[1] = 0,
 	},
+	
 }; 
 
 const struct LevelBasedSkillList_t LevelCALance_CharList[0x100] = {
@@ -31,6 +32,10 @@ const struct LevelBasedSkillList_t LevelCALance_CharList[0x100] = {
 		.A[1] = 0,
 		.S[0] = 0,
 		.S[1] = 0,
+	},
+	
+	[Unit_Ber] = {
+		.D[0] = CA_Vengeance,
 	},
 };
  
@@ -65,5 +70,16 @@ const struct LevelBasedSkillList_t LevelCABow_CharList[0x100] = {
 		.A[1] = CA_HuntersVolley,
 		.S[0] = 0,
 		.S[1] = 0,
+	},
+	
+	[Unit_Yuri] = {
+		.D[0] = CA_WardArrow,
+	},
+	[Unit_Felix] = {
+		.D[0] = CA_WardArrow,
+	},
+	
+	[Unit_Yuri] = {
+		.D[0] = CA_WardArrow,
 	},
 }; 

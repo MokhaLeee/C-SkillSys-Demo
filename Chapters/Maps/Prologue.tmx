@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="14" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="right-down" width="19" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" name="01000203" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../Tilesets/FE8 - Fields - 01000203.png" width="512" height="512"/>
+  <image source="Tilesets/01000203.png" width="512" height="512"/>
  </tileset>
- <layer name="Tile Layer 1" width="19" height="14">
+ <layer id="1" name="Tile Layer 1" width="19" height="14">
   <properties>
    <property name="ChapterID" value="0"/>
    <property name="Main" value=""/>
@@ -14,10 +14,10 @@
    <property name="TileConfig" value="3"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxtkktOwzAURR0y4tsCaygF2gpU1oCaliLYAx0UhET3wG8CFFXsIPwmdMQeEEIggboHBsAEdQEcK+8Jx83gKE7yfHz97MGYMb8wHxqzCEuwDLOwCu/8OzJpPvg2gAc4hy5cQIn6MlQggjo0IGZODSIz6vJR5wbzmrAJbdiFPXHdQRG2HWc1zPb1ZW8HgTGdIPl2FiQeRX2XMifvufweFJgfwToseC71taX2FW4ysr1AU8Zf8O057Jr+u62rs95UkHaN897guSVOe3Zz4Wgu31liXtlx2ayPQdILi3W2MubFzjnp+6TjmWb8zLMnrg7cSx8iyR9Ln91sffGdiOtJ8vSEtpdhX/LHcv7uP+2BZqrYLFCFq2C0L3pXYjmbGanZgUOh5tw57csnz7Xwfz+6nuZZwXPL+E3q1dV17twxNQVqcjDMOHcd/5gk+0SQzlSU+3Yt6N6Hcvf9s1NyePLiOnXyqMeu3ZK9/gHIIIK9
+   eJxtk0tKA0EQhmvSK0XMJJ4hjJoEcTyDmJconiFCfICCRzDiaqILbxBfG6PHEAQh6h1cqBuZA/gXXYXdzSw+qlNV/U/X352PEtEvWDBE7yWfqrHkWC8iLoFl8Cb1TBiBC1BHrQGaxt8f0gJt0Am+6Wp1UeuBTdnzQkRT5LcQt0EicYDaHtiXPtXKHS2e7SgiOgZD7JlB3OHfWJ+AO9G7JFuvFmgpXK9hbwusgy5YDeZ7RM+TaI3Ir7nz9qTnC3yT1WHUV+2LkTsgS6indMh6w5oVyem5MueuWEv16jh7I7K+ulqJ+MGaffF9HPjyEGhyfijzcL9qsg77fA9ujPVtLrJ6sfHvfiJRtXYRK+idj2xuQHafcijn53Va4HHm6DXRl4AUPAc6U7nXiczJb02/Wfh+HV8+EdfM/zzqQSq5FejcYv1Kvs9t582doaeGXFn+a+HZdP0DrtA7C07JsiE67M21oPefy9sfUzFl6MSide6cR3X4232Z9Q+geHKR
   </data>
  </layer>
- <layer name="Village Door" width="19" height="14">
+ <layer id="2" name="Village Door" width="19" height="14" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="1"/>
@@ -26,7 +26,7 @@
    <property name="Y" value="2"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgaoJt5oF0wCkbByAUA9TQAjw==
+   eJxjYBga4DQeuW5mujljFBABLjJBMDWAICMDAx8jdcyCgRPUNW5EAADPpwPp
   </data>
  </layer>
 </map>

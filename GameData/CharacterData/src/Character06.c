@@ -13,12 +13,12 @@ const struct CharacterData Char06 = {
 	/* 0A */ ._u0A = 9,
 
 	/* 0B */ .baseLevel = 1,
-	/* 0C */ .baseHP = 3,
-	/* 0D */ .basePow = 1,
-	/* 0E */ .baseSkl = 2,
-	/* 0F */ .baseSpd = 3,
-	/* 10 */ .baseDef = 0,
-	/* 11 */ .baseRes = 0,
+	/* 0C */ .baseHP = 17,
+	/* 0D */ .basePow = 2,
+	/* 0E */ .baseSkl = 4,
+	/* 0F */ .baseSpd = 5,
+	/* 10 */ .baseDef = 2,
+	/* 11 */ .baseRes = 3,
 	/* 12 */ .baseLck = 3,
 	/* 13 */ .baseCon = 0,
 
@@ -36,7 +36,7 @@ const struct CharacterData Char06 = {
 	/* 1E */ .growthSkl = 40,
 	/* 1F */ .growthSpd = 50,
 	/* 20 */ .growthDef = 20,
-	/* 21 */ .growthRes = 15,
+	/* 21 */ .growthRes = 30,
 	/* 22 */ .growthLck = 30,
 
 	/* 23 */ ._u23 = 0,

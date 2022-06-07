@@ -97,6 +97,9 @@ int GetClassBaseWExp(u8 class_id, const u8 wType){
 	}
 }
 
+int GetClassBaseWLevel(u8 class_id, const u8 wType){
+	return GetWeaponLevelFromExp( GetClassBaseWExp(class_id, wType) );
+}
 
 void SetWExp(struct Unit* unit, const u8 wType, u8 exp){
 	

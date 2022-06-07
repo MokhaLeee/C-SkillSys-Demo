@@ -38,17 +38,48 @@ static void EkrPutText_SetStatusNonePromo(void){
 
 static void EkrPutText_SetStatusPromo(void)
 {
-	gLevelUpStatsBase.stat_up[LU_HP]  = BU_AFT->unit.pClassData->promotionHp;
-	gLevelUpStatsBase.stat_up[LU_STR] = BU_AFT->unit.pClassData->promotionPow;
-	gLevelUpStatsBase.stat_up[LU_MAG] = GetClassPromoBonusMag(BU_AFT->unit.pClassData->number);
-	gLevelUpStatsBase.stat_up[LU_SKL] = BU_AFT->unit.pClassData->promotionSkl;
-	gLevelUpStatsBase.stat_up[LU_SPD] = BU_AFT->unit.pClassData->promotionSpd;
+	const struct ClassData* promotedClass = BU_AFT->unit.pClassData;
+	
+	gLevelUpStatsBase.stat_up[LU_HP]  = 
+		BU_PRE->unit.maxHP < promotedClass->promotionHp
+			? promotedClass->promotionHp - BU_PRE->unit.maxHP
+			: 0;
+			
+	gLevelUpStatsBase.stat_up[LU_STR] = 
+		BU_PRE->unit.pow < promotedClass->promotionPow
+			? promotedClass->promotionPow - BU_PRE->unit.pow
+			: 0;
+		
+	gLevelUpStatsBase.stat_up[LU_MAG] = 
+		*GetMagAt(&BU_PRE->unit) < GetClassPromoBonusMag(promotedClass->number)
+			? GetClassPromoBonusMag(promotedClass->number) - *GetMagAt(&BU_PRE->unit)
+			: 0;
+	
+	gLevelUpStatsBase.stat_up[LU_SKL] = 
+		BU_PRE->unit.skl < promotedClass->promotionSkl
+			? promotedClass->promotionSkl - BU_PRE->unit.skl
+			: 0;
+			
+	gLevelUpStatsBase.stat_up[LU_SPD] = 
+		BU_PRE->unit.spd < promotedClass->promotionSpd
+			? promotedClass->promotionSpd - BU_PRE->unit.spd
+			: 0;
 	
 	gLevelUpStatsBase.stat_up[LU_LCK] = 0;
-	gLevelUpStatsBase.stat_up[LU_DEF] = BU_AFT->unit.pClassData->promotionDef;
-	gLevelUpStatsBase.stat_up[LU_RES] = BU_AFT->unit.pClassData->promotionRes;
+	
+	gLevelUpStatsBase.stat_up[LU_DEF] = 
+		BU_PRE->unit.def < promotedClass->promotionDef
+			? promotedClass->promotionDef - BU_PRE->unit.def
+			: 0;
+
+	gLevelUpStatsBase.stat_up[LU_RES] = 
+		BU_PRE->unit.res < promotedClass->promotionRes
+			? promotedClass->promotionRes - BU_PRE->unit.res
+			: 0;
+
 	gLevelUpStatsBase.stat_up[LU_CON] = 
 		BU_AFT->unit.pClassData->baseCon - BU_PRE->unit.pClassData->baseCon;
+	
 	gLevelUpStatsBase.stat_up[LU_MOV] = 
 		BU_AFT->unit.pClassData->baseMov - BU_PRE->unit.pClassData->baseMov;
 }

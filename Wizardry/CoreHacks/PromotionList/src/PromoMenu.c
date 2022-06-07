@@ -16,6 +16,13 @@ int NewPromoMenu_OnBPress(struct MenuProc* menu, struct MenuItemProc* item){
 }
 
 
+// Make a Help Box
+void NewPromoMenu_HelpBox(struct MenuProc*, struct MenuItemProc* menu_item){
+	
+	// StartHelpBox(8 * menu_item->xTile, 8 * menu_item->yTile, 0x212;
+	
+	return;
+}
 
 
 static u8 NewPromoCmd_Usability(const struct MenuItemDef*, int number);
@@ -53,8 +60,21 @@ const struct MenuItemDef MenuItems_NewPromotion[] = {
 u8 NewPromoCmd_Usability(const struct MenuItemDef*, int number){
 	
 	struct Proc_PromoInit* prom_init = Proc_Find(gProc_PromotionInit);
+	u8 charId = prom_init->charId; 
+	u8 classIdOld = prom_init->classOld; 
+	u8 itemId = prom_init->item;
+	u8 classPromo = GetUnitPromoList(charId, classIdOld, itemId)[number];
+	struct Unit* unit = GetUnitFromCharId(charId);
 	
-	return number < prom_init->count ? MENU_ENABLED : MENU_NOTSHOWN;
+	if( number >= prom_init->count )
+		return MENU_NOTSHOWN;
+	
+	else if( 100 != GetPromoteRate(unit, classPromo) )
+		return MENU_DISABLED;
+	
+	else
+		return MENU_ENABLED;
+
 }
 
 
@@ -100,6 +120,10 @@ u8 NewPromoCmd_Effect(struct MenuProc* menu, struct MenuItemProc* menu_item){
 	struct Proc_PromoMain* procMain = procDisp->proc_parent;
 	struct Proc_PromoInit* proc_init = Proc_Find(gProc_PromotionInit);
 	const u8 *class_list = GetUnitPromoList(procDisp->charId, proc_init->classOld, proc_init->item);
+	
+	if( MENU_ENABLED != menu_item->availability )
+		return MENU_ACT_SND6B;
+
 	
 	if( 0 != procDisp->state )
 		return 0;

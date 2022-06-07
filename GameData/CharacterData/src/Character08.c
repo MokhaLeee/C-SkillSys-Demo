@@ -13,12 +13,12 @@ const struct CharacterData Char08 = {
 	/* 0A */ ._u0A = 1,
 
 	/* 0B */ .baseLevel = 1,
-	/* 0C */ .baseHP = 3,
-	/* 0D */ .basePow = 1,
-	/* 0E */ .baseSkl = 2,
-	/* 0F */ .baseSpd = 1,
-	/* 10 */ .baseDef = 0,
-	/* 11 */ .baseRes = 3,
+	/* 0C */ .baseHP = 18,
+	/* 0D */ .basePow = 0,
+	/* 0E */ .baseSkl = 3,
+	/* 0F */ .baseSpd = 3,
+	/* 10 */ .baseDef = 1,
+	/* 11 */ .baseRes = 4,
 	/* 12 */ .baseLck = 3,
 	/* 13 */ .baseCon = 0,
 
@@ -35,8 +35,8 @@ const struct CharacterData Char08 = {
 	/* 1D */ .growthPow = 20,
 	/* 1E */ .growthSkl = 40,
 	/* 1F */ .growthSpd = 30,
-	/* 20 */ .growthDef = 20,
-	/* 21 */ .growthRes = 45,
+	/* 20 */ .growthDef = 30,
+	/* 21 */ .growthRes = 60,
 	/* 22 */ .growthLck = 40,
 
 	/* 23 */ ._u23 = 0,
@@ -50,3 +50,18 @@ const struct CharacterData Char08 = {
 	/* 2C */ .pSupportData = (struct SupportData const*const)0x88AEC9C,
 	/* 30 */ ._pU30 = (u8*)7,
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

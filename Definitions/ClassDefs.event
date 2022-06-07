@@ -1,5 +1,5 @@
 #define Class_Thief_F 0x0E
-#define Class_Soldier_F 0x30
+#define Class_Soldier_F 0x37
 #define Class_Fighter_F 0x3A
 #define Class_Pirate_F 0x41
 #define Class_Warrior_F 0x38

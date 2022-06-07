@@ -18,9 +18,6 @@
 #include "Constants.event"
 #include "Indices.event"
 
-// Item Data Fix
-#include "ItemData/ItemDataFix.event"
-
 // Class Data
 #include "ClassData/ClassData.event"
 
@@ -45,5 +42,9 @@
 #include "UnitExpa/ClassRomDataExpa.lyn.event"
 
 
+
+// Vanilla N2Cs
+#include "Vanilla/ChapterDataEditor/ChapterDataEditor.event"
+#include "Vanilla/ItemEditors/FE8ItemEditor.event"
 
 #endif // GAME_DATA

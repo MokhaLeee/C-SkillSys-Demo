@@ -14,6 +14,7 @@
 #define Unit_Sylvain 0x0B
 #define Unit_Yuri 0x0C
 #define Unit_Marianne 0x0D
+#define Unit_Felix 0x0E
 
 #define MountainBandit 0x80
 

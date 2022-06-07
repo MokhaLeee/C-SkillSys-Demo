@@ -2,7 +2,59 @@
 #define _T0_RecruitM_Sword 0xCA
 #define _T0_RecruitM_Lance 0xCB
 #define _T0_RecruitM_Bow 0xCC
-#define _T0_RecruitF_Magic 0xCD
-#define _T0_RecruitM_Staff 0xCE
+#define _T0_RecruitM_Staff 0xCD
 
 
+#define _T0_RecruitF_Sword 0xCE
+#define _T0_RecruitF_Lance 0xCF
+#define _T0_RecruitF_Magic 0xD0
+#define _T0_RecruitF_Staff 0xD1
+
+#define _T1_FighterM_Bow 0xD2
+#define _T1_FighterM_Unarmed 0xD3
+
+#define _T1_MyrmidonF_Bow 0xD4
+#define _T1_MyrmidonM_Bow 0xD5
+
+#define _T1_SoldierF_Lance 0xD6
+#define _T1_SoldierF_Unarmed 0xD7
+
+#define _T1_SoldierM_Sword 0xD8
+#define _T1_SoldierM_Bow 0xD9
+#define _T1_SoldierM_Staff 0xDA
+#define _T1_SoldierM_Unarmed 0xDB
+
+#define _T2_KnightM_Sword 0xDC
+#define _T2_KnightM_Axe 0xDD
+#define _T2_KnightM_HandAxe 0xDE
+#define _T2_KnightM_Bow 0xDF
+#define _T2_KnightM_Magic 0xE0
+#define _T2_KnightM_Staff 0xE1
+
+#define _T2_MercenaryF_Axe 0xE2
+#define _T2_MercenaryF_HandAxe 0xE3
+#define _T2_MercenaryF_Bow 0xE4
+#define _T2_MercenaryF_Unarmed 0xE5
+
+#define _T2_MercenaryM_Lance 0xE6
+#define _T2_MercenaryM_Axe 0xE7
+#define _T2_MercenaryM_HandAxe 0xE8
+#define _T2_MercenaryM_Bow 0xE9
+#define _T2_MercenaryM_Unarmed 0xEA
+
+#define _T2_PirateF_Axe 0xEB
+#define _T2_PirateF_HandAxe 0xEC
+#define _T2_PirateF_Unarmed 0xED
+
+#define _T2_PirateM_Sword 0xEE
+#define _T2_PirateM_Lance 0xEF
+
+#define _T2_ShamanF_Staff 0xF0
+
+#define _T2_ShamanM_Staff 0xF1
+
+#define _T2_ThiefF_Knife 0xF2
+#define _T2_ThiefF_Bow 0xF3
+#define _T2_ThiefF_Unarmed 0xF4
+
+#define _T2_ThiefM_Bow 0xF5

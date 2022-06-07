@@ -1,0 +1,8 @@
+#define NumberOfAnims 0x100
+
+#include "BattleAnimes/AnimDefinitions-Vanilla.event"
+#include "BattleAnimes/AnimDefinitions-Demo.event"
+#include "BattleAnimes/RepointedAnimTable.event"
+
+#include "BattleAnimes/AnimsInstaller.event"
+#include "BattleAnimes/AnimMappings.event"

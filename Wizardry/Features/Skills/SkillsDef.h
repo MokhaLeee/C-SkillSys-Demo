@@ -56,7 +56,7 @@ enum{
 	SID_AvoidSword = 0x2F,		// 剑回避
 	
 	
-	SID_SwordBreaker = 0x30,
+	SID_SwordBreaker = 0x30,	// 剑杀
 	SID_AxeBreaker = 0x31,
 	SID_LanceBreaker = 0x32,
 	SID_BowBreaker = 0x33,

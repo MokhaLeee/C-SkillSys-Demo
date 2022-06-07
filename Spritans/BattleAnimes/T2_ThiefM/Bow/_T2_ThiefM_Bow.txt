@@ -1,0 +1,243 @@
+/// - Mode 1
+C03
+C07
+4 p- _T2_ThiefM_Bow_000.png
+4 p- _T2_ThiefM_Bow_001.png
+3 p- _T2_ThiefM_Bow_002.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_004.png
+2 p- _T2_ThiefM_Bow_005.png
+2 p- _T2_ThiefM_Bow_006.png
+2 p- _T2_ThiefM_Bow_007.png
+2 p- _T2_ThiefM_Bow_008.png
+2 p- _T2_ThiefM_Bow_009.png
+2 p- _T2_ThiefM_Bow_010.png
+2 p- _T2_ThiefM_Bow_011.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+6 p- _T2_ThiefM_Bow_013.png
+3 p- _T2_ThiefM_Bow_014.png
+4 p- _T2_ThiefM_Bow_015.png
+C19
+4 p- _T2_ThiefM_Bow_016.png
+6 p- _T2_ThiefM_Bow_017.png
+30 p- _T2_ThiefM_Bow_018.png
+2 p- _T2_ThiefM_Bow_019.png
+C05
+2 p- _T2_ThiefM_Bow_020.png
+2 p- _T2_ThiefM_Bow_021.png
+1 p- _T2_ThiefM_Bow_022.png
+C01
+C06
+3 p- _T2_ThiefM_Bow_023.png
+3 p- _T2_ThiefM_Bow_024.png
+1 p- _T2_ThiefM_Bow_000.png
+C0D
+~~~
+/// - Mode 3
+C03
+C07
+4 p- _T2_ThiefM_Bow_000.png
+2 p- _T2_ThiefM_Bow_025.png
+16 p- _T2_ThiefM_Bow_026.png
+4 p- _T2_ThiefM_Bow_025.png
+20 p- _T2_ThiefM_Bow_027.png
+2 p- _T2_ThiefM_Bow_025.png
+4 p- _T2_ThiefM_Bow_001.png
+3 p- _T2_ThiefM_Bow_002.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_004.png
+2 p- _T2_ThiefM_Bow_005.png
+2 p- _T2_ThiefM_Bow_006.png
+2 p- _T2_ThiefM_Bow_007.png
+2 p- _T2_ThiefM_Bow_008.png
+2 p- _T2_ThiefM_Bow_009.png
+2 p- _T2_ThiefM_Bow_010.png
+2 p- _T2_ThiefM_Bow_011.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+2 p- _T2_ThiefM_Bow_028.png
+2 p- _T2_ThiefM_Bow_029.png
+2 p- _T2_ThiefM_Bow_030.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+2 p- _T2_ThiefM_Bow_028.png
+2 p- _T2_ThiefM_Bow_029.png
+2 p- _T2_ThiefM_Bow_030.png
+2 p- _T2_ThiefM_Bow_012.png
+6 p- _T2_ThiefM_Bow_013.png
+3 p- _T2_ThiefM_Bow_014.png
+4 p- _T2_ThiefM_Bow_015.png
+C19
+4 p- _T2_ThiefM_Bow_016.png
+6 p- _T2_ThiefM_Bow_017.png
+30 p- _T2_ThiefM_Bow_018.png
+2 p- _T2_ThiefM_Bow_019.png
+C05
+2 p- _T2_ThiefM_Bow_020.png
+2 p- _T2_ThiefM_Bow_021.png
+1 p- _T2_ThiefM_Bow_022.png
+C01
+C06
+3 p- _T2_ThiefM_Bow_023.png
+3 p- _T2_ThiefM_Bow_024.png
+1 p- _T2_ThiefM_Bow_000.png
+C0D
+~~~
+/// - Mode 5
+C03
+C07
+4 p- _T2_ThiefM_Bow_000.png
+4 p- _T2_ThiefM_Bow_001.png
+3 p- _T2_ThiefM_Bow_002.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_004.png
+2 p- _T2_ThiefM_Bow_005.png
+2 p- _T2_ThiefM_Bow_006.png
+2 p- _T2_ThiefM_Bow_007.png
+2 p- _T2_ThiefM_Bow_008.png
+2 p- _T2_ThiefM_Bow_009.png
+2 p- _T2_ThiefM_Bow_010.png
+2 p- _T2_ThiefM_Bow_011.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+6 p- _T2_ThiefM_Bow_013.png
+3 p- _T2_ThiefM_Bow_014.png
+4 p- _T2_ThiefM_Bow_015.png
+C19
+4 p- _T2_ThiefM_Bow_016.png
+6 p- _T2_ThiefM_Bow_017.png
+30 p- _T2_ThiefM_Bow_018.png
+2 p- _T2_ThiefM_Bow_019.png
+C05
+2 p- _T2_ThiefM_Bow_020.png
+2 p- _T2_ThiefM_Bow_021.png
+1 p- _T2_ThiefM_Bow_022.png
+C01
+C06
+3 p- _T2_ThiefM_Bow_023.png
+3 p- _T2_ThiefM_Bow_024.png
+1 p- _T2_ThiefM_Bow_000.png
+C0D
+~~~
+/// - Mode 6
+C03
+C07
+4 p- _T2_ThiefM_Bow_000.png
+2 p- _T2_ThiefM_Bow_025.png
+16 p- _T2_ThiefM_Bow_026.png
+4 p- _T2_ThiefM_Bow_025.png
+20 p- _T2_ThiefM_Bow_027.png
+2 p- _T2_ThiefM_Bow_025.png
+4 p- _T2_ThiefM_Bow_001.png
+3 p- _T2_ThiefM_Bow_002.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_004.png
+2 p- _T2_ThiefM_Bow_005.png
+2 p- _T2_ThiefM_Bow_006.png
+2 p- _T2_ThiefM_Bow_007.png
+2 p- _T2_ThiefM_Bow_008.png
+2 p- _T2_ThiefM_Bow_009.png
+2 p- _T2_ThiefM_Bow_010.png
+2 p- _T2_ThiefM_Bow_011.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+2 p- _T2_ThiefM_Bow_028.png
+2 p- _T2_ThiefM_Bow_029.png
+2 p- _T2_ThiefM_Bow_030.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+2 p- _T2_ThiefM_Bow_028.png
+2 p- _T2_ThiefM_Bow_029.png
+2 p- _T2_ThiefM_Bow_030.png
+2 p- _T2_ThiefM_Bow_012.png
+6 p- _T2_ThiefM_Bow_013.png
+3 p- _T2_ThiefM_Bow_014.png
+4 p- _T2_ThiefM_Bow_015.png
+C19
+4 p- _T2_ThiefM_Bow_016.png
+6 p- _T2_ThiefM_Bow_017.png
+30 p- _T2_ThiefM_Bow_018.png
+2 p- _T2_ThiefM_Bow_019.png
+C05
+2 p- _T2_ThiefM_Bow_020.png
+2 p- _T2_ThiefM_Bow_021.png
+1 p- _T2_ThiefM_Bow_022.png
+C01
+C06
+3 p- _T2_ThiefM_Bow_023.png
+3 p- _T2_ThiefM_Bow_024.png
+1 p- _T2_ThiefM_Bow_000.png
+C0D
+~~~
+/// - Mode 7
+C02
+1 p- _T2_ThiefM_Bow_000.png
+C0E
+3 p- _T2_ThiefM_Bow_031.png
+1 p- _T2_ThiefM_Bow_032.png
+C01
+3 p- _T2_ThiefM_Bow_031.png
+C0D
+~~~
+/// - Mode 8
+C02
+1 p- _T2_ThiefM_Bow_000.png
+C0E
+3 p- _T2_ThiefM_Bow_031.png
+1 p- _T2_ThiefM_Bow_032.png
+C01
+3 p- _T2_ThiefM_Bow_031.png
+C0D
+~~~
+/// - Mode 9
+1 p- _T2_ThiefM_Bow_000.png
+C01
+~~~
+/// - Mode 10
+1 p- _T2_ThiefM_Bow_000.png
+C01
+~~~
+/// - Mode 11
+1 p- _T2_ThiefM_Bow_000.png
+C01
+~~~
+/// - Mode 12
+C03
+C07
+4 p- _T2_ThiefM_Bow_000.png
+4 p- _T2_ThiefM_Bow_001.png
+3 p- _T2_ThiefM_Bow_002.png
+2 p- _T2_ThiefM_Bow_003.png
+2 p- _T2_ThiefM_Bow_004.png
+2 p- _T2_ThiefM_Bow_005.png
+2 p- _T2_ThiefM_Bow_006.png
+2 p- _T2_ThiefM_Bow_007.png
+2 p- _T2_ThiefM_Bow_008.png
+2 p- _T2_ThiefM_Bow_009.png
+2 p- _T2_ThiefM_Bow_010.png
+2 p- _T2_ThiefM_Bow_011.png
+C23
+2 p- _T2_ThiefM_Bow_012.png
+6 p- _T2_ThiefM_Bow_013.png
+3 p- _T2_ThiefM_Bow_014.png
+4 p- _T2_ThiefM_Bow_015.png
+C19
+4 p- _T2_ThiefM_Bow_016.png
+6 p- _T2_ThiefM_Bow_017.png
+30 p- _T2_ThiefM_Bow_018.png
+2 p- _T2_ThiefM_Bow_019.png
+C05
+2 p- _T2_ThiefM_Bow_020.png
+2 p- _T2_ThiefM_Bow_021.png
+1 p- _T2_ThiefM_Bow_022.png
+C01
+C06
+3 p- _T2_ThiefM_Bow_023.png
+3 p- _T2_ThiefM_Bow_024.png
+1 p- _T2_ThiefM_Bow_000.png
+C0D
+~~~
+/// - End of animation

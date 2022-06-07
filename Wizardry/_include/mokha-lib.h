@@ -15,3 +15,11 @@ const void* GetIconGfx(unsigned icon);
 
 // New draw abs number
 void NewDrawAbsDecNumber(u16 *dest, int color, int number);
+
+
+// ====================================================
+//                     Map Misc
+// ====================================================
+
+int IsPositionVaild(s8 x, s8 y);
+struct Unit* GetUnitByLoc(s8 x, s8 y);

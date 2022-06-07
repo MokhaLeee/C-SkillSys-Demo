@@ -24,6 +24,14 @@ static void PostAction_ExecNext(struct Proc_PostAction* proc){
 }
 
 
+static void PostAction_ClearFlags(){
+	
+	// Set here, W.I.P.
+	gpBattleFlagExt->combatArt_hitted = 0;
+}
+
+
+
 static const struct ProcCmd ProcCmd_PostActionHook[] = {
 	
 	PROC_YIELD,
@@ -35,6 +43,7 @@ PROC_LABEL(0),
 	
 	
 PROC_LABEL(1),
+	PROC_CALL( PostAction_ClearFlags ),
 	PROC_END,
 };
 
@@ -62,5 +71,6 @@ int HandlePostActionTraps(ProcPtr proc){
 		Proc_StartBlocking(ProcCmd_PostActionHook, proc);
 	
 	child->fun_cur = &PostActionLoopTable[0];
+	
 	return 0;
 }

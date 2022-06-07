@@ -46,7 +46,7 @@ ASSERT (FreeSpaceFontEnd - CURRENTOFFSET)
 
 // Graphics & etc
 ORG FreeSpaceAssets
-#include "Spritans/GraphicsInstaller.event"
+#include "Spritans/_GraphicsInstaller.event"
 // No Assert
 
 

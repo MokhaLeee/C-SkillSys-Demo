@@ -129,7 +129,7 @@ POIN _MugMiniGfx
 POIN _MugPal
 POIN _MugFramesGfx
 WORD 0
-BYTE 3 6 3 4
+BYTE 3 5 3 3
 WORD 1
 POP
 }
@@ -351,4 +351,31 @@ POP
 }
 
 #define Mug_Marianne 0x0D
+
+{
+_MugGfx:
+#incbin "Portraits/Felix_mug.dmp"
+
+_MugPal:
+#incbin "Portraits/Felix_palette.dmp"
+
+_MugMiniGfx:
+#incbin "Portraits/Felix_minimug.dmp"
+
+_MugFramesGfx:
+#incbin "Portraits/Felix_frames.dmp"
+
+PUSH
+ORG PortraitTable+(0x1C*0x0E)
+POIN _MugGfx
+POIN _MugMiniGfx
+POIN _MugPal
+POIN _MugFramesGfx
+WORD 0
+BYTE 2 5 1 3
+WORD 1
+POP
+}
+
+#define Mug_Felix 0x0E
 

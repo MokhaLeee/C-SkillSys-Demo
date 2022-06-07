@@ -1,0 +1,24 @@
+
+// Portraits
+ALIGN 4
+#include "Portraits.event"
+
+
+// Battle Animes
+ALIGN 4
+#include "BattleAnimes.event"
+
+
+// Spirits
+ALIGN 4
+#include "Spirits.event"
+
+
+// Chapter Titles
+ALIGN 4
+#include "ChapterTitles.event"
+
+
+// Misc
+ALIGN 4
+#include "Misc.event"

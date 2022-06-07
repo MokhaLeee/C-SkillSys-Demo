@@ -1,4 +1,4 @@
-#include "gbafe.h"
+#include "gbafe-chax.h"
 
 // (802BD50) ApplyUnitPromotion
 void MLU_PromoGain_Vanilla(struct Unit* unit, u8 classId) {
@@ -9,71 +9,34 @@ void MLU_PromoGain_Vanilla(struct Unit* unit, u8 classId) {
 	// int i;
 
 	// Apply stat ups
-
-	unit->maxHP += promotedClass->promotionHp;
-
-	if (unit->maxHP > promotedClass->maxHP)
-		unit->maxHP = promotedClass->maxHP;
-
-	unit->pow += promotedClass->promotionPow;
-
-	if (unit->pow > promotedClass->maxPow)
-		unit->pow = promotedClass->maxPow;
-
-	unit->skl += promotedClass->promotionSkl;
-
-	if (unit->skl > promotedClass->maxSkl)
-		unit->skl = promotedClass->maxSkl;
-
-	unit->spd += promotedClass->promotionSpd;
-
-	if (unit->spd > promotedClass->maxSpd)
-		unit->spd = promotedClass->maxSpd;
-
-	unit->def += promotedClass->promotionDef;
-
-	if (unit->def > promotedClass->maxDef)
-		unit->def = promotedClass->maxDef;
-
-	unit->res += promotedClass->promotionRes;
-
-	if (unit->res > promotedClass->maxRes)
-		unit->res = promotedClass->maxRes;
-
-/*	// now in Weapon System  
-
-	// Remove base class' base wexp from unit wexp
-	for (i = 0; i < 8; ++i)
-		unit->ranks[i] -= unit->pClassData->baseRanks[i];
-
-	// Update unit class
-	unit->pClassData = promotedClass;
-
- 
-	// Add promoted class' base wexp to unit wexp
-	for (i = 0; i < 8; ++i) {
-		int wexp = unit->ranks[i];
-
-		wexp += unit->pClassData->baseRanks[i];
-
-		if (wexp > WPN_EXP_S)
-			wexp = WPN_EXP_S;
-
-		unit->ranks[i] = wexp;
+	
+	if( unit->maxHP < promotedClass->promotionHp ){
+		unit->curHP += promotedClass->promotionHp - unit->maxHP;
+		unit->maxHP = promotedClass->promotionHp;
 	}
-
-    // If Pupil -> Shaman promotion, set Anima rank to 0
-	if (baseClassId == CLASS_PUPIL && promClassId == CLASS_SHAMAN)
-		unit->ranks[ITYPE_ANIMA] = 0; 
-*/
 	
+	if( unit->pow < promotedClass->promotionPow )
+		unit->pow = promotedClass->promotionPow;
 	
+	// Need UnitExpa
+	if( *GetMagAt(unit) < GetClassPromoBonusMag(classId) )
+		*GetMagAt(unit) = GetClassPromoBonusMag(classId);
 	
-	// null the level reset!
-	// unit->level = 1;
-	// unit->exp   = 0;
-
-	unit->curHP += promotedClass->promotionHp;
+	if( unit->pow < promotedClass->promotionPow )
+		unit->pow = promotedClass->promotionPow;
+	
+	if( unit->skl < promotedClass->promotionSkl )
+		unit->skl = promotedClass->promotionSkl;
+	
+	if( unit->spd < promotedClass->promotionSpd )
+		unit->spd = promotedClass->promotionSpd;
+	
+	if( unit->def < promotedClass->promotionDef )
+		unit->def = promotedClass->promotionDef;
+	
+	if( unit->res < promotedClass->promotionRes )
+		unit->res = promotedClass->promotionRes;
+	
 
 	if (unit->curHP > GetUnitMaxHp(unit))
 		unit->curHP = GetUnitMaxHp(unit);
@@ -82,13 +45,14 @@ void MLU_PromoGain_Vanilla(struct Unit* unit, u8 classId) {
 
 // GenerateBattleUnitStatGainsComparatively
 void MLU_PromoDiff_Vanilla(struct BattleUnit* bu, struct Unit* unit) {
-	bu->changeHP  = bu->unit.maxHP - unit->maxHP;
-	bu->changePow = bu->unit.pow   - unit->pow;
-	bu->changeSkl = bu->unit.skl   - unit->skl;
-	bu->changeSpd = bu->unit.spd   - unit->spd;
-	bu->changeDef = bu->unit.def   - unit->def;
-	bu->changeRes = bu->unit.res   - unit->res;
-	bu->changeLck = bu->unit.lck   - unit->lck;
+	bu->changeHP  = bu->unit.maxHP > unit->maxHP ? bu->unit.maxHP > unit->maxHP : 0;
+	bu->changePow = bu->unit.pow > unit->pow ? bu->unit.pow - unit->pow : 0;
+	*GetBu_ChangeMagAt(bu) = *GetMagAt(&bu->unit) > *GetMagAt(unit) ? *GetMagAt(&bu->unit) - *GetMagAt(unit) : 0;
+	bu->changeSkl = bu->unit.skl > unit->skl ? bu->unit.skl - unit->skl : 0;
+	bu->changeSpd = bu->unit.spd > unit->spd ? bu->unit.spd - unit->spd : 0;
+	bu->changeDef = bu->unit.def > unit->def ? bu->unit.def - unit->def : 0;
+	bu->changeRes = bu->unit.res > unit->res ? bu->unit.res - unit->res : 0;
+	bu->changeLck = bu->unit.lck > unit->lck ? bu->unit.lck - unit->lck : 0;
 
 	if (bu->unit.conBonus != unit->conBonus)
         bu->changeCon = bu->unit.conBonus - unit->conBonus;

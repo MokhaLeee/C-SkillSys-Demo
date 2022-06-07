@@ -1,0 +1,55 @@
+
+
+StandingMapSprite(ArcherStandingMapSpriteID, MapSprite16x32, fe2Archer_std)
+MovingMapSprite(Archer, 0x81D0A7C, fe2Archer_mov)
+
+StandingMapSprite(RecruitStandingMapSpriteID, MapSprite16x32, fe2Viliger_f_std)
+MovingMapSprite(0x47, 0x81E0E40, fe2Viliger_f_mov)
+
+StandingMapSprite(JourneymanStandingMapSpriteID, MapSprite16x32, Alm_std)
+MovingMapSprite(0x3D, 0x81E173C, Alm_mov)
+
+
+
+// =====================================================
+//                       Graphics
+// =====================================================
+
+// Byleth
+ALIGN 4
+Byleth_f_std:
+	#incbin "Gfx/Byleth_f_std.4bpp.lz"
+
+ALIGN 4
+Byleth_f_mov:
+	#incbin "Gfx/Byleth_f_mov.4bpp.lz"
+
+
+// Alm
+ALIGN 4
+Alm_std:
+	#incbin "Gfx/Alm_std.4bpp.lz"
+
+ALIGN 4
+Alm_mov:
+	#incbin "Gfx/Alm_mov.4bpp.lz"
+	
+	
+// fe2 Archer
+ALIGN 4
+fe2Archer_std:
+	#incbin "Gfx/fe2Archer_std.4bpp.lz"
+
+ALIGN 4
+fe2Archer_mov:
+	#incbin "Gfx/fe2Archer_mov.4bpp.lz"
+
+
+// fe2 Viliger-f
+ALIGN 4
+fe2Viliger_f_std:
+	#incbin "Gfx/fe2Viliger_f_std.4bpp.lz"
+
+ALIGN 4
+fe2Viliger_f_mov:
+	#incbin "Gfx/fe2Viliger_f_mov.4bpp.lz"

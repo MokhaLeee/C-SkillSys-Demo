@@ -54,19 +54,45 @@ void LoadUnit_WRanks(struct Unit* unit){
 	const struct UnitRomDataExpa *unit_expa = GetUnitRomDataExpa(char_id);
 	const struct ClassRomDataExpa *class_expa = GetClassRomDataExpa(class_id);
 	
-	for (int i = 0; i <= ITYPE_STAFF; ++i) {
-		
-		if( 0 != unit->pCharacterData->baseRanks[i] )
-			SetWExp(unit, i, unit->pCharacterData->baseRanks[i]);
-		else
-			SetWExp(unit, i, unit->pClassData->baseRanks[i]);
-		
 
-    }
-	
-	
+	// Sword
 	SetWExp(unit, 
-		ITYPE_ANIMA, 
+		ITYPE_SWORD, 
+		0 != unit->pCharacterData->baseRanks[ITYPE_SWORD]
+			? unit->pCharacterData->baseRanks[ITYPE_SWORD]
+			: unit->pClassData->baseRanks[ITYPE_SWORD]);
+	
+	// Lance
+	SetWExp(unit, 
+		ITYPE_LANCE, 
+		0 != unit->pCharacterData->baseRanks[ITYPE_LANCE]
+			? unit->pCharacterData->baseRanks[ITYPE_LANCE]
+			: unit->pClassData->baseRanks[ITYPE_LANCE]);
+	
+	// Axe
+	SetWExp(unit, 
+		ITYPE_AXE, 
+		0 != unit->pCharacterData->baseRanks[ITYPE_AXE]
+			? unit->pCharacterData->baseRanks[ITYPE_AXE]
+			: unit->pClassData->baseRanks[ITYPE_AXE]);
+	
+	// Bow
+	SetWExp(unit, 
+		ITYPE_BOW, 
+		0 != unit->pCharacterData->baseRanks[ITYPE_BOW]
+			? unit->pCharacterData->baseRanks[ITYPE_BOW]
+			: unit->pClassData->baseRanks[ITYPE_BOW]);
+	
+	// W.Mag
+	SetWExp(unit, 
+		ITYPE_WMAG, 
+		0 != unit->pCharacterData->baseRanks[ITYPE_WMAG]
+			? unit->pCharacterData->baseRanks[ITYPE_WMAG]
+			: unit->pClassData->baseRanks[ITYPE_WMAG]);
+	
+	// B.Mag
+	SetWExp(unit, 
+		ITYPE_BMAG, 
 		GetMax(
 			unit->pCharacterData->baseRanks[ITYPE_ANIMA], 
 			unit->pClassData->baseRanks[ITYPE_ANIMA], 
@@ -110,7 +136,7 @@ void LoadUnit_WRanks(struct Unit* unit){
 
 void MLU_PromoGain_WExp(struct Unit* unit, u8 promClassId){
 	
-	#define SET_WXEP(wtype){							\
+/* 	#define SET_WXEP(wtype){							\
 		wexp = GetWExp(unit, wtype)						\
 			+ GetClassBaseWExp(promClassId, wtype);		\
 		wexp = wexp > 0 ? wexp : 0;						\
@@ -137,8 +163,11 @@ void MLU_PromoGain_WExp(struct Unit* unit, u8 promClassId){
 	SetWExp(unit, ITYPE_CLASS, 0);
     unit->pClassData = promotedClass;
 	
-	#undef SET_WXEP
-
+	#undef SET_WXEP */
+	
+	const struct ClassData* promotedClass = GetClassData(promClassId);
+	SetWExp(unit, ITYPE_CLASS, 0);
+	unit->pClassData = promotedClass;
 }
 
 

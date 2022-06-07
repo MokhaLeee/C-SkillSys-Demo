@@ -59,3 +59,9 @@
 ## msg_end
 0[X]
 
+
+#include VanillaStrings/Class.txt
+#include VanillaStrings/Item.txt
+#include VanillaStrings/StatScreen.txt
+#include VanillaStrings/Character.txt
+#include VanillaStrings/DeathQuote.txt
