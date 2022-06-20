@@ -91,6 +91,12 @@ gCanUnitUseAllTypeWeapon:
 	BYTE 0
 	#endif
 
+gBoolDebug:
+	#ifdef _DEBUG_
+	BYTE 1
+	#else 
+	BYTE 0
+	#endif
 
 ALIGN 4	
 #endif // VALUE_GLOBAL

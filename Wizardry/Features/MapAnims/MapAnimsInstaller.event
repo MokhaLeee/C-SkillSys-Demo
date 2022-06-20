@@ -1,6 +1,18 @@
 #ifndef MAP_ANIM_INSTALLED
 #define MAP_ANIM_INSTALLED
 
+#ifndef FreeSpace
+	#define FreeSpace $B2A610
+	ORG FreeSpace
+#endif
+
+/*
+ *
+ * A Map Anime, just like Debuff status Clear Routine
+ * Usage: void StartMapAnim_Gravity(struct Unit* unit, ProcPtr proc)
+ * Then it will start a child blocking proc to show anime effect
+ *
+ */
 
 // Gravity
 #include "Gravity/Gravity.lyn.event"

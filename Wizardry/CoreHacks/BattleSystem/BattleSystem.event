@@ -59,7 +59,7 @@ PROTECT $2B3EC $2B578		// BattleGenerateHitAttributes
 PROTECT $2B600 $2B83C		// BattleGenerateHitEffects
 
 // ====================================================
-//                  Bksel Rework
+//                  BkSel Rework
 // ====================================================
 #include "BattleForcast/BKSEL.lyn.event"
 PROTECT $3666C $366A0		// AddWeaponStatsAfterRound

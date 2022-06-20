@@ -47,7 +47,13 @@ END_MAIN
 
 AllyUnits1:
 UNIT Unit_Lysi Recruit1 0x00 Level(1, Ally, 0) [17, 11] 0x00 0x00 0x0 0x00 [IronSword, Fire, Vulnerary] NoAI
-UNIT Unit_Dimi Journeyman1 Unit_Lysi Level(1, Ally, 0) [16, 12] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
+
+#ifndef _DEBUG_
+	UNIT Unit_Dimi Journeyman1 Unit_Lysi Level(1, Ally, 0) [16, 12] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
+#else
+	UNIT Unit_Dimi Journeyman1 Unit_Lysi Level(1, Ally, 0) [16, 12] 0 0 0 0 [IronLance, SteelLance, Vulnerary, Item_PromoT1] NoAI
+#endif
+
 UNIT Unit_Eru Recruit1 Unit_Lysi Level(1, Ally, 0) [17, 10] 0 0 0 0 [SteelAxe, IronAxe, Hammer, Vulnerary] NoAI
 UNIT Unit_Shamir Recruit1 Unit_Lysi Level(1, Ally, 0) [16, 11] 0 0 0 0 [IronSword, SteelSword, IronBow,Vulnerary] NoAI
 UNIT Unit_Ber Recruit1 Unit_Lysi Level(1, Ally, 0) [14, 11] 0 0 0 0 [IronBow, SteelBow, Vulnerary] NoAI

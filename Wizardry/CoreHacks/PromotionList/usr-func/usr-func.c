@@ -102,7 +102,7 @@ const u8 *GetUnitPromoList(u8 charId, u8 classId, u8 itemId){
 	switch( itemId ){
 		
 		case Item_PromoT1:
-			if( unit->level < 5 )
+			if( unit->level < 5 && !gBoolDebug )
 				return gpRamPromoTmpList;
 			else
 				return isMale ? PromoList_T1_M : PromoList_T1_F;
